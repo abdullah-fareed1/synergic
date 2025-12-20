@@ -454,12 +454,13 @@ export default function Home() {
                     Let's Build Your System Together
                   </div>
                 </div>
-                <div className="bg-white bg-opacity-20 rounded-full p-2">
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
-                </div>
+                <div className="bg-white bg-opacity-20 rounded-full p-3 ml-4 flex-shrink-0">
+            <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition" />
+          </div>
               </button>
             </div>
           </div>
+
 
           {/* Desktop Layout */}
           <div className="hidden md:grid grid-cols-12 gap-8 lg:gap-10">
@@ -502,8 +503,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="bg-white bg-opacity-20 rounded-full p-3 ml-4 flex-shrink-0">
-                  <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition" />
-                </div>
+            <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition" />
+          </div>
               </button>
             </div>
 

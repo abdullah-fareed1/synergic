@@ -25,6 +25,6 @@ It is intentionally lightweight and focused on layout, design consistency, and r
 
 The site is deployed on Vercel and can be viewed here:
 
-👉 https://synergic-home.vercel.app
+👉 https://synergic.vercel.app
 
 This deployment will be continuously updated as the codebase evolves.
