@@ -12,7 +12,7 @@ export default function HeroSection() {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/heroimage.png')" }}
+        style={{ backgroundImage: "url('/heroimage.webp')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50" />
       </div>

@@ -3,6 +3,8 @@ import ChooseCombineGrow from "./home/sections/ChooseCombineGrow";
 import SolutionsSection from "./home/sections/SolutionsSection";
 import BuildFusionSection from "./home/sections/BuildFusionSection";
 import CustomersLogoSection from "./home/sections/CustomersLogoSection";
+import IndustryFocusedSection from "./home/sections/IndustryFocusedSection";
+import BlogSection from "./home/sections/BlogSection";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <SolutionsSection />
       <BuildFusionSection />
       <CustomersLogoSection />
+      <IndustryFocusedSection />
+      <BlogSection />
     </main>
   );
 }

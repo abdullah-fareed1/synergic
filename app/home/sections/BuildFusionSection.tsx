@@ -154,7 +154,7 @@ const BuildFusionSection: React.FC = () => {
                 {/* Placeholder for fusion.png image */}
                 <div className="relative aspect-4/3 bg-linear-to-br from-gray-800 to-gray-900">
                   <img 
-                    src="/fusion.png" 
+                    src="/fusion.webp" 
                     alt="FusionMesh Platform Dashboard"
                     className="w-full h-full object-cover"
                   />
