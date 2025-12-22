@@ -5,6 +5,7 @@ import BuildFusionSection from "./home/sections/BuildFusionSection";
 import CustomersLogoSection from "./home/sections/CustomersLogoSection";
 import IndustryFocusedSection from "./home/sections/IndustryFocusedSection";
 import BlogSection from "./home/sections/BlogSection";
+import Footer from "./home/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <CustomersLogoSection />
       <IndustryFocusedSection />
       <BlogSection />
+      <Footer />
     </main>
   );
 }
