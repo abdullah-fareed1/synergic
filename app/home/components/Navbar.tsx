@@ -6,32 +6,54 @@ type NavbarProps = {
 
 export default function Navbar({ onMenuClick }: NavbarProps) {
   return (
-    <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 md:py-6">
-      {/* Logo */}
-      <div className="flex items-center">
-        <img
-          src="/synergic-logo.svg"
-          alt="Synergic Intelligent Systems"
-          className="h-7 sm:h-8 md:h-9 lg:h-10 w-auto"
-        />
+    <nav className="absolute top-0 left-0 right-0 z-20">
+      {/* Grid overlay for desktop */}
+      <div className="hidden lg:block absolute inset-0 pointer-events-none">
+        {/* Vertical lines - positioned at 1, 5, 9, 13, 17 out of 18 columns */}
+        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+        
+        {/* Horizontal line - height is 1/18 of viewport width to make squares */}
+        <div className="absolute left-0 right-0 h-px bg-gray-300 opacity-30" style={{ top: 'calc(100vw / 20)' }} />
       </div>
 
-      <div className="flex items-center gap-4">
+      {/* Mobile horizontal line */}
+      <div className="lg:hidden absolute left-0 right-0 h-px bg-gray-300 opacity-30" style={{ top: 80 }} />
+
+      <div className="relative flex items-start justify-between" style={{ height: 'calc(100vw / 20)' }}>
+        {/* Desktop Logo */}
+        <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4">
+          <img
+            src="/synergic-logo.svg"
+            alt="Synergic Intelligent Systems"
+            className="h-8 w-auto"
+          />
+        </div>
+
+        {/* Mobile Logo */}
+        <div className="lg:hidden flex items-center px-4 py-4">
+          <img
+            src="/synergic-logo.svg"
+            alt="Synergic Intelligent Systems"
+            className="h-7 w-auto"
+          />
+        </div>
+
         {/* Desktop Get in Touch */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center absolute right-[5.56%] top-0 bottom-0 pr-4 gap-3">
           <span className="text-white text-sm font-medium tracking-wide uppercase">
             Get in Touch
           </span>
           <div
-            className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition"
-            style={{
-              borderWidth: "2px",
-              borderColor: "var(--brand-red)",
-            }}
+            className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition border-2"
+            style={{ borderColor: "#E63946" }}
           >
             <svg
               className="w-5 h-5"
-              style={{ color: "var(--brand-red)" }}
+              style={{ color: "#E63946" }}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -46,21 +68,17 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
           </div>
         </div>
 
-        {/* Menu Button */}
+        {/* Desktop Menu Button */}
         <button
           onClick={onMenuClick}
-          className="relative flex flex-col items-center justify-center hover:opacity-80 transition"
-          style={{ width: "72px", height: "56px" }}
+          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black bg-opacity-80"
+          style={{ width: '5.56%' }}
         >
-          <div
-            className="absolute inset-0 bg-black rounded-sm"
-            style={{ opacity: 0.32 }}
-          />
-          <div className="relative flex flex-col items-center gap-1">
+          <div className="flex flex-col items-center gap-1">
             <span
               className="uppercase font-semibold"
               style={{
-                color: "var(--brand-red)",
+                color: "#E63946",
                 fontSize: "9px",
                 letterSpacing: "1.55px",
               }}
@@ -68,9 +86,34 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
               MENU
             </span>
             <div className="flex flex-col gap-1">
-              <div className="bg-white w-7 h-0.75 rounded-sm" />
-              <div className="bg-white w-7 h-0.75 rounded-sm" />
-              <div className="bg-white w-7 h-0.75 rounded-sm" />
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
+            </div>
+          </div>
+        </button>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={onMenuClick}
+          className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-black bg-opacity-80"
+          style={{ width: 'calc(100vw / 6)', height: 80 }}
+        >
+          <div className="flex flex-col items-center gap-1">
+            <span
+              className="uppercase font-semibold"
+              style={{
+                color: "#E63946",
+                fontSize: "9px",
+                letterSpacing: "1.55px",
+              }}
+            >
+              MENU
+            </span>
+            <div className="flex flex-col gap-1">
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
             </div>
           </div>
         </button>
