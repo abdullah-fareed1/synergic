@@ -10,11 +10,11 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
       {/* Grid overlay for desktop */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
         {/* Vertical lines - positioned at 1, 5, 9, 13, 17 out of 18 columns */}
-        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-300 opacity-30" /> {/*line 1*/}
+        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 2*/}
+        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 3*/}
+        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 4*/}
+        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 5*/}
         
         {/* Horizontal line - height is 1/18 of viewport width to make squares */}
         <div className="absolute left-0 right-0 h-px bg-gray-300 opacity-30" style={{ top: 'calc(100vw / 20)' }} />

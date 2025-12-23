@@ -266,9 +266,9 @@ export default function ChooseCombineGrow() {
                     right: "0",
                     bottom: "0",
                     backgroundImage: `repeating-linear-gradient(
-                      135deg,
+                      45deg,
                       transparent,
-                      transparent 10px,
+                      transparent 8px,
                       rgba(100, 116, 139, 0.1) 10px,
                       rgba(100, 116, 139, 0.1) 11px
                     )`
