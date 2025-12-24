@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
-import { GridSection, GridContainer, GridCol } from "../../components";
+import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 export default function BuildFusionTopSection() {
   const buildOptions = [

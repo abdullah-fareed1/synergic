@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { GridSection, GridContainer, GridCol } from "../../components";
+import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const IndustryFocusedSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);

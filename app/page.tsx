@@ -57,7 +57,7 @@ import SolutionsSection from "./home/sections/SolutionsSection";
 import CustomersLogoSection from "./home/sections/CustomersLogoSection";
 import IndustryFocusedSection from "./home/sections/IndustryFocusedSection";
 import BlogSection from "./home/sections/BlogSection";
-import Footer from "./home/components/Footer";
+import Footer from "./components/Footer";
 import BuildFusionTopSection from "./home/sections/BuildFusionTopSection";
 import BuildFusionBottomSection from "./home/sections/BuildFusionBottomSection";
 

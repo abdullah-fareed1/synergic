@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { GridSection, GridContainer, GridCol } from "../../components";
+import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const BuildFusionBottomSection: React.FC = () => {
   const [hoveredFusion, setHoveredFusion] = useState<boolean>(false);
