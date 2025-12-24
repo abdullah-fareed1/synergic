@@ -54,11 +54,12 @@ export const metadata: Metadata = {
 import HeroSection from "./home/sections/HeroSection";
 import ChooseCombineGrow from "./home/sections/ChooseCombineGrow";
 import SolutionsSection from "./home/sections/SolutionsSection";
-import BuildFusionSection from "./home/sections/BuildFusionSection";
 import CustomersLogoSection from "./home/sections/CustomersLogoSection";
 import IndustryFocusedSection from "./home/sections/IndustryFocusedSection";
 import BlogSection from "./home/sections/BlogSection";
 import Footer from "./home/components/Footer";
+import BuildFusionTopSection from "./home/sections/BuildFusionTopSection";
+import BuildFusionBottomSection from "./home/sections/BuildFusionBottomSection";
 
 export default function Home() {
   return (
@@ -66,7 +67,8 @@ export default function Home() {
       <HeroSection />
       <ChooseCombineGrow />
       <SolutionsSection />
-      <BuildFusionSection />
+      <BuildFusionTopSection />
+      <BuildFusionBottomSection />
       <CustomersLogoSection />
       <IndustryFocusedSection />
       <BlogSection />
