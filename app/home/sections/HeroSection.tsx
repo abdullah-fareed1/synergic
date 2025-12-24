@@ -21,11 +21,11 @@ export default function HeroSection() {
 
       {/* Grid lines extending full height */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
-        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
       </div>
 
       {/* Navbar Component */}

@@ -18,11 +18,11 @@ export default function ChooseCombineGrow() {
         {/* Desktop Grid Lines - 18 column system */}
         <div className="hidden md:block absolute inset-0 pointer-events-none">
           {/* Vertical lines at positions 1, 5, 9, 13, 17 out of 18 */}
-          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-700 opacity-40" />
-          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-700 opacity-40" />
-          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-700 opacity-40" />
-          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-700 opacity-40" />
-          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-700 opacity-40" />
+          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
+          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
+          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
+          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
+          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
         </div>
 
         <div className="max-w-full mx-auto px-6 md:px-0 relative z-10">
@@ -83,7 +83,7 @@ export default function ChooseCombineGrow() {
             </div>
 
             {/* Combine Accordion */}
-            <div className="border-t border-gray-700">
+            <div className="border-t border-gray-400">
               <button
                 onClick={() => toggle("combine")}
                 className="w-full py-6 flex items-center justify-between text-left"
@@ -147,7 +147,7 @@ export default function ChooseCombineGrow() {
             </div>
 
             {/* Grow Accordion */}
-            <div className="border-t border-gray-700">
+            <div className="border-t border-gray-400">
               <button
                 onClick={() => toggle("grow")}
                 className="w-full py-6 flex items-center justify-between text-left"
@@ -182,7 +182,7 @@ export default function ChooseCombineGrow() {
             {/* Mobile CTA Button */}
             <div className="pt-8">
               <button
-                className="w-full text-white px-6 py-5 rounded flex items-center justify-between group transition"
+                className="w-full text-white px-6 py-5 rounded flex items-center justify-between transition"
                 style={{ backgroundColor: "#FF4D3D" }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundColor = "#E63520")
@@ -197,8 +197,12 @@ export default function ChooseCombineGrow() {
                     Let's Build Your System Together
                   </div>
                 </div>
-                <div className="bg-white bg-opacity-20 rounded-full p-3 ml-4 shrink-0">
-                  <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition" />
+
+                <div
+                  className="rounded-full p-3 ml-4 shrink-0 border border-white"
+                  style={{ backgroundColor: "#FF4D3D" }}
+                >
+                  <ArrowRight className="w-4 h-4 text-white" />
                 </div>
               </button>
             </div>
@@ -208,7 +212,10 @@ export default function ChooseCombineGrow() {
           <div className="hidden md:block relative">
             <div className="flex">
               {/* Left Section - Line 1 to Center (5.56% to 50%) = 8 parts */}
-              <div className="flex flex-col justify-between" style={{ width: '50%' }}>
+              <div
+                className="flex flex-col justify-between"
+                style={{ width: "50%" }}
+              >
                 {/* Content Area - starts after line 1, ends at center */}
                 <div className="pl-[16.67%] pr-[11.11%] py-12">
                   <p className="text-gray-400 text-xs tracking-widest mb-4 uppercase">
@@ -231,7 +238,7 @@ export default function ChooseCombineGrow() {
                 {/* CTA Button - Starts after line 1, at line 2 (27.78%) */}
                 <div className="pl-[11.11%]">
                   <button
-                    className="w-full text-white px-8 py-6 flex items-center justify-between group transition"
+                    className="w-full text-white px-8 py-6 flex items-center justify-between transition"
                     style={{ backgroundColor: "#FF4D3D" }}
                     onMouseEnter={(e) =>
                       (e.currentTarget.style.backgroundColor = "#E63520")
@@ -246,20 +253,27 @@ export default function ChooseCombineGrow() {
                         Let's Build Your System Together
                       </div>
                     </div>
-                    <div className="bg-white bg-opacity-20 rounded-full p-3 ml-4 shrink-0">
-                      <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition" />
+
+                    <div
+                      className="rounded-full p-3 ml-4 shrink-0 border border-white"
+                      style={{ backgroundColor: "#FF4D3D" }}
+                    >
+                      <ArrowRight className="w-4 h-4 text-white" />
                     </div>
                   </button>
                 </div>
               </div>
 
               {/* Right Section - Center to Line 5 (50% to 94.44%) = 8 parts */}
-              <div className="relative" style={{ width: '50%' }}>
+              <div className="relative" style={{ width: "50%" }}>
                 {/* Horizontal line from center to line 5 */}
-                <div className="absolute left-0 top-1/2 h-px bg-gray-700 opacity-40" style={{ right: '11.11%' }} />
-                
+                <div
+                  className="absolute left-0 top-1/2 h-px bg-gray-400 opacity-40"
+                  style={{ right: "11.11%" }}
+                />
+
                 {/* Diagonal striped background - starts at line 4 (72.22% of screen) and goes to end of screen */}
-                <div 
+                <div
                   className="absolute h-1/2 pointer-events-none"
                   style={{
                     left: "44.44%",
@@ -271,11 +285,14 @@ export default function ChooseCombineGrow() {
                       transparent 8px,
                       rgba(100, 116, 139, 0.1) 10px,
                       rgba(100, 116, 139, 0.1) 11px
-                    )`
+                    )`,
                   }}
                 />
-                
-                <div className="grid grid-cols-2 grid-rows-2 h-full" style={{ paddingRight: '11.11%' }}>
+
+                <div
+                  className="grid grid-cols-2 grid-rows-2 h-full"
+                  style={{ paddingRight: "11.11%" }}
+                >
                   {/* Choose - Top Left */}
                   <div className="px-8 py-12 flex flex-col justify-center">
                     <div
@@ -284,15 +301,18 @@ export default function ChooseCombineGrow() {
                     >
                       01
                     </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Choose</h3>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                      Choose
+                    </h3>
                     <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
                       You can start with what you need. Identify and select the
-                      solutions that best drive your strategic goals—whether that's
-                      launching a B2C eshop, leveraging AI-powered search, or
-                      automating key workflows—for an ideal fit from day one.
+                      solutions that best drive your strategic goals—whether
+                      that's launching a B2C eshop, leveraging AI-powered
+                      search, or automating key workflows—for an ideal fit from
+                      day one.
                     </p>
                   </div>
-    
+
                   {/* Combine - Top Right */}
                   <div className="px-8 py-12 flex flex-col justify-center">
                     <div
@@ -301,14 +321,16 @@ export default function ChooseCombineGrow() {
                     >
                       02
                     </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Combine</h3>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                      Combine
+                    </h3>
                     <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
                       Seamlessly integrate your chosen modules into a single,
-                      cohesive platform that breaks down silos, automates processes,
-                      and delivers a unified customer experience.
+                      cohesive platform that breaks down silos, automates
+                      processes, and delivers a unified customer experience.
                     </p>
                   </div>
-    
+
                   {/* Grow - Bottom Left */}
                   <div className="px-8 py-12 flex flex-col justify-center">
                     <div
@@ -317,15 +339,17 @@ export default function ChooseCombineGrow() {
                     >
                       03
                     </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Grow</h3>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                      Grow
+                    </h3>
                     <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
-                      Expand over time with secure, scalable solutions tailored to
-                      your business. Unlock new revenue streams and enter new
+                      Expand over time with secure, scalable solutions tailored
+                      to your business. Unlock new revenue streams and enter new
                       markets without disruption—add new features or services
                       whenever you're ready.
                     </p>
                   </div>
-    
+
                   {/* Checklist - Bottom Right */}
                   <div className="px-8 py-12 flex items-center relative z-10">
                     <div className="space-y-3">

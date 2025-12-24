@@ -25,11 +25,11 @@ const CustomersLogoSection: React.FC = () => {
       <div className="hidden lg:block relative py-20">
         {/* GRIDLINES */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
+          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
         </div>
 
         <div className="relative z-10 flex">
@@ -91,8 +91,8 @@ const CustomersLogoSection: React.FC = () => {
                 key={i}
                 className={`absolute ${pos} w-5 h-5 flex items-center justify-center z-10`}
               >
-                <div className="w-full h-0.5 bg-gray-300" />
-                <div className="absolute w-0.5 h-full bg-gray-300" />
+                <div className="w-full h-0.5 bg-gray-400" />
+                <div className="absolute w-0.5 h-full bg-gray-400" />
               </div>
             ))}
           </div>
@@ -117,7 +117,7 @@ const CustomersLogoSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 border-l border-r border-gray-300">
+        <div className="grid grid-cols-4 border-l border-r border-gray-400">
           {gridItems.map((item, index) => {
             const row = Math.floor(index / 4);
             const col = index % 4;

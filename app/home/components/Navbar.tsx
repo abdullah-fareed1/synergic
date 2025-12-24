@@ -10,18 +10,18 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
       {/* Grid overlay for desktop */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
         {/* Vertical lines - positioned at 1, 5, 9, 13, 17 out of 18 columns */}
-        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-300 opacity-30" /> {/*line 1*/}
-        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 2*/}
-        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 3*/}
-        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 4*/}
-        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />{/*line 5*/}
-        
+        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" /> {/*line 1*/}
+        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 2*/}
+        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 3*/}
+        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 4*/}
+        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 5*/}
+
         {/* Horizontal line - height is 1/18 of viewport width to make squares */}
-        <div className="absolute left-0 right-0 h-px bg-gray-300 opacity-30" style={{ top: 'calc(100vw / 20)' }} />
+        <div className="absolute left-0 right-0 h-px bg-gray-400 opacity-30" style={{ top: 'calc(100vw / 20)' }} />
       </div>
 
       {/* Mobile horizontal line */}
-      <div className="lg:hidden absolute left-0 right-0 h-px bg-gray-300 opacity-30" style={{ top: 80 }} />
+      <div className="lg:hidden absolute left-0 right-0 h-px bg-gray-400 opacity-30" style={{ top: 60 }} />
 
       <div className="relative flex items-start justify-between" style={{ height: 'calc(100vw / 20)' }}>
         {/* Desktop Logo */}
@@ -71,10 +71,14 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         {/* Desktop Menu Button */}
         <button
           onClick={onMenuClick}
-          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black bg-opacity-80"
+          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
           style={{ width: '5.56%' }}
         >
           <div className="flex flex-col items-center gap-1">
+            <div className="flex flex-col gap-1">
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
+              <div className="bg-white w-7 h-0.5 rounded-sm" />
+            </div>
             <span
               className="uppercase font-semibold"
               style={{
@@ -85,21 +89,22 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             >
               MENU
             </span>
-            <div className="flex flex-col gap-1">
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-            </div>
+            
           </div>
         </button>
 
         {/* Mobile Menu Button */}
         <button
           onClick={onMenuClick}
-          className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-black bg-opacity-80"
-          style={{ width: 'calc(100vw / 6)', height: 80 }}
+          className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
+          style={{ width: 'calc(100vw / 6)', height: 60 }}
         >
           <div className="flex flex-col items-center gap-1">
+            
+            <div className="flex flex-col gap-1">
+              <div className="bg-white w-7 h-0.5 rounded-sm mt-0.5" />
+              <div className="bg-white w-7 h-0.5 rounded-sm mt-0.5" />
+            </div>
             <span
               className="uppercase font-semibold"
               style={{
@@ -110,11 +115,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             >
               MENU
             </span>
-            <div className="flex flex-col gap-1">
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-            </div>
           </div>
         </button>
       </div>

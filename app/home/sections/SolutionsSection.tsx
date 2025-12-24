@@ -69,12 +69,11 @@ const SolutionsSection: React.FC = () => {
   return (
     <section className="w-full bg-white py-16 relative overflow-hidden">
       {/* Vertical gridlines - only on desktop */}
-      <div className="hidden lg:block absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-      <div className="hidden lg:block absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-      <div className="hidden lg:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-      <div className="hidden lg:block absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-      <div className="hidden lg:block absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-300 opacity-30" />
-
+      <div className="hidden lg:block absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+      <div className="hidden lg:block absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+      <div className="hidden lg:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+      <div className="hidden lg:block absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+      <div className="hidden lg:block absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
       {/* Content container */}
       <div className="relative z-10 px-4 lg:px-0">
         {/* Header - starts from gridline 1 */}
@@ -122,7 +121,7 @@ const SolutionsSection: React.FC = () => {
           </div>
           
           {/* Bottom horizontal line - full width */}
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-300 opacity-30" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-400 opacity-30" />
         </div>
 
         {/* Tagline */}
@@ -145,7 +144,7 @@ const SolutionsSection: React.FC = () => {
                   key={solution.id}
                   onMouseEnter={() => setHoveredCard(solution.id)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  className={`relative transition-all duration-300 cursor-pointer group border-l border-r border-b border-t border-gray-200 flex flex-col ${
+                  className={`relative transition-all duration-300 cursor-pointer group border-l border-r border-b border-t border-gray-300 flex flex-col ${
                     hoveredCard === solution.id
                       ? 'bg-[#FB3B22] text-white'
                       : 'bg-white text-gray-800'
