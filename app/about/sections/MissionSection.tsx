@@ -5,7 +5,7 @@ import { GridSection, GridContainer, GridCol } from "../../components/grid";
 export default function MissionSection() {
   return (
     <>
-      {/* MOBILE: */}
+      {/* MOBILE: stacked layout */}
       <section
         className="lg:hidden px-2 py-12"
         style={{ backgroundColor: "var(--brand-dark)" }}
@@ -37,7 +37,7 @@ export default function MissionSection() {
         </div>
       </section>
 
-      {/* DESKTOP: */}
+      {/* DESKTOP: grid-based layout */}
       <GridSection
         bgColor="bg-[var(--brand-dark)]"
         showLines={[true, false, true, true, true]}
@@ -45,16 +45,16 @@ export default function MissionSection() {
         desktopOnly={true}
       >
         <GridContainer className="items-center">
-          {/* AB Column */}
+          {/* AB Column - Image with overlaid text */}
           <GridCol
             span="AB"
-            className="flex items-center justify-center relative min-h-112.5"
+            className="flex items-center justify-center relative min-h-[450px]"
           >
             <div className="relative flex items-center justify-center">
               <img
                 src="/mission.png"
                 alt="Mission"
-                className="w-100 h-10 xl:w-112.5 xl:h-112.5 object-contain"
+                className="w-[400px] h-[40px] xl:w-[450px] xl:h-[450px] object-contain"
               />
               <h2 className="absolute pl-60 text-white text-3xl xl:text-6xl font-bold text-center leading-[1.15] tracking-tight">
                 Our Mission<br />is Simple
@@ -62,7 +62,7 @@ export default function MissionSection() {
             </div>
           </GridCol>
 
-          {/* CD Column*/}
+          {/* CD Column - Text content */}
           <GridCol span="CD" className="pl-16 pr-12 py-12 flex items-center">
             <div className="space-y-6 max-w-lg">
               <p className="text-gray-300 text-xl xl:text-2xl leading-relaxed font-normal">
