@@ -1,21 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { GridSection, GridContainer, GridCol } from "../../components";
 
 const IndustryFocusedSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const industries = [
     {
@@ -61,68 +50,154 @@ const IndustryFocusedSection = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-[#111D2B] overflow-hidden px-6 md:px-12 lg:px-16 xl:px-20">
-      {/* Content Container */}
-      <div className="w-full min-h-screen flex flex-col">
-        {/* Header Section */}
-        <div className="px-2 md:px-6 lg:px-12 pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 bg-[#111D2B]">
-          <p className="text-[#FB3B22] text-sm md:text-base font-bold uppercase tracking-wider mb-4">
-            Industry-Focused Solutions
-          </p>
-          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl">
-            From startups to enterprises, we build what works at any scale
-          </h2>
-        </div>
+    <>
+      {/* DESKTOP VERSION - Grid Layout */}
+      <div className="hidden lg:block">
+        {/* Section 1: Header */}
+        <GridSection
+          bgColor="bg-[#111D2B]"
+          showLines={[true, false, false, false, true]}
+          className="text-white pt-20 pb-12"
+          desktopOnly={true}
+        >
+          <GridContainer>
+            <GridCol span="ABCD" className="px-5">
+              <p className="text-[#FB3B22] text-sm font-bold uppercase tracking-wider mb-4">
+                INDUSTRY-FOCUSED SOLUTIONS
+              </p>
+              <h2 className="text-5xl font-bold leading-tight max-w-4xl">
+                From startups to enterprises, we build what works at any scale
+              </h2>
+            </GridCol>
+          </GridContainer>
+        </GridSection>
+        
 
-        {/* Cards Section - Desktop */}
-        <div className="hidden md:grid md:grid-cols-4 flex-1 relative overflow-hidden rounded-lg">
-          {/* Background Image for Cards */}
+        {/* Section 2: Cards with Background Image */}
+        <GridSection
+          bgColor="bg-[#111D2B]"
+          showLines={[true, false, false, false, true]}
+          className="text-white border-t border-b border-gray-700 relative"
+          desktopOnly={true}
+        >
+          {/* Diagonal Striped Background - Left Side */}
           <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url(/industryfocusedsolutions.webp)' }}
+            className="absolute left-0 top-0 bottom-0 w-[5.56%] pointer-events-none"
+            style={{
+              backgroundImage: `repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 8px,
+                rgba(100, 116, 139, 0.1) 10px,
+                rgba(100, 116, 139, 0.1) 11px
+              )`
+            }}
           />
-          {industries.map((industry, index) => (
-            <div
-              key={index}
-              className={`relative z-10 border-r border-gray-700 last:border-r-0 ${
-                industry.isHighlighted 
-                  ? 'bg-black/80' 
-                  : 'bg-black/40 hover:bg-black/60 transition-all duration-300'
-              }`}
+          
+          <GridContainer className="min-h-150 relative">
+            {/* Background Image Column - ABCD */}
+            <GridCol 
+              span="ABCD" 
+              position="absolute"
+              className="z-0 h-full"
+              style={{
+                backgroundImage: 'url(/industryfocusedsolutions.webp)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
             >
-              <div className={`h-full flex flex-col ${industry.isHighlighted ? 'justify-start' : 'justify-center items-center text-center'} p-6 lg:p-8 ${!industry.isHighlighted ? 'pt-[66%]' : ''}`}>
-                <h3 className={`text-xl lg:text-2xl font-bold mb-2 ${
-                  industry.isHighlighted ? 'text-[#FB3B22]' : 'text-white'
-                }`}>
-                  {industry.title}
-                </h3>
-                
-                {industry.subtitle && (
-                  <p className="text-gray-400 text-sm lg:text-base mb-6">
-                    {industry.subtitle}
+              <div className="h-150"></div>
+            </GridCol>
+            
+            {/* Column A - Enterprises */}
+            <GridCol span="A" className="relative z-10 group">
+              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
+                <div className="h-full flex flex-col justify-start items-start text-left p-8 pl-12">
+                  <h3 className="text-2xl font-bold mb-2 text-[#FB3B22]">
+                    {industries[0].title}
+                  </h3>
+                  <p className="text-gray-400 text-base mb-6">
+                    {industries[0].subtitle}
                   </p>
-                )}
-                
-                {industry.services.length > 0 && (
-                  <ul className="space-y-3 mt-4">
-                    {industry.services.map((service, idx) => (
+                  <ul className="space-y-3">
+                    {industries[0].services.map((service, idx) => (
                       <li 
                         key={idx}
-                        className="text-gray-300 text-sm lg:text-base hover:text-white transition-colors cursor-pointer"
+                        className="text-gray-300 text-base hover:text-white transition-colors cursor-pointer"
                       >
                         {service}
                       </li>
                     ))}
                   </ul>
-                )}
+                </div>
               </div>
-            </div>
-          ))}
+            </GridCol>
+
+            {/* Column B - Startups & SaaS */}
+            <GridCol span="B" className="relative z-10 group">
+              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
+                <div className="h-full flex flex-col justify-center items-center text-center p-8">
+                  <h3 className="text-2xl font-bold text-white">
+                    {industries[1].title}
+                  </h3>
+                </div>
+              </div>
+            </GridCol>
+
+            {/* Column C - Retailers & B2B */}
+            <GridCol span="C" className="relative z-10 group">
+              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
+                <div className="h-full flex flex-col justify-center items-center text-center p-8">
+                  <h3 className="text-2xl font-bold text-white">
+                    {industries[2].title}
+                  </h3>
+                </div>
+              </div>
+            </GridCol>
+
+            {/* Column D - Public Sector */}
+            <GridCol span="D" className="relative z-10 group">
+              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
+                <div className="h-full flex flex-col justify-center items-center text-center p-8">
+                  <h3 className="text-2xl font-bold text-white">
+                    {industries[3].title}
+                  </h3>
+                </div>
+              </div>
+            </GridCol>
+          </GridContainer>
+        </GridSection>
+
+        {/* Spacer section below cards */}
+        <GridSection
+          bgColor="bg-[#111D2B]"
+          showLines={[true, false, false, false, true]}
+          className="h-16"
+          desktopOnly={true}
+        >
+          <GridContainer>
+            <GridCol span="ABCD">
+              <div></div>
+            </GridCol>
+          </GridContainer>
+        </GridSection>
+      </div>
+
+      {/* MOBILE VERSION - Carousel */}
+      <section className="lg:hidden bg-[#111D2B] text-white">
+        {/* Header */}
+        <div className="px-[5.56%] py-12">
+          <p className="text-[#FB3B22] text-xs font-bold uppercase tracking-wider mb-4">
+            INDUSTRY-FOCUSED SOLUTIONS
+          </p>
+          <h2 className="text-2xl font-bold leading-tight">
+            From startups to enterprises, we build what works at any scale
+          </h2>
         </div>
 
-        {/* Cards Section - Mobile Carousel */}
-        <div className="md:hidden relative w-full" style={{ height: '70vh' }}>
-          {/* Background Image for Mobile Cards */}
+        {/* Carousel */}
+        <div className="relative" style={{ height: '50vh' }}>
+          {/* Background Image */}
           <div 
             className="absolute inset-0 bg-center"
             style={{ 
@@ -132,7 +207,7 @@ const IndustryFocusedSection = () => {
             }}
           />
           
-          <div className="h-full overflow-hidden relative z-10 rounded-lg">
+          <div className="h-full overflow-hidden relative z-10">
             <div 
               className="flex h-full transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${activeSlide * 100}%)` }}
@@ -146,7 +221,7 @@ const IndustryFocusedSection = () => {
                       : 'bg-black/60'
                   }`}
                 >
-                  <div className={`h-full flex flex-col ${industry.isHighlighted ? 'justify-start' : 'justify-center items-center text-center'} p-8 ${!industry.isHighlighted ? 'pt-[66%]' : ''}`}>
+                  <div className={`h-full flex flex-col ${industry.isHighlighted ? 'justify-start items-start text-left p-8' : 'justify-center items-center text-center p-8'}`}>
                     <h3 className={`text-2xl font-bold mb-2 ${
                       industry.isHighlighted ? 'text-[#FB3B22]' : 'text-white'
                     }`}>
@@ -176,26 +251,11 @@ const IndustryFocusedSection = () => {
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-all"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6 text-white" />
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-all"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6 text-white" />
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+        {/* Dots Indicator */}
+        <div className="bg-[#0A1929] py-6 flex justify-center">
+          <div className="flex gap-2">
             {industries.map((_, index) => (
               <button
                 key={index}
@@ -210,8 +270,8 @@ const IndustryFocusedSection = () => {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

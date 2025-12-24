@@ -272,7 +272,7 @@ export default function ChooseCombineGrow() {
                   style={{ right: "11.11%" }}
                 />
 
-                {/* Diagonal striped background - starts at line 4 (72.22% of screen) and goes to end of screen */}
+                {/* Diagonal striped background */}
                 <div
                   className="absolute h-1/2 pointer-events-none"
                   style={{
