@@ -8,6 +8,7 @@ const SolvingSection = () => {
         showLines={[true, false, true, false, true]}
         bgColor="bg-white"
         className="relative"
+        desktopOnly={true}
       >
         <GridContainer className="py-16">
           <GridCol span="AB" className="flex flex-col pl-24">
@@ -20,14 +21,14 @@ const SolvingSection = () => {
               </p>
             </div>
 
-            <div>
+            <div >
               <div className="flex items-center gap-3 mb-8">
                 <span className="text-red-500 text-2xl font-bold">✕</span>
                 <h3 className="text-2xl font-extrabold text-gray-900">Common challenges</h3>
               </div>
 
-              <p className="text-gray-900 text-base mb-8 leading-relaxed">
-                We see these problems all the time — and <span className="font-bold">we build systems that solve them.</span>
+              <p className="text-gray-900 text-base mb-8 leading-relaxed pt-8">
+                We see these problems all the time — and <span className="font-bold">we build <br/> systems that solve them.</span>
               </p>
 
               <ul className="space-y-3">
@@ -78,8 +79,8 @@ const SolvingSection = () => {
                 <h3 className="text-2xl font-extrabold text-gray-900">The Better Way Forward</h3>
               </div>
 
-              <p className="text-gray-900 text-base mb-8 leading-relaxed">
-                Our commerce solutions go beyond the basics, combining modern design with enterprise-grade flexibility — <span className="font-bold">without the complexity.</span>
+              <p className="text-gray-900 text-base mb-8 pt-8 leading-relaxed">
+                Our commerce solutions go beyond the basics, combining modern design <br/> with enterprise-grade flexibility — <span className="font-bold">without the complexity.</span>
               </p>
 
               <ul className="space-y-5">
@@ -130,15 +131,15 @@ const SolvingSection = () => {
           </GridCol>
         </GridContainer>
 
-        <div className="absolute w-full h-px bg-gray-400" style={{ top: 'calc(4rem + 120px + 20px)' }}></div>
+        <div className="absolute w-full h-px bg-gray-400 opacity-30" style={{ top: 'calc(4rem + 120px + 20px)' }}></div>
 
-        <div className="absolute w-full h-px bg-gray-400" style={{ top: 'calc(4rem + 120px + 100px)' }}></div>
+        <div className="absolute w-full h-px bg-gray-400 opacity-30" style={{ top: 'calc(4rem + 120px + 100px)' }}></div>
 
-        <div className="w-full h-px bg-gray-400"></div>
+        <div className="w-full h-px bg-gray-400 opacity-30"></div>
       </GridSection>
 
-      <section className="lg:hidden pt-8 pb-8 bg-white">
-        <div className="px-6">
+      <section className="lg:hidden bg-white">
+        <div className="px-6 pt-8 pb-8">
           <div className="mb-8">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4 leading-tight">
               Solving What Slows You Down
@@ -159,7 +160,7 @@ const SolvingSection = () => {
             </div>
 
             <p className="text-gray-900 text-sm mb-4 leading-relaxed">
-              We see these problems all the time — and <span className="font-bold">we build systems that solve them.</span>
+              We see these problems all the time — and <span className="font-bold">we <br/> build systems that solve them.</span>
             </p>
 
             <ul className="space-y-2.5">
@@ -201,7 +202,7 @@ const SolvingSection = () => {
 
         <div className="w-full h-px bg-gray-300 mb-6"></div>
 
-        <div className="px-6">
+        <div className="px-6 pb-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="text-green-500 text-2xl font-bold">+</span>
@@ -209,7 +210,7 @@ const SolvingSection = () => {
             </div>
 
             <p className="text-gray-900 text-sm mb-4 leading-relaxed">
-              Our commerce solutions go beyond the basics, combining modern design with enterprise-grade flexibility — <span className="font-bold">without the complexity.</span>
+              Our commerce solutions go beyond the basics,<br/> combining modern design with enterprise-grade<br/> flexibility — <span className="font-bold">without the complexity.</span>
             </p>
 
             <ul className="space-y-4">
@@ -258,8 +259,6 @@ const SolvingSection = () => {
             </ul>
           </div>
         </div>
-
-        <div className="w-full h-px bg-gray-300 mt-6"></div>
       </section>
     </>
   );
