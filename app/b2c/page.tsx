@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import FeatureSection from "./sections/FeatureSection";
 import HeroSection from "./sections/HeroSection";
+import ModularSection from "./sections/ModularSection";
 import SolutionsSection from "./sections/SolutionsSection";
 import SolvingSection from "./sections/SolvingSection";
 
@@ -11,6 +12,7 @@ export default function About() {
       <FeatureSection />
       <SolvingSection />
       <SolutionsSection />
+      <ModularSection />
     </main>
   );
 }

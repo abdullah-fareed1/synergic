@@ -64,7 +64,7 @@ const SolutionsSection = () => {
               <div className="flex items-center justify-between p-6 w-full">
                 <div>
                   <p className="text-sm text-white/80 mb-1">Talk to an eCommerce expert</p>
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-xl text-white">
                     Let's create your new eShop
                   </h3>
                 </div>
@@ -236,7 +236,7 @@ const SolutionsSection = () => {
           <div className="flex items-center justify-between p-6">
             <div>
               <p className="text-sm text-white/80 mb-1">Talk to an eCommerce expert</p>
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl text-white">
                 Let's create your new eShop
               </h3>
             </div>
