@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import CommerceLeadersSection from "./sections/CommerceLeadersSection";
 import FeatureSection from "./sections/FeatureSection";
 import HeroSection from "./sections/HeroSection";
 import ModularSection from "./sections/ModularSection";
@@ -13,6 +14,7 @@ export default function About() {
       <SolvingSection />
       <SolutionsSection />
       <ModularSection />
+      <CommerceLeadersSection />
     </main>
   );
 }

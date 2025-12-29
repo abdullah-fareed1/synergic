@@ -1,4 +1,3 @@
-import React from 'react';
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 // Stripe background
