@@ -8,7 +8,7 @@ import ModularSection from "./sections/ModularSection";
 import SolutionsSection from "./sections/SolutionsSection";
 import SolvingSection from "./sections/SolvingSection";
 
-export default function About() {
+export default function B2C() {
   return (
     <main className="min-h-screen bg-white">
       <HeroSection />
