@@ -77,11 +77,11 @@ const CommerceLeadersSection = () => {
 
             <GridCol
               span="CD"
-              className="relative h-105"
+              className="relative h-150"
               style={{ overflow: "visible", padding: 0, margin: 0 }}
             >
               <div
-                className="absolute left-0 top-0 bottom-0 h-full"
+                className="absolute left-0 top-0 bottom-0 h-full mt-5 mb-10"
                 style={{ width: "150%", overflow: "visible" }}
               >
                 <div
