@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import BuiltToEvolveSection from "./sections/BuiltToEvolveSection";
 import CommerceLeadersSection from "./sections/CommerceLeadersSection";
 import FeatureSection from "./sections/FeatureSection";
 import HeroSection from "./sections/HeroSection";
@@ -17,6 +18,8 @@ export default function About() {
       <ModularSection />
       <CommerceLeadersSection />
       <ModernTechnologySection />
+      <BuiltToEvolveSection />
+      <Footer />
     </main>
   );
 }
