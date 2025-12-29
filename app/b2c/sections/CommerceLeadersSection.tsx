@@ -155,7 +155,7 @@ const CommerceLeadersSection = () => {
       </GridSection>
 
       {/* Mobile Layout */}
-      <section className="lg:hidden px-4 py-8 bg-gray-50">
+      <section className="lg:hidden px-4 py-8 bg-gray-50 overflow-x-hidden" >
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
             Trusted by Commerce Leaders
@@ -166,8 +166,8 @@ const CommerceLeadersSection = () => {
           </p>
         </div>
 
-        <div className="relative" style={{ height: "350px" }}>
-          <div className="relative h-full overflow-visible">
+        <div className="relative overflow-x-hidden" style={{ height: "350px" }}>
+          <div className="relative h-full">
             <div className="relative w-full h-full flex items-center overflow-visible">
               {images.map((img, index) => {
                 const nextIndex = (activeIndex + 1) % images.length;
