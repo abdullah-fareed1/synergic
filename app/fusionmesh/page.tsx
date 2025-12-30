@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import FusionMeshGlanceSection from "./sections/FusionMeshGlanceSection";
 import HeroSection from "./sections/HeroSection";
+import SolutionsSection from "./sections/SolutionsSection";
 import WhyFusionMeshSection from "./sections/WhyFusionMeshSection";
 
 export default function FusionMesh() {
@@ -9,7 +10,8 @@ export default function FusionMesh() {
       <HeroSection />
       <FusionMeshGlanceSection />
       <WhyFusionMeshSection />
-      <Footer />
+      <SolutionsSection />
+      {/* <Footer /> */}
     </main>
   );
 }
