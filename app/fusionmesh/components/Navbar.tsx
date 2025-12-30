@@ -104,17 +104,9 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             <div className="flex flex-col gap-1">
               <div className="bg-white w-7 h-0.5 rounded-sm mt-0.5" />
               <div className="bg-white w-7 h-0.5 rounded-sm mt-0.5" />
+              <div className="bg-white w-7 h-0.5 rounded-sm mt-0.5" />
             </div>
-            <span
-              className="uppercase font-semibold"
-              style={{
-                color: "#E63946",
-                fontSize: "9px",
-                letterSpacing: "1.55px",
-              }}
-            >
-              MENU
-            </span>
+            
           </div>
         </button>
       </div>
