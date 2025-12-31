@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Synergic Intelligent Systems",
     images: [
       {
-        url: "https://synergic.vercel.app/synergic.webp",
+        url: "https://synergic.vercel.app/images/synergic.webp",
         width: 1200,
         height: 630,
         alt: "Synergic Intelligent Systems – Modular Software Platforms",

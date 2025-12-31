@@ -73,7 +73,7 @@ export default function ExpertandQualitySection() {
 
             <div className="flex items-center justify-between px-12 py-8 cursor-pointer hover:bg-[#e8e8e0] transition-colors" style={{ backgroundColor: '#F3F3EE' }}>
               <div className="flex items-center gap-6">
-                <img src="/iso.png" alt="ISO Certification" className="h-12 w-auto" />
+                <img src="logos/iso.png" alt="ISO Certification" className="h-12 w-auto" />
                 <span className="text-lg font-semibold text-gray-900">ΕΛΟΤ EN ISO 9001:2015</span>
               </div>
               <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">

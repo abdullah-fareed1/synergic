@@ -51,7 +51,7 @@ const ModernTechnologySection = () => {
                 <div className="space-y-6 pt-4">
                   <div className="flex items-start gap-4">
                     <img
-                      src="/24-hour-service.svg"
+                      src="icons/24-hour-service-purple.svg"
                       alt="Cloud Native"
                       className="w-10 h-10 shrink-0"
                     />
@@ -62,7 +62,7 @@ const ModernTechnologySection = () => {
 
                   <div className="flex items-start gap-4">
                     <img
-                      src="/speed-alt.svg"
+                      src="icons/speed-alt-purple.svg"
                       alt="Fast Response"
                       className="w-10 h-10 shrink-0"
                     />
@@ -73,7 +73,7 @@ const ModernTechnologySection = () => {
 
                   <div className="flex items-start gap-4">
                     <img
-                      src="/cloud-network2.svg"
+                      src="icons/cloud-network2.svg"
                       alt="Scalability"
                       className="w-10 h-10 shrink-0"
                     />

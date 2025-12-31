@@ -101,7 +101,7 @@ const IndustryFocusedSection = () => {
               position="absolute"
               className="z-0 h-full"
               style={{
-                backgroundImage: 'url(/industryfocusedsolutions.webp)',
+                backgroundImage: 'url(images/industryfocusedsolutions.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
@@ -201,7 +201,7 @@ const IndustryFocusedSection = () => {
           <div 
             className="absolute inset-0 bg-center"
             style={{ 
-              backgroundImage: 'url(/industryfocusedsolutions.webp)',
+              backgroundImage: 'url(images/industryfocusedsolutions.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center center'
             }}

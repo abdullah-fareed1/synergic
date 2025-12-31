@@ -43,16 +43,16 @@ export default function FeatureSection() {
               </p>
               <div className="flex justify-start gap-2.5">
                 <div className="w-10 h-10 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-                  <img src="/pc-and-smartphone.svg" alt="PC and Smartphone" className="w-5 h-5" />
+                  <img src="icons/pc-and-smartphone.svg" alt="PC and Smartphone" className="w-5 h-5" />
                 </div>
                 <div className="w-10 h-10 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-                  <img src="/server.svg" alt="Server" className="w-5 h-5" />
+                  <img src="icons/server.svg" alt="Server" className="w-5 h-5" />
                 </div>
                 <div className="w-10 h-10 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-                  <img src="/cloud-network.svg" alt="Cloud Network" className="w-5 h-5" />
+                  <img src="icons/cloud-network3.svg" alt="Cloud Network" className="w-5 h-5" />
                 </div>
                 <div className="w-10 h-10 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-                  <img src="/shield-check.svg" alt="Shield Check" className="w-5 h-5" />
+                  <img src="icons/shield-check.svg" alt="Shield Check" className="w-5 h-5" />
                 </div>
               </div>
             </div>
@@ -101,16 +101,16 @@ export default function FeatureSection() {
           
           <div className="flex justify-left gap-3 mb-6">
             <div className="w-12 h-12 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-              <img src="/pc-and-smartphone.svg" alt="PC and Smartphone" className="w-6 h-6" />
+              <img src="icons/pc-and-smartphone.svg" alt="PC and Smartphone" className="w-6 h-6" />
             </div>
             <div className="w-12 h-12 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-              <img src="/server.svg" alt="Server" className="w-6 h-6" />
+              <img src="icons/server.svg" alt="Server" className="w-6 h-6" />
             </div>
             <div className="w-12 h-12 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-              <img src="/cloud-network.svg" alt="Cloud Network" className="w-6 h-6" />
+              <img src="icons/cloud-network3.svg" alt="Cloud Network" className="w-6 h-6" />
             </div>
             <div className="w-12 h-12 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
-              <img src="/shield-check.svg" alt="Shield Check" className="w-6 h-6" />
+              <img src="icons/shield-check.svg" alt="Shield Check" className="w-6 h-6" />
             </div>
           </div>
 

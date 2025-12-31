@@ -2,17 +2,17 @@ import React from "react";
 
 const CustomersLogoSection: React.FC = () => {
   const gridItems = [
-    { hasLogo: true, src: "/bn.png", alt: "BN Logo" },
+    { hasLogo: true, src: "logos/bn.png", alt: "BN Logo" },
     { hasLogo: false },
-    { hasLogo: true, src: "/cronyx.png", alt: "Conyx Logo" },
+    { hasLogo: true, src: "logos/conyx.png", alt: "Conyx Logo" },
     { hasLogo: false },
     { hasLogo: false },
-    { hasLogo: true, src: "/gimell.png", alt: "Gimell Logo" },
+    { hasLogo: true, src: "logos/gimell.png", alt: "Gimell Logo" },
     { hasLogo: false },
-    { hasLogo: true, src: "/cyclops.png", alt: "Cyclops Logo" },
-    { hasLogo: true, src: "/arlington.png", alt: "Arlington Logo" },
+    { hasLogo: true, src: "logos/cyclops.png", alt: "Cyclops Logo" },
+    { hasLogo: true, src: "logos/arlington.png", alt: "Arlington Logo" },
     { hasLogo: false },
-    { hasLogo: true, src: "/beefeater.png", alt: "Beefeater Logo" },
+    { hasLogo: true, src: "logos/beefeater.png", alt: "Beefeater Logo" },
     { hasLogo: false },
   ];
 

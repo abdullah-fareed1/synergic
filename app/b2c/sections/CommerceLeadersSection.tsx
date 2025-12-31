@@ -7,9 +7,9 @@ const CommerceLeadersSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const images = [
-    "/commerce1.png",
-    "/commerce2.png",
-    "/commerce3.png",
+    "images/commerce1.png",
+    "images/commerce2.png",
+    "images/commerce3.png",
   ];
 
   const nextSlide = () => {

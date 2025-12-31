@@ -119,7 +119,7 @@ const SolutionsSection = () => {
         <GridContainer className="min-h-70">
           <GridCol span="A" className="border-r border-gray-300/30">
             <SolutionCard
-              icon="/shopping-cart.svg"
+              icon="icons/shopping-cart.svg"
               title="B2C eCommerce"
               description="fast, mobile-first online stores for brands and merchants"
             />
@@ -127,7 +127,7 @@ const SolutionsSection = () => {
 
           <GridCol span="B" className="border-r border-gray-300/30">
             <SolutionCard
-              icon="/factory-thin.svg"
+              icon="icons/factory-thin.svg"
               title="B2B Commerce Platforms"
               description="custom pricing, roles, bulk orders, automations"
             />
@@ -135,7 +135,7 @@ const SolutionsSection = () => {
 
           <GridCol span="C" className="border-r border-gray-300/30">
             <SolutionCard
-              icon="/shop.svg"
+              icon="icons/shop.svg"
               title="Marketplaces"
               description="multi-vendor and multi-channel commerce"
               comingSoon={true}
@@ -145,7 +145,7 @@ const SolutionsSection = () => {
 
           <GridCol span="D">
             <SolutionCard
-              icon="/boxes.svg"
+              icon="icons/boxes.svg"
               title="Product Information Management (PIM)"
               description="centralized product management across suppliers and channel"
             />
@@ -166,7 +166,7 @@ const SolutionsSection = () => {
         <GridContainer className="min-h-70">
           <GridCol span="A" className="border-r border-gray-300/30">
             <SolutionCard
-              icon="/inbox-up.svg"
+              icon="icons/inbox-up.svg"
               title="Order Management Systems (OMS)"
               description="automated order processing, fulfillment, and inventory control"
             />
@@ -174,7 +174,7 @@ const SolutionsSection = () => {
 
           <GridCol span="B" className="border-r border-gray-300/30">
             <SolutionCard
-              icon="/bulb.svg"
+              icon="icons/bulb.svg"
               title="AI enhanced Product Discovery & Recommendations"
               description="semantic search, personalization, and recommendations"
               comingSoon={true}
@@ -183,7 +183,7 @@ const SolutionsSection = () => {
 
           <GridCol span="C" className="border-r border-gray-300/30">
             <SolutionCard
-              icon="/plug-disconnected.svg"
+              icon="icons/plug-disconnected.svg"
               title="CRM & ERP Integration"
               description="seamless connections to back-office systems"
             />

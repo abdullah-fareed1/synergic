@@ -77,7 +77,7 @@ export default function HeroSection() {
             }}
           />
           <img
-            src="/fusion.webp"
+            src="images/fusion.webp"
             alt="Data Analytics Dashboard"
             className="w-full h-auto object-cover"
           />
@@ -130,7 +130,7 @@ export default function HeroSection() {
           <div
             className="absolute top-0 bottom-0 right-0"
             style={{
-              backgroundImage: "url(/fusion.webp)",
+              backgroundImage: "url(images/fusion.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               left: "50%",

@@ -16,7 +16,7 @@ export default function OurSolutionsSection() {
         <div 
           className="absolute right-0 top-0 bottom-0 w-[67.5%] pointer-events-none -z-10"
           style={{
-            backgroundImage: 'url(/solutions-bg.webp)',
+            backgroundImage: 'url(images/solutions-bg.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -84,7 +84,7 @@ export default function OurSolutionsSection() {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: 'url(/solutions-bg.webp)',
+              backgroundImage: 'url(images/solutions-bg.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

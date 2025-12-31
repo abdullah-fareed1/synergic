@@ -30,7 +30,7 @@ export default function HeroSection() {
 
           <div className="w-full flex justify-center">
             <img
-              src="/b2c-mobile.svg"
+              src="images/b2c-mobile.svg"
               alt="eCommerce Platform"
               className="w-full max-w-md"
             />
@@ -83,7 +83,7 @@ export default function HeroSection() {
             {/* img */}
             <GridCol span="CD" className="flex items-center justify-center  p-12">
               <img
-                src="/b2c-mobile.svg"
+                src="images/b2c-mobile.svg"
                 alt="eCommerce Platform"
                 className="w-full max-w-2xl"
               />

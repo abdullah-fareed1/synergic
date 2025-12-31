@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon-dark.svg",
+        url: "logos/favicon-dark.svg",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/favicon-light.svg",
+        url: "logos/favicon-light.svg",
         media: "(prefers-color-scheme: dark)",
       },
     ],

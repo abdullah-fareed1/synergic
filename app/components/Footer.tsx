@@ -9,39 +9,39 @@ const footerData = {
     links: [
       {
         label: "Enterprise Platforms & Apps",
-        url: "/enterprise/platforms-apps",
+        url: "#",
       },
-      { label: "Automations", url: "/enterprise/automations" },
-      { label: "Integrations", url: "/enterprise/integrations" },
-      { label: "Custom Solutions", url: "/enterprise/custom-solutions" },
-      { label: "Startups & SaaS", url: "/enterprise/startups-saas" },
+      { label: "Automations", url: "#" },
+      { label: "Integrations", url: "#" },
+      { label: "Custom Solutions", url: "#" },
+      { label: "Startups & SaaS", url: "#" },
     ],
   },
   ecommerce: {
     title: "ECOMMERCE",
     links: [
-      { label: "Composable Commerce", url: "/ecommerce/composable-commerce" },
-      { label: "B2C Solutions", url: "/ecommerce/b2c-solutions" },
-      { label: "B2B Platforms", url: "/ecommerce/b2b-platforms" },
-      { label: "ERP Integrations", url: "/ecommerce/erp-integrations" },
-      { label: "PIM Systems", url: "/ecommerce/pim-systems" },
-      { label: "Order Management Systems", url: "/ecommerce/order-management" },
+      { label: "Composable Commerce", url: "#" },
+      { label: "B2C Solutions", url: "/b2c" },
+      { label: "B2B Platforms", url: "#" },
+      { label: "ERP Integrations", url: "#" },
+      { label: "PIM Systems", url: "#" },
+      { label: "Order Management Systems", url: "#" },
     ],
   },
   techAdvantage: {
     title: "TECH ADVANTAGE",
     links: [
-      { label: "Fusion Mesh", url: "/tech/fusion-mesh" },
-      { label: "Core Technologies", url: "/tech/core-technologies" },
-      { label: "Commerce Tech Stack", url: "/tech/commerce-stack" },
+      { label: "Fusion Mesh", url: "/fusionmesh" },
+      { label: "Core Technologies", url: "#" },
+      { label: "Commerce Tech Stack", url: "#" },
     ],
   },
   cases: {
     title: "CASES",
     links: [
-      { label: "website development", url: "/cases/website-development" },
-      { label: "CMS technology", url: "/cases/cms-technology" },
-      { label: "digital marketing", url: "/cases/digital-marketing" },
+      { label: "website development", url: "#" },
+      { label: "CMS technology", url: "#" },
+      { label: "digital marketing", url: "#" },
     ],
   },
   company: {
@@ -388,7 +388,7 @@ const Footer = () => {
             style={{ left: "50%" }}
           >
             <img
-              src="/footer-logo.svg"
+              src="logos/footer-logo.svg"
               alt="Synergic Logo"
               className="h-12 w-auto"
             />

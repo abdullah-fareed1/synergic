@@ -13,7 +13,7 @@ export default function MissionSection() {
         <div className="flex flex-col items-start  mb-11">
           <div className="relative flex items-center justify-center">
             <img
-              src="/mission.png"
+              src="images/mission.png"
               alt="Mission"
               className="w-66 h-66"
             />
@@ -52,7 +52,7 @@ export default function MissionSection() {
           >
             <div className="relative flex items-center justify-center">
               <img
-                src="/mission.png"
+                src="images/mission.png"
                 alt="Mission"
                 className="w-[400px] h-[40px] xl:w-[450px] xl:h-[450px] object-contain"
               />

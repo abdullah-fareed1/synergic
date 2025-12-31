@@ -21,18 +21,20 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         {/* Desktop Logo */}
         <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4">
           <img
-            src="/synergic-logo.svg"
+            src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
             className="h-8 w-auto"
+            onClick={() => window.location.href = '/'}
           />
         </div>
 
         {/* Mobile Logo */}
         <div className="lg:hidden flex items-center px-4 py-4">
           <img
-            src="/synergic-logo.svg"
+            src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
             className="h-7 w-auto"
+            onClick={() => window.location.href = '/'}
           />
         </div>
 

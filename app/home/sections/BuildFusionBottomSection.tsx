@@ -66,7 +66,7 @@ const BuildFusionBottomSection: React.FC = () => {
           <GridCol span="CD" className="relative">
             <div className="relative aspect-4/3">
               <img 
-                src="/fusion.webp" 
+                src="images/fusion.webp" 
                 alt="FusionMesh Platform Dashboard"
                 className="w-full h-full object-cover"
               />
@@ -97,7 +97,7 @@ const BuildFusionBottomSection: React.FC = () => {
           <div className="relative">
             <div className="relative aspect-4/3">
               <img 
-                src="/fusion.webp" 
+                src="images/fusion.webp" 
                 alt="FusionMesh Platform Dashboard"
                 className="w-full h-full object-cover"
               />
