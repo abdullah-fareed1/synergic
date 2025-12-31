@@ -1,9 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useEffect, useState } from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const SolutionsSection = () => {
   const stripePattern =
     "repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.06) 0px, rgba(0, 0, 0, 0.06) 1px, transparent 1px, transparent 4px)";
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+  const [buttonTopPosition, setButtonTopPosition] = useState('0px');
+  const [buttonHeight, setButtonHeight] = useState('89px');
+
+  useEffect(() => {
+    const updateButtonPosition = () => {
+      if (sectionRef.current && buttonRef.current) {
+        const sectionRect = sectionRef.current.getBoundingClientRect();
+        const buttonRect = buttonRef.current.getBoundingClientRect();
+        const buttonTopRelative = buttonRect.top - sectionRect.top;
+        setButtonTopPosition(`${buttonTopRelative}px`);
+        setButtonHeight(`${buttonRect.height}px`);
+      }
+    };
+
+    updateButtonPosition();
+    window.addEventListener('resize', updateButtonPosition);
+    setTimeout(updateButtonPosition, 100);
+    return () => window.removeEventListener('resize', updateButtonPosition);
+  }, []);
 
   const solutions = [
     {
@@ -47,6 +71,7 @@ const SolutionsSection = () => {
 
   return (
     <div className="bg-[#F3F3EE]">
+      {/* Desktop Grid Layout */}
       <GridSection
         showLines={[true, true, true, true, true]}
         bgColor="bg-[#F3F3EE]"
@@ -138,87 +163,93 @@ const SolutionsSection = () => {
           </GridCol>
         </GridContainer>
       </GridSection>
+
+      {/* Desktop Grid Layout - Second Section */}
       <GridSection
         showLines={[true, true, true, true, true]}
         bgColor="bg-[#F3F3EE]"
         className="relative hidden lg:block"
         minHeight="450px"
       >
-        <div
-          className="hidden lg:block absolute left-0 right-0 h-px bg-gray-400 opacity-30"
-          style={{ top: "1px", zIndex: 2 }}
-        />
-        <div
-          className="hidden lg:block absolute left-0 right-0 h-px bg-gray-400 opacity-30"
-          style={{ bottom: "165px", zIndex: 2 }}
-        />
+        <div ref={sectionRef} className="relative w-full h-full">
+          <div
+            className="hidden lg:block absolute left-0 right-0 h-px bg-gray-400 opacity-30"
+            style={{ top: "1px", zIndex: 2 }}
+          />
 
-        <div
-          className="hidden lg:block absolute left-0 right-0 h-px bg-gray-400 opacity-30"
-          style={{ bottom: "63px", zIndex: 2 }}
-        />
+          <div
+            className="hidden lg:block absolute left-0 right-0 h-px bg-gray-400 opacity-30"
+            style={{ top: buttonTopPosition, zIndex: 6 }}
+          />
 
-        <GridContainer className="items-stretch min-h-[450px]">
-          <GridCol
-            span="AB"
-            className="py-16 px-0 flex flex-col justify-between relative"
-            style={{
-              background: stripePattern,
-            }}
-          >
-            <div className="flex-1 flex items-center">
-              <h2 className="text-4xl font-extrabold text-black leading-tight px-8">
-                Powered by Proven <br /> Technologies
-              </h2>
-            </div>
+          <div
+            className="hidden lg:block absolute left-0 right-0 h-px bg-gray-400 opacity-30"
+            style={{ top: `calc(${buttonTopPosition} + ${buttonHeight})`, zIndex: 6 }}
+          />
 
-            <div>
-              <button className="w-full flex items-center justify-between px-8 py-6 bg-white text-black text-lg transition-all duration-300 hover:bg-gray-50">
-                <div className="flex flex-col items-start">
-                  <span className="text-sm text-black mb-1">
-                    Want to see what's under the hood?
-                  </span>
-                  <span className="text-xl">Explore Our Tech Advantage</span>
-                </div>
-                <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center shrink-0">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </GridCol>
-          <GridCol
-            span="CD"
-            className="py-16 px-8 flex flex-col justify-between"
-          >
-            <div className="flex-1 flex items-center">
-              <p className="text-black text-xl leading-relaxed">
-                Fusion is built with industry-grade, future-ready technologies
-                that support scale, security, and performance.
-              </p>
-            </div>
-            <div className="flex items-center" style={{ height: "89px" }}>
-              <p className="text-black text-l leading-relaxed">
-                From modern data layers to AI-ready architectures, it brings
-                together the best of today's tech — engineered into one cohesive
-                framework.
-              </p>
-            </div>
-          </GridCol>
-        </GridContainer>
+          <GridContainer className="items-stretch min-h-[450px]">
+            <GridCol
+              span="AB"
+              className="py-16 px-0 flex flex-col justify-between relative"
+              style={{
+                background: stripePattern,
+              }}
+            >
+              <div className="flex-1 flex items-center">
+                <h2 className="text-4xl font-extrabold text-black leading-tight px-8">
+                  Powered by Proven <br /> Technologies
+                </h2>
+              </div>
+
+              <div ref={buttonRef}>
+                <button className="w-full flex items-center justify-between px-8 py-6 bg-white text-black text-lg cursor-pointer">
+                  <div className="flex flex-col items-start">
+                    <span className="text-sm text-black mb-1">
+                      Want to see what's under the hood?
+                    </span>
+                    <span className="text-xl">Explore Our Tech Advantage</span>
+                  </div>
+                  <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center shrink-0">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </GridCol>
+            <GridCol
+              span="CD"
+              className="py-16 px-8 flex flex-col justify-between"
+            >
+              <div className="flex-1 flex items-center">
+                <p className="text-black text-xl leading-relaxed">
+                  Fusion is built with industry-grade, future-ready technologies
+                  that support scale, security, and performance.
+                </p>
+              </div>
+              <div className="flex items-center" style={{ height: "89px" }}>
+                <p className="text-black text-l leading-relaxed">
+                  From modern data layers to AI-ready architectures, it brings
+                  together the best of today's tech — engineered into one cohesive
+                  framework.
+                </p>
+              </div>
+            </GridCol>
+          </GridContainer>
+        </div>
       </GridSection>
 
+      {/* Mobile Layout */}
       <section className="lg:hidden">
         <div className="px-6 pt-8 pb-8">
           <h2 className="text-4xl font-extrabold text-black leading-tight mb-4">
@@ -273,7 +304,7 @@ const SolutionsSection = () => {
             <span className="text-xs text-black mb-1">
               Need a custom mix? We'll design the right stack.
             </span>
-            <span className="text-lg font-normal">
+            <span className="text-lg">
               Start your unique commerce platform
             </span>
           </div>
