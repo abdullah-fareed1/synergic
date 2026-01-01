@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import CoreTechnologiesSection from "./sections/CoreTechnologiesSection";
 import HeroSection from "./sections/HeroSection";
 import MixMatchSection from "./sections/MixMatchSection";
+import WhyThisStackSection from "./sections/WhyThisStackSection";
 
 export default function TechAdvantage() {
   return (
@@ -9,6 +10,7 @@ export default function TechAdvantage() {
       <HeroSection />
       <CoreTechnologiesSection />
       <MixMatchSection />
+      <WhyThisStackSection />
       <Footer />
     </main>
   );
