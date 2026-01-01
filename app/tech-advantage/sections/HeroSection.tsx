@@ -102,7 +102,7 @@ export default function HeroSection() {
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
         <GridSection
-          showLines={[true, true, true, true, true]}
+          showLines={[true, false, false, false, true]}
           className="py-20"
           minHeight="700px"
         >
