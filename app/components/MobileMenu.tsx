@@ -12,7 +12,7 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-6 border-b border-gray-800">
         <img
-          src="/synergic-logo.svg"
+          src="logos/synergic-logo.svg"
           alt="Synergic Intelligent Systems"
           className="h-8"
         />

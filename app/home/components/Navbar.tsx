@@ -76,8 +76,8 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
           className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
           style={{ width: '5.56%' }}
         >
-          <div className="flex flex-col items-center gap-1">
-            <div className="flex flex-col gap-1">
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col gap-2">
               <div className="bg-white w-7 h-0.5 rounded-sm" />
               <div className="bg-white w-7 h-0.5 rounded-sm" />
             </div>
