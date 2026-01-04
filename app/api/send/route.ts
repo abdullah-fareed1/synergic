@@ -24,7 +24,7 @@ export async function GET() {
 
     const result = await resend.emails.send({
       from: `Synergic NextJs <${sendingEmail}>`,
-      to: ["contact@synergic.gr"],
+      to: ["abdullahfareed882@gmail.com"],
       replyTo: `${formData.firstName} ${formData.lastName} <${formData.email}>`,
       subject: "Synergic Next.js Contact Form",
       react: EmailTemplate(formData),
