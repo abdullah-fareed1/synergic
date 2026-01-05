@@ -2,11 +2,9 @@ import React from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const ReadyToBuildSection = () => {
-  // Stripes for green background (grey lines on green)
   const stripePatternGreen =
-    "linear-gradient(45deg, #d9d9d9 8.33%, transparent 8.33%, transparent 50%, #d9d9d9 50%, #d9d9d9 58.33%, transparent 58.33%, transparent 100%)";
+    "linear-gradient(45deg, rgba(217, 217, 217, 0.2) 8.33%, transparent 8.33%, transparent 50%, rgba(217, 217, 217, 0.2) 50%, rgba(217, 217, 217, 0.2) 58.33%, transparent 58.33%, transparent 100%)";
   
-  // Stripes for white background (grey lines on white)
   const stripePatternWhite =
     "linear-gradient(45deg, #d9d9d9 8.33%, #ffffff 8.33%, #ffffff 50%, #d9d9d9 50%, #d9d9d9 58.33%, #ffffff 58.33%, #ffffff 100%)";
   
@@ -16,7 +14,6 @@ const ReadyToBuildSection = () => {
     <>
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        {/* Section 1: Content Section */}
         <GridSection
           bgColor="bg-transparent"
           showLines={[true, true, true, true, true]}
@@ -25,71 +22,105 @@ const ReadyToBuildSection = () => {
             className="absolute left-0 w-[5.56%] top-0 bottom-0 bg-[#2B7856]"
             style={{ zIndex: 0 }}
           />
+          
+          <div
+            className="absolute left-0 w-[5.56%] top-0"
+            style={{ 
+              zIndex: 1,
+              height: '80%',
+              backgroundImage: stripePatternGreen,
+              backgroundSize: stripeSize,
+              borderBottom: '1px solid rgba(156, 163, 175, 0.3)'
+            }}
+          />
+          
           <div
             className="absolute right-[5.56%] w-[22.22%] top-0 bottom-0 bg-white"
             style={{ zIndex: 0 }}
           />
           <div
             className="absolute right-0 w-[5.56%] top-0 bottom-0 bg-white"
-            style={{ zIndex: 0 }}
+            style={{ 
+              zIndex: 0,
+              backgroundImage: stripePatternWhite,
+              backgroundSize: stripeSize,
+            }}
           />
 
-          {/* Manual Gridlines */}
-          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
+          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
 
           <GridContainer>
             <GridCol
               span="AB"
-              className="px-12 py-16 text-white flex flex-col justify-center min-h-[400px] relative"
+              className="px-12 py-16 text-white flex flex-col justify-center min-h-100 relative"
               style={{ zIndex: 5 }}
             >
               <div className="absolute inset-0 bg-[#2B7856]" style={{ zIndex: -1 }} />
-              <h2 className="text-5xl font-extrabold mb-6 relative z-10">
+              
+              <div 
+                className="absolute inset-y-0 left-0 w-1/2"
+                style={{ 
+                  zIndex: -1,
+                  height: '80%',
+                  backgroundImage: stripePatternGreen,
+                  backgroundSize: stripeSize,
+                  borderBottom: '1px solid rgba(156, 163, 175, 0.3)'
+                }}
+              />
+              
+              <h2 className="text-4xl font-extrabold mb-6 relative z-10">
                 Ready to Build Your eShop?
               </h2>
               <p className="text-2xl font-normal mb-8 relative z-10">
                 Stop losing sales to slow, outdated platforms.
               </p>
-              <p className="text-base mb-4 opacity-90 relative z-10">
-                Give your customers the fast, modern shopping experience they
+              <p className="text-lg mb-4 opacity-90 relative z-10">
+                Give your customers the fast, modern shopping experience they<br/>
                 expect — while keeping more of your revenue.
               </p>
-              <p className="text-base opacity-90 relative z-10">
-                Build on technology designed for retail growth — without
+              <p className="text-lg opacity-90 relative z-10">
+                Build on technology designed for retail growth — without<br/>
                 transaction fees or platform limits.
               </p>
             </GridCol>
 
             <GridCol
               span="CD"
-              className="px-12 py-16 flex flex-col justify-center min-h-[400px] relative"
+              className="px-12 py-16 flex flex-col justify-center min-h-100 relative"
               style={{ zIndex: 5 }}
             >
               <div className="absolute inset-0 bg-white" style={{ zIndex: -1 }} />
-              <h2 className="text-5xl font-extrabold mb-6 text-black relative z-10">
+              <div 
+                className="absolute inset-y-0 right-0 w-1/2"
+                style={{ 
+                  zIndex: -1,
+                  backgroundImage: stripePatternWhite,
+                  backgroundSize: stripeSize,
+                }}
+              />
+              <h2 className="text-4xl font-extrabold mb-6 text-black relative z-10">
                 Complete Commerce Solutions
               </h2>
               <p className="text-2xl font-normal mb-8 text-black relative z-10">
                 B2C is just the beginning.
               </p>
-              <p className="text-base mb-4 text-gray-700 relative z-10">
+              <p className="text-lg mb-4 text-gray-700 relative z-10">
                 With our modular platform, you can extend your eShop into B2B
-                portals, digital marketplaces, or add enterprise-grade PIM, OMS,
+                portals, digital<br/> marketplaces, or add enterprise-grade PIM, OMS,
                 and ERP integrations.
               </p>
-              <p className="text-base text-gray-700 relative z-10">
+              <p className="text-lg text-gray-700 relative z-10">
                 Even AI-powered product discovery is on the roadmap. One
-                flexible foundation — endless ways to grow your business.
+                flexible foundation — endless<br/> ways to grow your business.
               </p>
             </GridCol>
           </GridContainer>
         </GridSection>
 
-        {/* Section 2: Button Section */}
         <GridSection
           bgColor="bg-transparent"
           showLines={[true, false, true, false, true]}
@@ -116,10 +147,9 @@ const ReadyToBuildSection = () => {
             style={{ zIndex: 0 }}
           />
 
-          {/* Manual Gridlines - Only 1, 3, 5 */}
-          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
+          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
 
           <GridContainer>
             <GridCol span="AB" className="relative" style={{ zIndex: 5 }}>
@@ -187,29 +217,25 @@ const ReadyToBuildSection = () => {
           </GridContainer>
         </GridSection>
 
-        {/* Section 3: Spacer with Stripes */}
         <GridSection
           bgColor="bg-transparent"
           showLines={[true, true, true, true, true]}
           className="h-20 relative"
         >
-          {/* Left side margin + A + B = Green background */}
           <div
             className="absolute left-0 w-[50%] top-0 bottom-0 bg-[#2B7856]"
             style={{ zIndex: 0 }}
           />
-          {/* Right side C + D + margin = White background */}
           <div
             className="absolute right-0 w-[50%] top-0 bottom-0 bg-white"
             style={{ zIndex: 0 }}
           />
 
-          {/* Manual Gridlines */}
-          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
-          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" style={{ zIndex: 100 }} />
+          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
+          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-15" style={{ zIndex: 100 }} />
 
           <GridContainer className="h-full">
             <GridCol span="A" className="h-20 relative" style={{ zIndex: 5 }}>
@@ -230,8 +256,6 @@ const ReadyToBuildSection = () => {
               span="C"
               className="h-20 relative"
               style={{
-                backgroundImage: stripePatternWhite,
-                backgroundSize: stripeSize,
                 zIndex: 5,
               }}
             >
