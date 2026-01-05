@@ -15,20 +15,16 @@ export default function ChooseCombineGrow() {
   return (
     <section className="bg-slate-900 text-white relative overflow-hidden">
       <div className="max-w-full mx-auto relative py-16 md:py-20">
-        {/* Desktop Grid Lines - 18 column system */}
         <div className="hidden md:block absolute inset-0 pointer-events-none">
-          {/* Vertical lines at positions 1, 5, 9, 13, 17 out of 18 */}
-          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
-          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
-          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
-          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
-          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-40" />
+          <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+          <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
         </div>
 
         <div className="max-w-full mx-auto px-6 md:px-0 relative z-10">
-          {/* Mobile Accordion Layout */}
           <div className="md:hidden">
-            {/* Mobile Header */}
             <div className="mb-12">
               <p className="text-gray-400 text-xs tracking-widest mb-3 uppercase">
                 CHOOSE. COMBINE. GROW.
@@ -49,7 +45,6 @@ export default function ChooseCombineGrow() {
               </div>
             </div>
 
-            {/* Choose Accordion */}
             <div className="border-t border-gray-700">
               <button
                 onClick={() => toggle("choose")}
@@ -81,8 +76,6 @@ export default function ChooseCombineGrow() {
                 </div>
               )}
             </div>
-
-            {/* Combine Accordion */}
             <div className="border-t border-gray-400">
               <button
                 onClick={() => toggle("combine")}
@@ -146,7 +139,6 @@ export default function ChooseCombineGrow() {
               )}
             </div>
 
-            {/* Grow Accordion */}
             <div className="border-t border-gray-400">
               <button
                 onClick={() => toggle("grow")}
@@ -179,7 +171,6 @@ export default function ChooseCombineGrow() {
               )}
             </div>
 
-            {/* Mobile CTA Button */}
             <div className="pt-8">
               <button
                 className="w-full text-white px-6 py-5 rounded flex items-center justify-between transition"
@@ -192,8 +183,8 @@ export default function ChooseCombineGrow() {
                 }
               >
                 <div className="text-left">
-                  <div className="text-xs mb-0.5">Start now</div>
-                  <div className="font-bold text-base">
+                  <div className="text-base mb-0.5">Start now</div>
+                  <div className="font-semibold text-base">
                     Let's Build Your System Together
                   </div>
                 </div>
@@ -211,12 +202,10 @@ export default function ChooseCombineGrow() {
           {/* Desktop Layout */}
           <div className="hidden md:block relative">
             <div className="flex">
-              {/* Left Section - Line 1 to Center (5.56% to 50%) = 8 parts */}
               <div
                 className="flex flex-col justify-between"
                 style={{ width: "50%" }}
               >
-                {/* Content Area - starts after line 1, ends at center */}
                 <div className="pl-[16.67%] pr-[11.11%] py-12">
                   <p className="text-gray-400 text-xs tracking-widest mb-4 uppercase">
                     CHOOSE. COMBINE. GROW.
@@ -235,7 +224,6 @@ export default function ChooseCombineGrow() {
                   </p>
                 </div>
 
-                {/* CTA Button - Starts after line 1, at line 2 (27.78%) */}
                 <div className="pl-[11.11%]">
                   <button
                     className="w-full text-white px-8 py-6 flex items-center justify-between transition"
@@ -248,8 +236,8 @@ export default function ChooseCombineGrow() {
                     }
                   >
                     <div className="text-left">
-                      <div className="text-xs mb-1">Start now</div>
-                      <div className="font-bold text-base leading-tight">
+                      <div className="text-lg mb-1">Start now</div>
+                      <div className="text-lg font-semibold leading-tight">
                         Let's Build Your System Together
                       </div>
                     </div>
@@ -264,15 +252,12 @@ export default function ChooseCombineGrow() {
                 </div>
               </div>
 
-              {/* Right Section - Center to Line 5 (50% to 94.44%) = 8 parts */}
               <div className="relative" style={{ width: "50%" }}>
-                {/* Horizontal line from center to line 5 */}
                 <div
-                  className="absolute left-0 top-1/2 h-px bg-gray-400 opacity-40"
+                  className="absolute left-0 top-1/2 h-px bg-gray-400 opacity-30"
                   style={{ right: "11.11%" }}
                 />
 
-                {/* Diagonal striped background */}
                 <div
                   className="absolute h-1/2 pointer-events-none"
                   style={{
@@ -293,7 +278,6 @@ export default function ChooseCombineGrow() {
                   className="grid grid-cols-2 grid-rows-2 h-full"
                   style={{ paddingRight: "11.11%" }}
                 >
-                  {/* Choose - Top Left */}
                   <div className="px-8 py-12 flex flex-col justify-center">
                     <div
                       className="font-bold mb-2 text-sm"
@@ -313,7 +297,6 @@ export default function ChooseCombineGrow() {
                     </p>
                   </div>
 
-                  {/* Combine - Top Right */}
                   <div className="px-8 py-12 flex flex-col justify-center">
                     <div
                       className="font-bold mb-2 text-sm"
@@ -331,7 +314,6 @@ export default function ChooseCombineGrow() {
                     </p>
                   </div>
 
-                  {/* Grow - Bottom Left */}
                   <div className="px-8 py-12 flex flex-col justify-center">
                     <div
                       className="font-bold mb-2 text-sm"
@@ -350,7 +332,6 @@ export default function ChooseCombineGrow() {
                     </p>
                   </div>
 
-                  {/* Checklist - Bottom Right */}
                   <div className="px-8 py-12 flex items-center relative z-10">
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
