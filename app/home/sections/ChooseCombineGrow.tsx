@@ -207,15 +207,15 @@ export default function ChooseCombineGrow() {
                 style={{ width: "50%" }}
               >
                 <div className="pl-[16.67%] pr-[11.11%] py-12">
-                  <p className="text-gray-400 text-xs tracking-widest mb-4 uppercase">
+                  <p className="text-gray-400 font-extrabold text-sm tracking-widest mb-4 uppercase">
                     CHOOSE. COMBINE. GROW.
                   </p>
-                  <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                  <h2 className="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
                     Solutions that fit your strategy
                   </h2>
-                  <p className="text-gray-300 text-base lg:text-lg mb-5 leading-relaxed">
-                    Every business is different. That's why we don't just offer
-                    platforms — we design systems that match how you sell,
+                  <p className="text-gray-300 text-lg lg:text-2xl mb-5 leading-relaxed">
+                    Every business is different. That's why we don't just<br/> offer
+                    platforms — we design systems that match<br/> how you sell,
                     operate, and grow.
                   </p>
                   <p className="text-gray-300 text-base lg:text-lg leading-relaxed">

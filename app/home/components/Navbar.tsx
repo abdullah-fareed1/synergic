@@ -46,7 +46,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
 
         {/* Desktop Get in Touch */}
         <div className="hidden lg:flex items-center absolute right-[5.56%] top-0 bottom-0 pr-4 gap-3">
-          <span className="text-white text-sm font-medium tracking-wide uppercase">
+          <span className="text-white text-sm tracking-wide uppercase">
             Get in Touch
           </span>
           <div

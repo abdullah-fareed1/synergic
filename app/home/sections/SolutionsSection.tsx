@@ -96,7 +96,7 @@ const SolutionsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative mb-12">
+        <div className="relative mb-5">
           <div className="absolute top-0 left-0 right-0 h-px bg-gray-300 opacity-30" />
 
           <div className="lg:mx-[5.56%] bg-[#F3F3EE] py-6 px-6 lg:px-8">
@@ -129,7 +129,7 @@ const SolutionsSection: React.FC = () => {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-400 opacity-30" />
         </div>
 
-        <div className="lg:ml-[5.56%] lg:mr-[5.56%] mb-8">
+        <div className="lg:ml-[5.56%] lg:mr-[5.56%] mb-5">
           <p className="text-lg font-bold text-gray-800 pl-4">
             From eShops to{" "}
             <span className="text-[#FB3B22] font-semibold">
