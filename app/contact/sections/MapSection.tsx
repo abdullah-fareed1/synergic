@@ -4,12 +4,15 @@ import Image from "next/image";
 const MapSection = () => {
   return (
     <>
-      <GridSection desktopOnly={true} showLines={[false, false, false, false, true]}>
+      <GridSection
+        desktopOnly={true}
+        showLines={[false, false, false, false, true]}
+      >
         <GridContainer className="h-[350px]">
           <GridCol span="AB" className="h-[350px] relative">
             <div className="absolute inset-0 -left-[calc(5.56%/0.4444)]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.5!2d23.7287!3d37.9987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3f4a9b0001%3A0x0!2sEvalkidou%205%20%26%20Liosion%2C%20Athens%2010445!5e0!3m2!1sen!2sgr!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4769.2838531695015!2d23.719423276963727!3d37.999459399183785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a3283ed09869%3A0x87b7129c784d81a4!2sSynergic%20Software!5e1!3m2!1sen!2sgr!4v1767703338378!5m2!1sen!2sgr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -87,7 +90,7 @@ const MapSection = () => {
 
         <div className="h-[300px] w-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.5!2d23.7287!3d37.9987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3f4a9b0001%3A0x0!2sEvalkidou%205%20%26%20Liosion%2C%20Athens%2010445!5e0!3m2!1sen!2sgr!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4769.2838531695015!2d23.719423276963727!3d37.999459399183785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a3283ed09869%3A0x87b7129c784d81a4!2sSynergic%20Software!5e1!3m2!1sen!2sgr!4v1767703338378!5m2!1sen!2sgr"
             width="100%"
             height="100%"
             style={{ border: 0 }}
