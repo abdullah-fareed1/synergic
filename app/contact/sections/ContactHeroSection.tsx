@@ -237,7 +237,7 @@ export default function ContactHeroSection() {
           </p>
         </div>
 
-        <div className="bg-[var(--brand-dark)]">
+        <div className="bg-(--brand-dark)">
           <div className="px-6 py-6">
             <p className="text-white text-sm leading-relaxed">
               Fill in the contact form<br />
@@ -350,7 +350,7 @@ export default function ContactHeroSection() {
 
         <div className="relative w-full">
           <div className="absolute left-0 top-0 bottom-0 bg-[#2B7856]" style={{ width: '5.56%' }} />
-          <div className="absolute right-0 top-0 bottom-0 bg-[var(--brand-dark)]" style={{ width: '5.56%' }} />
+          <div className="absolute right-0 top-0 bottom-0 bg-(--brand-dark)" style={{ width: '5.56%' }} />
           <div className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-20" style={{ left: '5.56%' }} />
           
           <GridSection
@@ -382,7 +382,7 @@ export default function ContactHeroSection() {
 
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 bg-[#2B7856]" style={{ width: '5.56%' }} />
-          <div className="absolute right-0 top-0 bottom-0 bg-[var(--brand-dark)]" style={{ width: '5.56%' }} />
+          <div className="absolute right-0 top-0 bottom-0 bg-(--brand-dark)" style={{ width: '5.56%' }} />
           <div className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-20" style={{ left: '5.56%' }} />
           <div className="absolute top-0 left-0 right-0 h-px bg-gray-400/30 z-20" />
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-400/30 z-20" />
@@ -462,7 +462,7 @@ export default function ContactHeroSection() {
 
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 bg-[#2B7856]" style={{ width: '5.56%' }} />
-          <div className="absolute right-0 top-0 bottom-0 bg-[var(--brand-dark)]" style={{ width: '5.56%' }} />
+          <div className="absolute right-0 top-0 bottom-0 bg-(--brand-dark)" style={{ width: '5.56%' }} />
           <div className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-20" style={{ left: '5.56%' }} />
           
           <GridSection
@@ -525,7 +525,7 @@ export default function ContactHeroSection() {
                       fill="none" 
                       stroke="currentColor" 
                       strokeWidth="1.5"
-                      className="flex-shrink-0"
+                      className="shrink-0"
                     >
                       <circle cx="12" cy="12" r="10" />
                       <path d="M8 12h8M12 8l4 4-4 4"/>
