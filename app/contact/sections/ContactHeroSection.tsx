@@ -65,13 +65,13 @@ function FloatingTextarea({ name, label, value, onChange, required = false, erro
         onChange={onChange}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className={`w-full h-full px-5 pt-7 bg-transparent text-white text-sm focus:outline-none resize-none peer ${error ? 'border-b-2 border-red-500' : ''}`}
+        className={`w-full h-full px-0 lg:px-5 pt-6 bg-transparent text-white text-base lg:text-sm focus:outline-none resize-none peer ${error ? 'border-b-2 border-red-500' : ''}`}
       />
       <label
-        className={`absolute left-5 transition-all duration-200 pointer-events-none ${error ? 'text-red-400' : 'text-gray-400'}
+        className={`absolute left-0 lg:left-5 transition-all duration-200 pointer-events-none ${error ? 'text-red-400' : 'text-gray-400'}
           ${isActive 
-            ? 'top-2 text-xs' 
-            : 'top-4 text-sm'
+            ? 'top-0 text-xs' 
+            : 'top-4 text-base lg:text-sm'
           }`}
       >
         {label}{required && <span className="text-red-400 ml-0.5">*</span>}
@@ -98,6 +98,8 @@ export default function ContactHeroSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
+  const [desktopWidgetId, setDesktopWidgetId] = useState<number | null>(null);
+  const [mobileWidgetId, setMobileWidgetId] = useState<number | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -124,7 +126,13 @@ export default function ContactHeroSection() {
       return;
     }
 
-    const recaptchaResponse = (window as any).grecaptcha.getResponse();
+    const isMobile = window.innerWidth < 1024;
+    const widgetId = isMobile ? mobileWidgetId : desktopWidgetId;
+    
+    let recaptchaResponse = '';
+    if (widgetId !== null) {
+      recaptchaResponse = (window as any).grecaptcha.getResponse(widgetId);
+    }
     
     if (!recaptchaResponse) {
       alert('Please complete the reCAPTCHA verification');
@@ -161,8 +169,8 @@ export default function ContactHeroSection() {
           company: '',
           message: ''
         });
-        if ((window as any).grecaptcha) {
-          (window as any).grecaptcha.reset();
+        if ((window as any).grecaptcha && widgetId !== null) {
+          (window as any).grecaptcha.reset(widgetId);
         }
       } else {
         setSubmitStatus('error');
@@ -181,11 +189,12 @@ export default function ContactHeroSection() {
       
       if ((window as any).grecaptcha && document.getElementById('recaptcha-container')) {
         try {
-          (window as any).grecaptcha.render('recaptcha-container', {
+          const desktopId = (window as any).grecaptcha.render('recaptcha-container', {
             'sitekey': process.env.NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY,
             'theme': 'dark',
             'size': 'normal'
           });
+          setDesktopWidgetId(desktopId);
         } catch (error) {
           console.error('Error rendering desktop reCAPTCHA:', error);
         }
@@ -193,11 +202,12 @@ export default function ContactHeroSection() {
 
       if ((window as any).grecaptcha && document.getElementById('recaptcha-container-mobile')) {
         try {
-          (window as any).grecaptcha.render('recaptcha-container-mobile', {
+          const mobileId = (window as any).grecaptcha.render('recaptcha-container-mobile', {
             'sitekey': process.env.NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY,
             'theme': 'dark',
             'size': 'normal'
           });
+          setMobileWidgetId(mobileId);
         } catch (error) {
           console.error('Error rendering mobile reCAPTCHA:', error);
         }

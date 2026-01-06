@@ -18,8 +18,8 @@ export function EmailTemplate({
   return (
     <div
       style={{
-        fontFamily: "'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
-        backgroundColor: "#f3f3ee",
+        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+        backgroundColor: "#f8f9fa",
         padding: "40px 20px",
         minHeight: "100vh",
       }}
@@ -29,23 +29,25 @@ export function EmailTemplate({
           maxWidth: "600px",
           margin: "0 auto",
           backgroundColor: "#ffffff",
-          borderRadius: "0",
+          borderRadius: "12px",
           overflow: "hidden",
-          boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          border: "1px solid rgba(0,0,0,0.06)",
         }}
       >
         <div
           style={{
-            backgroundColor: "#2B7856",
-            padding: "32px 40px",
+            backgroundColor: "#1a5f3f",
+            padding: "40px 40px",
+            backgroundImage: "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%)",
           }}
         >
           <h1
             style={{
               margin: "0",
               color: "#ffffff",
-              fontSize: "24px",
-              fontWeight: "700",
+              fontSize: "26px",
+              fontWeight: "600",
               letterSpacing: "-0.5px",
             }}
           >
@@ -53,12 +55,12 @@ export function EmailTemplate({
           </h1>
           <p
             style={{
-              margin: "8px 0 0 0",
-              color: "rgba(255,255,255,0.85)",
-              fontSize: "14px",
+              margin: "10px 0 0 0",
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "15px",
             }}
           >
-            You have received a new inquiry from your website
+            You have received a new inquiry from Synergic Website.
           </p>
         </div>
 
@@ -77,18 +79,18 @@ export function EmailTemplate({
               <tr>
                 <td
                   style={{
-                    padding: "16px 0",
-                    borderBottom: "1px solid #e5e7eb",
+                    padding: "18px 0",
+                    borderBottom: "1px solid #e9ecef",
                   }}
                 >
                   <p
                     style={{
-                      margin: "0 0 4px 0",
-                      fontSize: "12px",
+                      margin: "0 0 6px 0",
+                      fontSize: "11px",
                       fontWeight: "600",
-                      color: "#6b7280",
+                      color: "#6c757d",
                       textTransform: "uppercase",
-                      letterSpacing: "0.5px",
+                      letterSpacing: "0.8px",
                     }}
                   >
                     Full Name
@@ -97,7 +99,7 @@ export function EmailTemplate({
                     style={{
                       margin: "0",
                       fontSize: "16px",
-                      color: "#111827",
+                      color: "#212529",
                       fontWeight: "500",
                     }}
                   >
@@ -109,18 +111,18 @@ export function EmailTemplate({
               <tr>
                 <td
                   style={{
-                    padding: "16px 0",
-                    borderBottom: "1px solid #e5e7eb",
+                    padding: "18px 0",
+                    borderBottom: "1px solid #e9ecef",
                   }}
                 >
                   <p
                     style={{
-                      margin: "0 0 4px 0",
-                      fontSize: "12px",
+                      margin: "0 0 6px 0",
+                      fontSize: "11px",
                       fontWeight: "600",
-                      color: "#6b7280",
+                      color: "#6c757d",
                       textTransform: "uppercase",
-                      letterSpacing: "0.5px",
+                      letterSpacing: "0.8px",
                     }}
                   >
                     Email Address
@@ -130,7 +132,7 @@ export function EmailTemplate({
                     style={{
                       margin: "0",
                       fontSize: "16px",
-                      color: "#2B7856",
+                      color: "#1a5f3f",
                       fontWeight: "500",
                       textDecoration: "none",
                     }}
@@ -143,18 +145,18 @@ export function EmailTemplate({
               <tr>
                 <td
                   style={{
-                    padding: "16px 0",
-                    borderBottom: "1px solid #e5e7eb",
+                    padding: "18px 0",
+                    borderBottom: "1px solid #e9ecef",
                   }}
                 >
                   <p
                     style={{
-                      margin: "0 0 4px 0",
-                      fontSize: "12px",
+                      margin: "0 0 6px 0",
+                      fontSize: "11px",
                       fontWeight: "600",
-                      color: "#6b7280",
+                      color: "#6c757d",
                       textTransform: "uppercase",
-                      letterSpacing: "0.5px",
+                      letterSpacing: "0.8px",
                     }}
                   >
                     Phone Number
@@ -164,7 +166,7 @@ export function EmailTemplate({
                     style={{
                       margin: "0",
                       fontSize: "16px",
-                      color: "#111827",
+                      color: "#212529",
                       fontWeight: "500",
                       textDecoration: "none",
                     }}
@@ -178,18 +180,18 @@ export function EmailTemplate({
                 <tr>
                   <td
                     style={{
-                      padding: "16px 0",
-                      borderBottom: "1px solid #e5e7eb",
+                      padding: "18px 0",
+                      borderBottom: "1px solid #e9ecef",
                     }}
                   >
                     <p
                       style={{
-                        margin: "0 0 4px 0",
-                        fontSize: "12px",
+                        margin: "0 0 6px 0",
+                        fontSize: "11px",
                         fontWeight: "600",
-                        color: "#6b7280",
+                        color: "#6c757d",
                         textTransform: "uppercase",
-                        letterSpacing: "0.5px",
+                        letterSpacing: "0.8px",
                       }}
                     >
                       Company
@@ -198,7 +200,7 @@ export function EmailTemplate({
                       style={{
                         margin: "0",
                         fontSize: "16px",
-                        color: "#111827",
+                        color: "#212529",
                         fontWeight: "500",
                       }}
                     >
@@ -211,29 +213,29 @@ export function EmailTemplate({
               <tr>
                 <td
                   style={{
-                    padding: "16px 0",
+                    padding: "18px 0",
                   }}
                 >
                   <p
                     style={{
-                      margin: "0 0 12px 0",
-                      fontSize: "12px",
+                      margin: "0 0 14px 0",
+                      fontSize: "11px",
                       fontWeight: "600",
-                      color: "#6b7280",
+                      color: "#6c757d",
                       textTransform: "uppercase",
-                      letterSpacing: "0.5px",
+                      letterSpacing: "0.8px",
                     }}
                   >
                     Message
                   </p>
                   <div
                     style={{
-                      backgroundColor: "#f9fafb",
-                      padding: "20px",
-                      borderLeft: "4px solid #2B7856",
+                      backgroundColor: "#f8f9fa",
+                      padding: "24px",
+                      borderLeft: "3px solid #1a5f3f",
                       fontSize: "15px",
                       lineHeight: "1.7",
-                      color: "#374151",
+                      color: "#495057",
                       whiteSpace: "pre-wrap",
                     }}
                   >
@@ -246,17 +248,17 @@ export function EmailTemplate({
 
           <div
             style={{
-              marginTop: "32px",
-              padding: "20px",
-              backgroundColor: "#111D2B",
-              borderRadius: "0",
+              marginTop: "36px",
+              padding: "24px",
+              backgroundColor: "#1a1a1a",
+              borderRadius: "8px",
             }}
           >
             <p
               style={{
-                margin: "0 0 8px 0",
+                margin: "0 0 12px 0",
                 fontSize: "13px",
-                color: "rgba(255,255,255,0.7)",
+                color: "rgba(255,255,255,0.75)",
               }}
             >
               Quick Actions
@@ -273,13 +275,14 @@ export function EmailTemplate({
                       href={`mailto:${email}?subject=Re: Your inquiry to Synergic`}
                       style={{
                         display: "inline-block",
-                        padding: "12px 24px",
-                        backgroundColor: "#2B7856",
+                        padding: "13px 26px",
+                        backgroundColor: "#1a5f3f",
                         color: "#ffffff",
                         fontSize: "14px",
                         fontWeight: "600",
                         textDecoration: "none",
                         marginRight: "12px",
+                        borderRadius: "6px",
                       }}
                     >
                       Reply to Email
@@ -288,13 +291,14 @@ export function EmailTemplate({
                       href={`tel:${phone}`}
                       style={{
                         display: "inline-block",
-                        padding: "12px 24px",
+                        padding: "13px 26px",
                         backgroundColor: "transparent",
                         color: "#ffffff",
                         fontSize: "14px",
                         fontWeight: "600",
                         textDecoration: "none",
-                        border: "1px solid rgba(255,255,255,0.3)",
+                        border: "1.5px solid rgba(255,255,255,0.3)",
+                        borderRadius: "6px",
                       }}
                     >
                       Call Now
@@ -308,16 +312,16 @@ export function EmailTemplate({
 
         <div
           style={{
-            backgroundColor: "#f9fafb",
-            padding: "24px 40px",
-            borderTop: "1px solid #e5e7eb",
+            backgroundColor: "#f8f9fa",
+            padding: "28px 40px",
+            borderTop: "1px solid #e9ecef",
           }}
         >
           <p
             style={{
               margin: "0",
               fontSize: "12px",
-              color: "#9ca3af",
+              color: "#6c757d",
               textAlign: "center",
             }}
           >
