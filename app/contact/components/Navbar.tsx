@@ -101,9 +101,9 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         >
           <div className="flex flex-col items-center gap-1">
             <div className="flex flex-col gap-2">
-              <div className="bg-black w-7 h-0.5 rounded-sm mt-0.8" />
-              <div className="bg-black w-7 h-0.5 rounded-sm mt-0.8" />
-              <div className="bg-black w-7 h-0.5 rounded-sm mt-0.8" />
+              <div className="bg-white w-10 h-0.5 rounded-sm mt-0.8" />
+              <div className="bg-white w-10 h-0.5 rounded-sm mt-0.8" />
+              <div className="bg-white w-10 h-0.5 rounded-sm mt-0.8" />
             </div>
             
           </div>
