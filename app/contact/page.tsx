@@ -1,5 +1,5 @@
 import Footer from '../components/Footer'
-import HeroSection from './sections/HeroSection'
+import HeroSection from './sections/ContactHeroSection'
 
 export default function Contact() {
   return (
