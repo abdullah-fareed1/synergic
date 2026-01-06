@@ -87,7 +87,7 @@ const SolutionsSection: React.FC = () => {
           <p className="text-m text-black font-extrabold mb-2 tracking-wide uppercase">
             SOLUTIONS WE DELIVER
           </p>
-          <h2 className="text-4xl sm:text-3xl lg:text-5xl font-extrabold text-[#111D2B] mb-4 ">
+          <h2 className="text-3xl sm:text-3xl lg:text-5xl font-extrabold text-[#111D2B] mb-4 ">
             Powerful digital solutions on modern technological platforms
           </h2>
           <p className="text-2xl text-black ">
