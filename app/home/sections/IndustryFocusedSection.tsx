@@ -1,44 +1,49 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const IndustryFocusedSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  
+  const stripePatternDark =
+    "linear-gradient(45deg, rgba(30, 55, 80, 0.9) 8.33%, rgba(15, 30, 50, 0.9) 8.33%, rgba(15, 30, 50, 0.9) 50%, rgba(30, 55, 80, 0.9) 50%, rgba(30, 55, 80, 0.9) 58.33%, rgba(15, 30, 50, 0.9) 58.33%, rgba(15, 30, 50, 0.9) 100%)";
+
+  const stripeSize = "6.00px 6.00px";
 
   const industries = [
     {
-      title: 'Enterprises',
-      subtitle: 'Integrate. Automate. Modernize.',
+      title: "Enterprises",
+      subtitle: "Integrate. Automate. Modernize.",
       services: [
-        'Enterprise Apps',
-        'Customer & Partner Portals',
-        'Workflow Automation & AI Agents',
-        'System Integration & APIs',
-        'Data Integration & BI',
-        'Legacy Modernization',
-        'AI-Enhanced Search'
+        "Enterprise Apps",
+        "Customer & Partner Portals",
+        "Workflow Automation & AI Agents",
+        "System Integration & APIs",
+        "Data Integration & BI",
+        "Legacy Modernization",
+        "AI-Enhanced Search",
       ],
-      isHighlighted: true
+      isHighlighted: true,
     },
     {
-      title: 'Startups & SaaS Builders',
-      subtitle: '',
+      title: "Startups & SaaS Builders",
+      subtitle: "",
       services: [],
-      isHighlighted: false
+      isHighlighted: false,
     },
     {
-      title: 'Retailers & B2B',
-      subtitle: '',
+      title: "Retailers & B2B",
+      subtitle: "",
       services: [],
-      isHighlighted: false
+      isHighlighted: false,
     },
     {
-      title: 'Public Sector',
-      subtitle: '',
+      title: "Public Sector",
+      subtitle: "",
       services: [],
-      isHighlighted: false
-    }
+      isHighlighted: false,
+    },
   ];
 
   const nextSlide = () => {
@@ -46,14 +51,14 @@ const IndustryFocusedSection = () => {
   };
 
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + industries.length) % industries.length);
+    setActiveSlide(
+      (prev) => (prev - 1 + industries.length) % industries.length
+    );
   };
 
   return (
     <>
-      {/* DESKTOP VERSION - Grid Layout */}
       <div className="hidden lg:block">
-        {/* Section 1: Header */}
         <GridSection
           bgColor="bg-[#111D2B]"
           showLines={[true, false, false, false, true]}
@@ -71,59 +76,62 @@ const IndustryFocusedSection = () => {
             </GridCol>
           </GridContainer>
         </GridSection>
-        
 
-        {/* Section 2: Cards with Background Image */}
         <GridSection
           bgColor="bg-[#111D2B]"
           showLines={[true, false, false, false, true]}
           className="text-white border-t border-b border-gray-700 relative"
           desktopOnly={true}
         >
-          {/* Diagonal Striped Background - Left Side */}
-          <div 
+          <div
             className="absolute left-0 top-0 bottom-0 w-[5.56%] pointer-events-none"
             style={{
-              backgroundImage: `repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 8px,
-                rgba(100, 116, 139, 0.1) 10px,
-                rgba(100, 116, 139, 0.1) 11px
-              )`
+              backgroundImage: stripePatternDark,
+              backgroundSize: stripeSize,
             }}
           />
-          
+
           <GridContainer className="min-h-150 relative">
-            {/* Background Image Column - ABCD */}
-            <GridCol 
-              span="ABCD" 
+            <GridCol
+              span="ABCD"
               position="absolute"
               className="z-0 h-full"
               style={{
-                backgroundImage: 'url(images/industryfocusedsolutions.webp)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundImage: "url(images/industryfocusedsolutions.webp)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <div className="h-150"></div>
             </GridCol>
-            
-            {/* Column A - Enterprises */}
+
             <GridCol span="A" className="relative z-10 group">
-              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col justify-start items-start text-left p-8 pl-12">
+              <div className="h-150 bg-black/85 transition-all duration-300 mx-0.5">
+                <div className="h-full flex flex-col justify-center items-start text-left px-8 pl-12">
                   <h3 className="text-2xl font-bold mb-2 text-[#FB3B22]">
                     {industries[0].title}
                   </h3>
-                  <p className="text-gray-400 text-base mb-6">
+                  <p className="text-gray-400 text-lg font-bold mb-6">
                     {industries[0].subtitle}
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 ml-4">
                     {industries[0].services.map((service, idx) => (
-                      <li 
+                      <li
                         key={idx}
                         className="text-gray-300 text-base hover:text-white transition-colors cursor-pointer"
+                        style={{
+                          textUnderlineOffset: "4px",
+                          textDecoration: "none",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.textDecoration = "underline";
+                          e.currentTarget.style.textDecorationColor =
+                            "var(--brand-red)";
+                          e.currentTarget.style.textDecorationThickness = "1px";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.textDecoration = "none";
+                        }}
                       >
                         {service}
                       </li>
@@ -133,21 +141,19 @@ const IndustryFocusedSection = () => {
               </div>
             </GridCol>
 
-            {/* Column B - Startups & SaaS */}
             <GridCol span="B" className="relative z-10 group">
               <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col justify-center items-center text-center p-8">
-                  <h3 className="text-2xl font-bold text-white">
+                <div className="h-full flex flex-col items-center text-center p-8 pt-[42%]">
+                  <h3 className="text-2xl font-bold text-white ">
                     {industries[1].title}
                   </h3>
                 </div>
               </div>
             </GridCol>
 
-            {/* Column C - Retailers & B2B */}
             <GridCol span="C" className="relative z-10 group">
               <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col justify-center items-center text-center p-8">
+                <div className="h-full flex flex-col items-center text-center p-8 pt-[42%]">
                   <h3 className="text-2xl font-bold text-white">
                     {industries[2].title}
                   </h3>
@@ -155,10 +161,9 @@ const IndustryFocusedSection = () => {
               </div>
             </GridCol>
 
-            {/* Column D - Public Sector */}
             <GridCol span="D" className="relative z-10 group">
               <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col justify-center items-center text-center p-8">
+                <div className="h-full flex flex-col items-center text-center p-8 pt-[42%]">
                   <h3 className="text-2xl font-bold text-white">
                     {industries[3].title}
                   </h3>
@@ -168,7 +173,6 @@ const IndustryFocusedSection = () => {
           </GridContainer>
         </GridSection>
 
-        {/* Spacer section below cards */}
         <GridSection
           bgColor="bg-[#111D2B]"
           showLines={[true, false, false, false, true]}
@@ -183,9 +187,7 @@ const IndustryFocusedSection = () => {
         </GridSection>
       </div>
 
-      {/* MOBILE VERSION - Carousel */}
       <section className="lg:hidden bg-[#111D2B] text-white">
-        {/* Header */}
         <div className="px-[5.56%] py-12">
           <p className="text-[#FB3B22] text-xs font-bold uppercase tracking-wider mb-4">
             INDUSTRY-FOCUSED SOLUTIONS
@@ -195,20 +197,18 @@ const IndustryFocusedSection = () => {
           </h2>
         </div>
 
-        {/* Carousel */}
-        <div className="relative" style={{ height: '50vh' }}>
-          {/* Background Image */}
-          <div 
+        <div className="relative" style={{ height: "50vh" }}>
+          <div
             className="absolute inset-0 bg-center"
-            style={{ 
-              backgroundImage: 'url(images/industryfocusedsolutions.webp)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center center'
+            style={{
+              backgroundImage: "url(images/industryfocusedsolutions.webp)",
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
             }}
           />
-          
+
           <div className="h-full overflow-hidden relative z-10">
-            <div 
+            <div
               className="flex h-full transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${activeSlide * 100}%)` }}
             >
@@ -216,31 +216,30 @@ const IndustryFocusedSection = () => {
                 <div
                   key={index}
                   className={`w-full h-full shrink-0 ${
-                    industry.isHighlighted 
-                      ? 'bg-black/85' 
-                      : 'bg-black/60'
+                    industry.isHighlighted ? "bg-black/85" : "bg-black/60"
                   }`}
                 >
-                  <div className={`h-full flex flex-col ${industry.isHighlighted ? 'justify-start items-start text-left p-8' : 'justify-center items-center text-center p-8'}`}>
-                    <h3 className={`text-2xl font-bold mb-2 ${
-                      industry.isHighlighted ? 'text-[#FB3B22]' : 'text-white'
-                    }`}>
+                  <div
+                    className={`h-full flex flex-col ${industry.isHighlighted ? "justify-start items-start text-left p-8" : "justify-center items-center text-center p-8"}`}
+                  >
+                    <h3
+                      className={`text-2xl font-bold mb-2 ${
+                        industry.isHighlighted ? "text-[#FB3B22]" : "text-white"
+                      }`}
+                    >
                       {industry.title}
                     </h3>
-                    
+
                     {industry.subtitle && (
                       <p className="text-gray-400 text-base mb-6">
                         {industry.subtitle}
                       </p>
                     )}
-                    
+
                     {industry.services.length > 0 && (
                       <ul className="space-y-4 mt-4">
                         {industry.services.map((service, idx) => (
-                          <li 
-                            key={idx}
-                            className="text-gray-300 text-base"
-                          >
+                          <li key={idx} className="text-gray-300 text-base">
                             {service}
                           </li>
                         ))}
@@ -253,7 +252,6 @@ const IndustryFocusedSection = () => {
           </div>
         </div>
 
-        {/* Dots Indicator */}
         <div className="bg-[#0A1929] py-6 flex justify-center">
           <div className="flex gap-2">
             {industries.map((_, index) => (
@@ -261,9 +259,9 @@ const IndustryFocusedSection = () => {
                 key={index}
                 onClick={() => setActiveSlide(index)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  index === activeSlide 
-                    ? 'w-8 bg-[#FB3B22]' 
-                    : 'w-1.5 bg-gray-500'
+                  index === activeSlide
+                    ? "w-8 bg-[#FB3B22]"
+                    : "w-1.5 bg-gray-500"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
