@@ -8,10 +8,8 @@ import MobileMenu from "../../components/MobileMenu";
 export default function CareerHeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Employee images array
   const employees = Array.from({ length: 13 }, (_, i) => `/images/employees/${i + 1}.webp`);
 
-  // Stripe pattern for brand-dark background
   const stripePatternDark =
     "linear-gradient(45deg, #1a2a3a 8.33%, #111D2B 8.33%, #111D2B 50%, #1a2a3a 50%, #1a2a3a 58.33%, #111D2B 58.33%, #111D2B 100%)";
   
@@ -19,119 +17,128 @@ export default function CareerHeroSection() {
 
   return (
     <>
-      {/*  MOBILE VERSION */}
-      <section className="lg:hidden">
+      {/*MOBILE VERSION*/}
+      <section className="lg:hidden overflow-x-hidden">
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
-
-        {/* Mobile Hero */}
         <div
-          className="relative px-6 pt-24 pb-12 text-center"
+          className="relative px-6 pt-24 pb-8"
           style={{
             backgroundColor: "var(--brand-dark)",
             background: "radial-gradient(ellipse at center, #233A53 0%, var(--brand-dark) 70%)",
           }}
         >
-          <span className="text-white text-xs font-medium uppercase tracking-[0.2em]">
+          <p className="text-center text-white text-xs font-medium uppercase tracking-[0.2em]">
             SYNERGIC CAREERS
-          </span>
-
-          <h1 className="text-white text-3xl font-extrabold leading-tight mt-4">
-            <span className="inline">
-              <span className="underline decoration-(--brand-red) decoration-2 underline-offset-4">Work</span> Together,{" "}
-              <span className="underline decoration-(--brand-red) decoration-2 underline-offset-4">Win</span> Together
-            </span>
-          </h1>
-
-          <p className="text-gray-300 text-sm leading-relaxed mt-4">
-            At Synergic, we believe that collaboration is the key to long-term success — with our clients, our partners, and our people.
           </p>
 
-          {/* Mobile Employee Photos Grid */}
-          <div className="relative mt-8 h-[300px]">
-            {/* Row 1 */}
-            <div className="absolute left-0 top-0 w-[80px] h-[100px]">
-              <img src={employees[0]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute left-[90px] top-[20px] w-[80px] h-[100px]">
-              <img src={employees[1]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute right-[90px] top-[10px] w-[80px] h-[100px]">
-              <img src={employees[2]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute right-0 top-0 w-[80px] h-[100px]">
-              <img src={employees[3]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
+          <h1 className="text-center text-white text-[28px] font-extrabold leading-tight mt-4">
+            <span className="underline decoration-(--brand-red) decoration-2 underline-offset-4">Work</span> Together,{" "}
+            <span className="underline decoration-(--brand-red) decoration-2 underline-offset-4">Win</span> Together
+          </h1>
+          <p className="text-center text-gray-300 text-sm leading-relaxed mt-4">
+            At Synergic, we believe that collaboration is the key to long-term success with our clients, our partners, and our people.
+          </p>
 
-            {/* Row 2 */}
-            <div className="absolute left-[20px] top-[110px] w-[80px] h-[100px]">
-              <img src={employees[4]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute left-1/2 -translate-x-1/2 top-[90px] w-[100px] h-[120px]">
-              <img src={employees[5]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute right-[20px] top-[110px] w-[80px] h-[100px]">
-              <img src={employees[6]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
+          <div className="relative mt-8 mx-auto" style={{ maxWidth: "340px" }}>
+            {/* 
+              Layout calculations:
+              - 5 columns
+              - Image width: 60px
+              - Gap between images: 8px
+              - Total width: (60 * 5) + (8 * 4) = 300 + 32 = 332px
+              - Image height: 75px (maintaining aspect ratio similar to desktop ~1:1.24)
+              - Vertical gap: 8px
+              - Vertical offset for columns 2 & 4: ~20px
+            */}
+            <div 
+              className="relative"
+              style={{ 
+                width: "332px", 
+                height: "178px", /* 75 + 8 + 75 + 20 offset consideration */
+                margin: "0 auto"
+              }}
+            >
+              {/* Column 1 - 2 images, top-aligned */}
+              <div className="absolute left-0 top-0 w-[60px] h-[75px]">
+                <img src={employees[0]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
+              <div className="absolute left-0 top-[83px] w-[60px] h-[75px]">
+                <img src={employees[1]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
 
-            {/* Row 3 */}
-            <div className="absolute left-[50px] bottom-0 w-[80px] h-[100px]">
-              <img src={employees[7]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[10px] w-[80px] h-[100px]">
-              <img src={employees[8]} alt="Employee" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute right-[50px] bottom-0 w-[80px] h-[100px]">
-              <img src={employees[9]} alt="Employee" className="w-full h-full object-cover" />
+              {/* Column 2 - 2 images, pushed down ~20px */}
+              <div className="absolute left-[68px] top-[20px] w-[60px] h-[75px]">
+                <img src={employees[2]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
+              <div className="absolute left-[68px] top-[103px] w-[60px] h-[75px]">
+                <img src={employees[3]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
+
+              {/* Column 3 - 1 image, centered vertically */}
+              <div className="absolute left-[136px] top-[51.5px] w-[60px] h-[75px]">
+                <img src={employees[4]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
+
+              {/* Column 4 - 2 images, pushed down (mirror of column 2) */}
+              <div className="absolute left-[204px] top-[20px] w-[60px] h-[75px]">
+                <img src={employees[5]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
+              <div className="absolute left-[204px] top-[103px] w-[60px] h-[75px]">
+                <img src={employees[6]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
+
+              {/* Column 5 - 2 images, top-aligned (mirror of column 1) */}
+              <div className="absolute left-[272px] top-0 w-[60px] h-[75px]">
+                <img src={employees[7]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
+              <div className="absolute left-[272px] top-[83px] w-[60px] h-[75px]">
+                <img src={employees[8]} alt="Employee" className="w-full h-full object-cover rounded-md" />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Mobile Section 2 - Headings */}
-        <div className="bg-(--brand-dark) px-6 py-10">
-          <div className="mb-10">
+        <div className="bg-(--brand-dark) py-10">
+          <div className="mb-6 px-6">
             <h2 className="text-white text-2xl font-extrabold">How We Collaborate</h2>
-            <p className="text-gray-300 text-sm mt-2">
+            <p className="text-gray-300 text-sm mt-2 leading-relaxed">
               Whether you're a client, a teammate, or a partner, here's what you can expect.
             </p>
           </div>
-
-          {/* Mobile 4 Items Grid */}
-          <div className="grid grid-cols-2 gap-6 mb-10">
-            <div>
-              <span className="text-(--brand-red) text-xs font-medium">01</span>
+          <div className="flex flex-col">
+            <div className="py-6 px-6 border-b border-gray-400/30">
+              <span className="text-(--brand-red) text-sm font-semibold">01</span>
               <h3 className="text-white text-base font-bold mt-1">Accountability</h3>
-              <p className="text-gray-400 text-xs mt-2 leading-relaxed">
-                We take ownership of our work, our timelines, and our impact and stand by our commitments.
+              <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+                We take ownership of our work, our timelines, and our impact — and stand by our commitments.
               </p>
             </div>
-            <div>
-              <span className="text-(--brand-red) text-xs font-medium">02</span>
+            <div className="py-6 px-6 border-b border-gray-400/30">
+              <span className="text-(--brand-red) text-sm font-semibold">02</span>
               <h3 className="text-white text-base font-bold mt-1">Mutual Benefit</h3>
-              <p className="text-gray-400 text-xs mt-2 leading-relaxed">
-                Collaboration should create value for everyone involved that's when it truly works.
+              <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+                Collaboration should create value for everyone involved — that's when it truly works.
               </p>
             </div>
-            <div>
-              <span className="text-(--brand-red) text-xs font-medium">03</span>
+            <div className="py-6 px-6 border-b border-gray-400/30">
+              <span className="text-(--brand-red) text-sm font-semibold">03</span>
               <h3 className="text-white text-base font-bold mt-1">Approachability</h3>
-              <p className="text-gray-400 text-xs mt-2 leading-relaxed">
+              <p className="text-gray-400 text-sm mt-2 leading-relaxed">
                 We stay open, responsive, and transparent because real progress needs honest conversations.
               </p>
             </div>
-            <div>
-              <span className="text-(--brand-red) text-xs font-medium">04</span>
+            <div className="py-6 px-6 border-b border-gray-400/30">
+              <span className="text-(--brand-red) text-sm font-semibold">04</span>
               <h3 className="text-white text-base font-bold mt-1">Continuous Learning</h3>
-              <p className="text-gray-400 text-xs mt-2 leading-relaxed">
-                Improvement isn't a phase it's a mindset. We evolve by learning and adapting every day.
+              <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+                Improvement isn't a phase — it's a mindset. We evolve by learning and adapting every day.
               </p>
             </div>
           </div>
-
-          {/* Mobile People & Technologies */}
-          <div className="border-t border-gray-400/30 pt-10">
+          <div className="pt-10 px-6">
             <h2 className="text-white text-2xl font-extrabold">People & Technologies</h2>
-            <p className="text-gray-300 text-sm mt-2">
-              We're problem-solvers at heart engineers, designers, and analysts united by curiosity and care for craft.
+            <p className="text-gray-300 text-sm mt-2 leading-relaxed">
+              We're problem-solvers at heart — engineers, designers, and analysts united by curiosity and care for craft.
             </p>
 
             <p className="text-gray-300 text-sm mt-6">At Synergic, you'll work with:</p>
@@ -167,7 +174,6 @@ export default function CareerHeroSection() {
             background: "radial-gradient(ellipse at center, #233A53 0%, var(--brand-dark) 70%)",
           }}
         >
-          {/* Grid lines layer - behind images */}
           <div className="absolute inset-0 z-0">
             <GridSection
               showLines={[true, true, true, true, true]}
@@ -180,12 +186,8 @@ export default function CareerHeroSection() {
             </GridSection>
           </div>
 
-          {/* Content layer - above grid lines */}
           <div className="relative z-10">
-            {/* Spacer for navbar */}
             <div style={{ height: "5.56vw" }} />
-
-            {/* Hero Content */}
             <div className="flex flex-col items-center justify-center text-center pt-16 pb-8">
               <span className="text-white text-lg uppercase">
                 SYNERGIC CAREERS
