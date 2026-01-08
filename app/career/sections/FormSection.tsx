@@ -36,15 +36,15 @@ function FloatingInput({
         onChange={onChange}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className={`w-full h-full px-5 pt-4 bg-transparent text-white text-base focus:outline-none peer ${
+        className={`w-full h-full px-0 lg:px-5 pt-4 bg-transparent text-white text-base lg:text-base focus:outline-none peer ${
           error ? "border-b-2 border-red-500" : ""
         }`}
       />
       <label
-        className={`absolute left-5 transition-all duration-200 pointer-events-none ${
+        className={`absolute left-0 lg:left-5 transition-all duration-200 pointer-events-none ${
           error ? "text-red-400" : "text-gray-400"
         }
-          ${isActive ? "top-2 text-xs" : "top-1/2 -translate-y-1/2 text-base"}`}
+          ${isActive ? "top-0 lg:top-2 text-xs" : "top-1/2 -translate-y-1/2 text-base"}`}
       >
         {label}
         {required && <span className="text-red-400 ml-0.5">*</span>}
@@ -81,15 +81,15 @@ function FloatingTextarea({
         onChange={onChange}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className={`w-full h-full px-5 pt-6 bg-transparent text-white text-base focus:outline-none resize-none peer ${
+        className={`w-full h-full px-0 lg:px-5 pt-6 bg-transparent text-white text-base lg:text-base focus:outline-none resize-none peer ${
           error ? "border-b-2 border-red-500" : ""
         }`}
       />
       <label
-        className={`absolute left-5 transition-all duration-200 pointer-events-none ${
+        className={`absolute left-0 lg:left-5 transition-all duration-200 pointer-events-none ${
           error ? "text-red-400" : "text-gray-400"
         }
-          ${isActive ? "top-2 text-xs" : "top-4 text-base"}`}
+          ${isActive ? "top-0 lg:top-2 text-xs" : "top-4 text-base"}`}
       >
         {label}
         {required && <span className="text-red-400 ml-0.5">*</span>}
@@ -126,7 +126,7 @@ function FileUpload({
         accept=".pdf,.doc,.docx"
         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
       />
-      <div className="w-full h-full px-5 flex items-center justify-between">
+      <div className="w-full h-full px-0 lg:px-5 flex items-center justify-between">
         <div className="flex flex-col justify-center">
           <label
             className={`transition-all duration-200 ${
@@ -137,7 +137,7 @@ function FileUpload({
             {required && <span className="text-red-400 ml-0.5">*</span>}
           </label>
           {hasFile && (
-            <span className="text-white text-base truncate max-w-[150px]">
+            <span className="text-white text-base truncate max-w-[200px] lg:max-w-[150px]">
               {file.name}
             </span>
           )}
@@ -180,6 +180,7 @@ const FormSection = () => {
   );
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
   const [desktopWidgetId, setDesktopWidgetId] = useState<number | null>(null);
+  const [mobileWidgetId, setMobileWidgetId] = useState<number | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -206,7 +207,7 @@ const FormSection = () => {
         !formData.email.trim() ||
         !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
       phone: !formData.phone.trim(),
-      message: !formData.message.trim(),
+      message: false,
       cv: !cvFile,
     };
     setErrors(newErrors);
@@ -219,9 +220,12 @@ const FormSection = () => {
       return;
     }
 
+    const isMobile = window.innerWidth < 1024;
+    const widgetId = isMobile ? mobileWidgetId : desktopWidgetId;
+
     let recaptchaResponse = "";
-    if (desktopWidgetId !== null) {
-      recaptchaResponse = (window as any).grecaptcha.getResponse(desktopWidgetId);
+    if (widgetId !== null) {
+      recaptchaResponse = (window as any).grecaptcha.getResponse(widgetId);
     }
 
     if (!recaptchaResponse) {
@@ -237,7 +241,6 @@ const FormSection = () => {
     setSubmitStatus("idle");
 
     try {
-      // Create FormData for file upload
       const formDataToSend = new FormData();
       formDataToSend.append("fullName", formData.fullName.trim());
       formDataToSend.append("email", formData.email.trim());
@@ -259,9 +262,8 @@ const FormSection = () => {
         setSubmitStatus("success");
         setFormData({ fullName: "", email: "", phone: "", message: "" });
         setCvFile(null);
-        // Reset reCAPTCHA
-        if (desktopWidgetId !== null) {
-          (window as any).grecaptcha.reset(desktopWidgetId);
+        if (widgetId !== null) {
+          (window as any).grecaptcha.reset(widgetId);
         }
       } else {
         setSubmitStatus("error");
@@ -298,9 +300,27 @@ const FormSection = () => {
           console.error("Error rendering career reCAPTCHA:", error);
         }
       }
+
+      if (
+        (window as any).grecaptcha &&
+        document.getElementById("recaptcha-container-career-mobile")
+      ) {
+        try {
+          const mobileId = (window as any).grecaptcha.render(
+            "recaptcha-container-career-mobile",
+            {
+              sitekey: process.env.NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY,
+              theme: "dark",
+              size: "normal",
+            }
+          );
+          setMobileWidgetId(mobileId);
+        } catch (error) {
+          console.error("Error rendering career mobile reCAPTCHA:", error);
+        }
+      }
     };
 
-    // If grecaptcha is already loaded, render immediately
     if ((window as any).grecaptcha && (window as any).grecaptcha.render) {
       (window as any).onRecaptchaLoadCareer();
     }
@@ -313,21 +333,184 @@ const FormSection = () => {
         strategy="lazyOnload"
       />
 
-      {/* Desktop Layout */}
+      <section className="lg:hidden">
+        <div className="bg-(--brand-red) px-6 pt-16 pb-20 py-8 ">
+          <span className="text-white text-xs font-extrabold uppercase tracking-wider">
+            RESULTS-DRIVEN PEOPLE-POWERED
+          </span>
+
+          <h2 className="text-white text-2xl font-extrabold leading-tight mt-4">
+            Career Opportunities
+          </h2>
+
+          <p className="text-white text-base leading-relaxed mt-4">
+            We value autonomy, accountability, and lifelong learning.
+            <br />
+            Whether you're working from Athens or abroad, we
+            <br />
+            provide the trust and support you need to thrive.
+          </p>
+
+          <p className="text-white text-base font-semibold mt-6 mb-3">
+            We welcome:
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-center text-white text-base">
+              <span
+                className="w-2 h-2 rounded-full mr-3 shrink-0"
+                style={{ backgroundColor: "var(--brand-white)" }}
+              />
+              Experienced professionals ready to lead
+            </li>
+            <li className="flex items-center text-white text-base">
+              <span
+                className="w-2 h-2 rounded-full mr-3 shrink-0"
+                style={{ backgroundColor: "var(--brand-white)" }}
+              />
+              Young talent eager to learn and grow
+            </li>
+            <li className="flex items-center text-white text-base">
+              <span
+                className="w-2 h-2 rounded-full mr-3 shrink-0"
+                style={{ backgroundColor: "var(--brand-white)" }}
+              />
+              Freelance specialists looking for purposeful projects
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-(--brand-dark)">
+          <div className="px-6 py-6 pt-20 pb-12 border-b border-gray-400/30">
+            <h3 className="text-white text-3xl font-extrabold">Work With Us</h3>
+            <p className="text-white text-lg leading-relaxed mt-2">
+              We're always looking for talented individuals
+              <br />
+              to join our growing team.
+            </p>
+          </div>
+
+          <div className="flex flex-col">
+            <div className="border-b border-gray-400/30 h-20">
+              <div className="px-6 h-full">
+                <FloatingInput
+                  name="fullName"
+                  label="Full name"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
+                  error={errors.fullName}
+                />
+              </div>
+            </div>
+
+            <div className="border-b border-gray-400/30 h-20">
+              <div className="px-6 h-full">
+                <FloatingInput
+                  name="phone"
+                  label="Phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  error={errors.phone}
+                />
+              </div>
+            </div>
+
+            <div className="border-b border-gray-400/30 h-20">
+              <div className="px-6 h-full">
+                <FloatingInput
+                  name="email"
+                  label="Email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  error={errors.email}
+                />
+              </div>
+            </div>
+
+            <div className="border-b  border-gray-400/30 h-20">
+              <div className="px-6 h-full">
+                <FileUpload
+                  name="cv"
+                  label="CV"
+                  file={cvFile}
+                  onChange={handleFileChange}
+                  required
+                  error={errors.cv}
+                />
+              </div>
+            </div>
+
+            <div className="border-b border-gray-400/30 h-42">
+              <div className="px-6 h-full">
+                <FloatingTextarea
+                  name="message"
+                  label="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  error={errors.message}
+                />
+              </div>
+            </div>
+
+            <div className="border-b border-gray-400/30 h-24 flex items-center justify-center overflow-hidden">
+              <div
+                id="recaptcha-container-career-mobile"
+                style={{
+                  transform: "scaleX(1) scaleY(1)",
+                  transformOrigin: "center center",
+                }}
+              />
+            </div>
+
+            <button
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+              className={`w-full h-24 flex items-center justify-between px-6 text-white text-lg ${
+                isSubmitting
+                  ? "opacity-70 cursor-not-allowed"
+                  : "hover:opacity-90"
+              }`}
+              style={{ backgroundColor: "#2B7856" }}
+            >
+              <span>
+                {isSubmitting
+                  ? "Sending..."
+                  : submitStatus === "success"
+                  ? "Application Sent!"
+                  : submitStatus === "error"
+                  ? "Try Again"
+                  : "Join our team"}
+              </span>
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12h8M12 8l4 4-4 4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <div className="hidden lg:block">
-        {/* Section 1: Header Row */}
         <div className="relative">
-          {/* Left margin background */}
           <div
             className="absolute left-0 top-0 bottom-0"
             style={{ width: "5.56%" }}
           />
-          {/* Right margin background */}
           <div
             className="absolute right-0 top-0 bottom-0 bg-(--brand-dark)"
             style={{ width: "5.56%" }}
           />
-          {/* Manual gridlines on top of everything */}
           <div
             className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-30 pointer-events-none"
             style={{ left: "5.56%" }}
@@ -390,7 +573,6 @@ const FormSection = () => {
             </GridContainer>
           </GridSection>
 
-          {/* Stripe fill for right margin */}
           <div
             className="absolute right-0 top-0 bottom-0 z-10"
             style={{
@@ -401,19 +583,15 @@ const FormSection = () => {
           />
         </div>
 
-        {/* Section 2: Main Form Row */}
         <div className="relative">
-          {/* Left margin background */}
           <div
             className="absolute left-0 top-0 bottom-0"
             style={{ width: "5.56%" }}
           />
-          {/* Right margin background */}
           <div
             className="absolute right-0 top-0 bottom-0 bg-(--brand-dark)"
             style={{ width: "5.56%" }}
           />
-          {/* Manual gridlines on top of everything */}
           <div
             className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-30 pointer-events-none"
             style={{ left: "5.56%" }}
@@ -422,7 +600,6 @@ const FormSection = () => {
             className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-30 pointer-events-none"
             style={{ left: "94.44%" }}
           />
-          {/* Top border */}
           <div className="absolute top-0 left-0 right-0 h-px bg-gray-400/30 z-30" />
 
           <GridSection
@@ -431,7 +608,6 @@ const FormSection = () => {
             minHeight="auto"
           >
             <GridContainer>
-              {/* Orange/Red Content Section */}
               <GridCol
                 span="AB"
                 className="p-8"
@@ -481,7 +657,6 @@ const FormSection = () => {
                 </ul>
               </GridCol>
 
-              {/* Form Column C: Full name, Email, Message */}
               <GridCol
                 span="C"
                 className="flex flex-col"
@@ -490,7 +665,7 @@ const FormSection = () => {
                   minHeight: "320px",
                 }}
               >
-                <div className="h-16 border-b border-gray-400/30 border-r border-r-gray-400/30">
+                <div className="h-20 border-b border-gray-400/30 border-r border-r-gray-400/30">
                   <FloatingInput
                     name="fullName"
                     label="Full name"
@@ -500,7 +675,7 @@ const FormSection = () => {
                     error={errors.fullName}
                   />
                 </div>
-                <div className="h-16 border-b border-gray-400/30 border-r border-r-gray-400/30">
+                <div className="h-20 border-b border-gray-400/30 border-r border-r-gray-400/30">
                   <FloatingInput
                     name="email"
                     label="Email"
@@ -517,13 +692,11 @@ const FormSection = () => {
                     label="Message"
                     value={formData.message}
                     onChange={handleChange}
-                    required
                     error={errors.message}
                   />
                 </div>
               </GridCol>
 
-              {/* Form Column D: Phone, CV */}
               <GridCol
                 span="D"
                 className="flex flex-col"
@@ -532,7 +705,7 @@ const FormSection = () => {
                   minHeight: "320px",
                 }}
               >
-                <div className="h-16 border-b border-gray-400/30">
+                <div className="h-20 border-b border-gray-400/30">
                   <FloatingInput
                     name="phone"
                     label="Phone"
@@ -543,35 +716,31 @@ const FormSection = () => {
                     error={errors.phone}
                   />
                 </div>
-                <div className="h-16 border-b border-gray-400/30">
+                <div className="h-20 border-b border-gray-400/30">
                   <FileUpload
                     name="cv"
                     label="CV"
                     file={cvFile}
                     onChange={handleFileChange}
+                    required
                     error={errors.cv}
                   />
                 </div>
-                {/* Empty space to match message height */}
                 <div className="flex-1" />
               </GridCol>
             </GridContainer>
           </GridSection>
         </div>
 
-        {/* Section 3: reCAPTCHA and Submit Row */}
         <div className="relative">
-          {/* Left margin background */}
           <div
             className="absolute left-0 top-0 bottom-0"
             style={{ width: "5.56%" }}
           />
-          {/* Right margin background */}
           <div
             className="absolute right-0 top-0 bottom-0 bg-(--brand-dark)"
             style={{ width: "5.56%" }}
           />
-          {/* Manual gridlines on top of everything */}
           <div
             className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-30 pointer-events-none"
             style={{ left: "5.56%" }}
@@ -592,9 +761,7 @@ const FormSection = () => {
             className="absolute top-0 bottom-0 w-px bg-gray-400/30 z-30 pointer-events-none"
             style={{ left: "94.44%" }}
           />
-          {/* Top border */}
           <div className="absolute top-0 left-0 right-0 h-px bg-gray-400/30 z-30" />
-          {/* Bottom border */}
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-400/30 z-30" />
 
           <GridSection
@@ -603,7 +770,6 @@ const FormSection = () => {
             minHeight="auto"
           >
             <GridContainer className="h-24">
-              {/* Striped AB Column */}
               <GridCol
                 span="AB"
                 className="h-24"
@@ -615,7 +781,6 @@ const FormSection = () => {
                 <></>
               </GridCol>
 
-              {/* reCAPTCHA Column */}
               <GridCol
                 span="C"
                 className="h-24 flex items-center justify-center border-r border-r-gray-400/30"
@@ -630,7 +795,6 @@ const FormSection = () => {
                 />
               </GridCol>
 
-              {/* Submit Button Column */}
               <GridCol
                 span="D"
                 className="h-24"
