@@ -8,6 +8,9 @@ import MobileMenu from "../../components/MobileMenu";
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const stripePatternBrandLight =
+    "repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(209, 209, 209, 0.3) 2px, rgba(209, 209, 209, 0.3) 4px)";
+
   return (
     <>
       <section className="lg:hidden relative bg-(--brand-light)">
@@ -50,16 +53,40 @@ export default function HeroSection() {
           minHeight="65vh"
           className="relative -mb-1"
         >
-          {/* Horizontal line */}
+
+          <div
+            className="absolute hidden lg:block"
+            style={{
+              left: "27.78%",
+              top: 0,
+              width: "22.22%",
+              height: "48.5%",
+              background: stripePatternBrandLight,
+              zIndex: 1,
+            }}
+          />
+          <div
+            className="absolute hidden lg:block"
+            style={{
+              left: "72.22%",
+              top: "48.5%",
+              right: 0,
+              bottom: 0,
+              background: stripePatternBrandLight,
+              zIndex: 1,
+            }}
+          />
+
           <div
             className="absolute left-0 right-0 h-px bg-gray-400/30 z-10 hidden lg:block"
-            style={{ top: "50.5%" }}
+            style={{ top: "48.5%" }}
           />
+
           <div
             className="absolute text-(--brand-red) font-light hidden lg:block"
             style={{
-              left: "5.56%",
-              top: "50%",
+              left: "94.44%",
+              top: "48%",
               transform: "translate(-50%, -50%)",
               fontSize: "2.5rem",
               lineHeight: 1,
@@ -68,11 +95,12 @@ export default function HeroSection() {
           >
             +
           </div>
+
           <div
             className="absolute text-(--brand-black) font-light hidden lg:block"
             style={{
               left: "50%",
-              top: "50%",
+              top: "48%",
               transform: "translate(-50%, -50%)",
               fontSize: "2.5rem",
               lineHeight: 1,
@@ -104,7 +132,7 @@ export default function HeroSection() {
 
               <GridCol
                 span="CD"
-                className="relative pb-0 mb-0"
+                className="relative"
                 style={{
                   alignSelf: "flex-end",
                   lineHeight: 0,
@@ -114,25 +142,26 @@ export default function HeroSection() {
                 <div
                   className="relative"
                   style={{
-                    width: "120%",
+                    width: "100%",
                     lineHeight: 0,
                     fontSize: 0,
-                    paddingTop: "30px",
-                    marginBottom: 0,
-                    paddingBottom: 0,
+                    paddingTop: "50px",
+                    marginBottom: "20px",
+                    paddingRight: "5.56%", 
                     zIndex: 30,
                   }}
                 >
                   <img
                     src="/images/b2b-hero-desktop.webp"
-                    alt="B2C eCommerce Solutions"
+                    alt="B2B eCommerce Solutions"
                     className="block"
                     style={{
-                      width: "auto",
+                      paddingTop: 20,
+                      paddingBottom: 40,
+                      width: "120%",
                       height: "auto",
-                      marginLeft: "-10%",
+                      marginLeft: "0%",
                       display: "block",
-                      marginBottom: 0,
                     }}
                   />
                 </div>
