@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { RefreshCw } from "lucide-react";
 import Image from "next/image";
 
 interface Solution {
@@ -76,40 +75,47 @@ const SolutionsSection: React.FC = () => {
 
   return (
     <section className="w-full bg-white py-16 relative overflow-hidden">
-      <div className="hidden lg:block absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
-      <div className="hidden lg:block absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
-      <div className="hidden lg:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
-      <div className="hidden lg:block absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
-      <div className="hidden lg:block absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+      {/* Desktop grid lines */}
+      <div className="hidden lg:block absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400/30" />
+      <div className="hidden lg:block absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400/30" />
+      <div className="hidden lg:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-400/30" />
+      <div className="hidden lg:block absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400/30" />
+      <div className="hidden lg:block absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400/30" />
 
       <div className="relative z-10 px-4 lg:px-0">
-        <div className="lg:ml-[5.56%] lg:mr-[5.56%] mb-12 pl-4">
+        {/* Header Section */}
+        <div className="lg:ml-[5.56%] lg:mr-[5.56%] mb-12 lg:pl-4">
           <p className="text-m text-black font-extrabold mb-2 tracking-wide uppercase">
             SOLUTIONS WE DELIVER
           </p>
-          <h2 className="text-3xl sm:text-3xl lg:text-5xl font-extrabold text-[#111D2B] mb-4 ">
+          <h2 className="text-4xl sm:text-4xl lg:text-5xl font-extrabold text-[#111D2B] mb-4">
             Powerful digital solutions on modern technological platforms
           </h2>
-          <p className="text-2xl text-black ">
+          {/* Changed from text-2xl to text-xl on mobile */}
+          <p className="text-xl lg:text-xl text-black">
             Our modular, API-driven framework empowers you to create, customize,
             and expand without constraints
           </p>
         </div>
 
+        {/* Filter Section */}
         <div className="relative mb-5">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gray-300 opacity-30" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gray-400/30" />
 
-          <div className="lg:mx-[5.56%] bg-[#F3F3EE] py-6 px-6 lg:px-8">
+          <div className="lg:mx-[5.56%] bg-[#F3F3EE] py-6 px-4 lg:px-8">
             <div className="flex flex-col lg:flex-row lg:items-center gap-4">
+              {/* Mobile: Centered "Solutions for" label */}
               <span className="text-gray-700 font-medium text-center lg:text-left">
                 Solutions for :
               </span>
-              <div className="grid grid-cols-2 lg:flex lg:flex-wrap gap-3 flex-1">
+              
+              {/* Filter buttons - More boxy, reduced gap, larger text on mobile */}
+              <div className="grid grid-cols-2 lg:flex lg:flex-wrap gap-2 lg:gap-3 flex-1">
                 {filters.map((filter) => (
                   <button
                     key={filter.id}
                     onClick={() => setActiveFilter(filter.id)}
-                    className={`px-6 py-2.5 rounded-lg lg:rounded-full text-sm font-medium transition-all duration-200 ${
+                    className={`px-6 py-2.5 rounded-sm lg:rounded-full text-base lg:text-sm font-medium transition-all duration-200 ${
                       activeFilter === filter.id
                         ? "bg-[#111D2B] text-white"
                         : "bg-white text-gray-700 hover:bg-gray-100"
@@ -119,17 +125,20 @@ const SolutionsSection: React.FC = () => {
                   </button>
                 ))}
               </div>
-              <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors justify-center lg:justify-start">
+              
+              {/* Reset button - hidden on mobile in this design */}
+              <button className="hidden lg:flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors justify-center lg:justify-start">
                 <img src="/icons/reset.svg" alt="Reset" className="w-4 h-4" />
                 <span className="text-sm">Reset</span>
               </button>
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-400 opacity-30" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-400/30" />
         </div>
 
-        <div className="lg:ml-[5.56%] lg:mr-[5.56%] mb-5">
+        {/* Subtitle - Desktop only */}
+        <div className="hidden lg:block lg:ml-[5.56%] lg:mr-[5.56%] mb-5">
           <p className="text-lg font-bold text-gray-800 pl-4">
             From eShops to{" "}
             <span className="text-[#FB3B22] font-semibold">
@@ -139,9 +148,10 @@ const SolutionsSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Solutions Cards */}
         <div className="relative">
           <div
-            className="absolute top-0 left-0 right-0 h-px bg-gray-300 opacity-30"
+            className="absolute top-0 left-0 right-0 h-px bg-gray-400/30"
             style={{
               marginLeft: "-100vw",
               marginRight: "-100vw",
@@ -149,18 +159,53 @@ const SolutionsSection: React.FC = () => {
             }}
           />
 
-          <div className="lg:ml-[5.56%] lg:mr-[5.56%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 mb-0">
-              {solutions.slice(0, 4).map((solution) => (
+          {/* Mobile Layout - Horizontal cards (icon left, text right) */}
+          <div className="lg:hidden">
+            {solutions.map((solution) => (
+              <div
+                key={solution.id}
+                className="flex items-start gap-4 px-4 py-5 border-b border-l border-r border-gray-200"
+              >
+                {/* Icon on the left */}
+                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                  <Image
+                    src={solution.iconPath}
+                    alt={solution.title}
+                    width={28}
+                    height={28}
+                    className="text-gray-600"
+                  />
+                </div>
+                
+                {/* Text on the right */}
+                <div className="flex-1">
+                  <h3 className="text-base font-bold text-gray-800 mb-1">
+                    {solution.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    {solution.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Layout - Grid cards (original vertical layout) */}
+          <div className="hidden lg:block lg:ml-[5.56%] lg:mr-[5.56%]">
+            {/* First row - 4 cards */}
+            <div className="grid grid-cols-4 gap-0 mb-0">
+              {solutions.slice(0, 4).map((solution, index) => (
                 <div
                   key={solution.id}
                   onMouseEnter={() => setHoveredCard(solution.id)}
                   onMouseLeave={() => setHoveredCard(null)}
                   className={`relative transition-all duration-300 cursor-pointer group border-l border-b border-t border-gray-300 flex flex-col ${
+                    index === 3 ? "border-r" : ""
+                  } ${
                     hoveredCard === solution.id
                       ? "bg-[#FB3B22] text-white"
                       : "bg-white text-gray-800"
-                  } min-h-65 lg:min-h-90`}
+                  } min-h-90`}
                 >
                   {hoveredCard === solution.id && (
                     <div className="absolute top-4 right-4 z-10">
@@ -223,17 +268,18 @@ const SolutionsSection: React.FC = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
-              {solutions.slice(4).map((solution) => (
+            {/* Second row - 3 cards + pattern */}
+            <div className="grid grid-cols-4 gap-0">
+              {solutions.slice(4).map((solution, index) => (
                 <div
                   key={solution.id}
                   onMouseEnter={() => setHoveredCard(solution.id)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  className={`relative transition-all duration-300 cursor-pointer group border-l border-r border-b border-gray-200 flex flex-col ${
+                  className={`relative transition-all duration-300 cursor-pointer group border-l border-b border-gray-200 flex flex-col ${
                     hoveredCard === solution.id
                       ? "bg-[#FB3B22] text-white"
                       : "bg-white text-gray-800"
-                  } min-h-65 lg:min-h-90`}
+                  } min-h-90`}
                 >
                   {hoveredCard === solution.id && (
                     <div className="absolute top-4 right-4 z-10">
@@ -287,18 +333,20 @@ const SolutionsSection: React.FC = () => {
                 </div>
               ))}
 
+              {/* Pattern fill for empty space */}
               <div
-                className="hidden lg:block bg-white border-r border-b border-gray-200 relative overflow-hidden min-h-70"
+                className="bg-transparent border-l border-r border-b border-gray-200 relative overflow-hidden min-h-70"
                 style={{
                   backgroundImage:
-                    "repeating-linear-gradient(45deg, transparent, transparent 8px, #e5e5e5 10px, #e5e5e5 11px)",
+                    "linear-gradient(45deg, rgb(156 163 175 / 0.3) 8.33%, transparent 8.33%, transparent 50%, rgb(156 163 175 / 0.3) 50%, rgb(156 163 175 / 0.3) 58.33%, transparent 58.33%, transparent 100%)",
+                  backgroundSize: "6.00px 6.00px",
                 }}
               />
             </div>
           </div>
 
           <div
-            className="absolute bottom-0 left-0 right-0 h-px bg-gray-300 opacity-30"
+            className="absolute bottom-0 left-0 right-0 h-px bg-gray-400/30"
             style={{
               marginLeft: "-100vw",
               marginRight: "-100vw",

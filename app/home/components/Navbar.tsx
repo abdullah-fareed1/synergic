@@ -17,7 +17,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 5*/}
 
         {/* Horizontal line - height is 1/18 of viewport width to make squares */}
-        <div className="absolute left-0 right-0 h-px bg-gray-400 opacity-30" style={{ top: 'calc(100vw / 20)' }} />
+        <div className="absolute left-0 h-px bg-gray-400 opacity-30" style={{ top: 'calc(100vw / 20)', right: '5.56%' }} />
       </div>
 
       {/* Mobile horizontal line */}
@@ -29,7 +29,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
           <img
             src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
-            className="h-8 w-auto"
+            className="h-8 w-auto cursor-pointer"
             onClick={() => window.location.href = '/'}
           />
         </div>
@@ -39,7 +39,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
           <img
             src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
-            className="h-7 w-auto"
+            className="h-7 w-auto cursor-pointer"
             onClick={() => window.location.href = '/'}
           />
         </div>
@@ -74,13 +74,13 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         <button
           onClick={onMenuClick}
           className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
-          style={{ width: '5.56%' }}
+          style={{ width: '5.56%', zIndex: 30 }}
         >
           <div className="flex flex-col items-center gap-2">
-            <div className="flex flex-col gap-2">
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-            </div>
+            <svg width="32" height="12" viewBox="0 0 32 12" fill="none">
+              <rect x="0" y="0" width="32" height="3" rx="1.5" fill="white" />
+              <rect x="0" y="9" width="32" height="3" rx="1.5" fill="white" />
+            </svg>
             <span
               className="uppercase font-semibold"
               style={{
@@ -91,7 +91,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             >
               MENU
             </span>
-            
           </div>
         </button>
 
@@ -101,11 +100,16 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
           className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
           style={{ width: 'calc(100vw / 6)', height: 60 }}
         >
-          <div className="flex flex-col items-center gap-1">
-            
-            <div className="flex flex-col gap-1">
-              <div className="bg-white w-7 h-0.5 rounded-sm mt-0.5" />
-              <div className="bg-white w-7 h-0.5 rounded-sm mt-0.5" />
+          <div className="flex flex-col items-center gap-[6px]">
+            <div className="flex flex-col gap-[6px]">
+              <div 
+                className="bg-white" 
+                style={{ width: '32px', height: '2px', borderRadius: '1px' }} 
+              />
+              <div 
+                className="bg-white" 
+                style={{ width: '32px', height: '2px', borderRadius: '1px' }} 
+              />
             </div>
             <span
               className="uppercase font-semibold"
