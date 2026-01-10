@@ -73,9 +73,12 @@ const SolutionsSection: React.FC = () => {
     },
   ];
 
+  const stripePattern =
+    "linear-gradient(45deg, rgb(156 163 175 / 0.3) 8.33%, transparent 8.33%, transparent 50%, rgb(156 163 175 / 0.3) 50%, rgb(156 163 175 / 0.3) 58.33%, transparent 58.33%, transparent 100%)";
+  const stripeSize = "6.00px 6.00px";
+
   return (
     <section className="w-full bg-white py-16 relative overflow-hidden">
-      {/* Desktop grid lines */}
       <div className="hidden lg:block absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400/30" />
       <div className="hidden lg:block absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400/30" />
       <div className="hidden lg:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-400/30" />
@@ -83,7 +86,6 @@ const SolutionsSection: React.FC = () => {
       <div className="hidden lg:block absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400/30" />
 
       <div className="relative z-10 px-4 lg:px-0">
-        {/* Header Section */}
         <div className="lg:ml-[5.56%] lg:mr-[5.56%] mb-12 lg:pl-4">
           <p className="text-m text-black font-extrabold mb-2 tracking-wide uppercase">
             SOLUTIONS WE DELIVER
@@ -91,25 +93,21 @@ const SolutionsSection: React.FC = () => {
           <h2 className="text-4xl sm:text-4xl lg:text-5xl font-extrabold text-[#111D2B] mb-4">
             Powerful digital solutions on modern technological platforms
           </h2>
-          {/* Changed from text-2xl to text-xl on mobile */}
           <p className="text-xl lg:text-xl text-black">
             Our modular, API-driven framework empowers you to create, customize,
             and expand without constraints
           </p>
         </div>
 
-        {/* Filter Section */}
         <div className="relative mb-5">
           <div className="absolute top-0 left-0 right-0 h-px bg-gray-400/30" />
 
           <div className="lg:mx-[5.56%] bg-[#F3F3EE] py-6 px-4 lg:px-8">
             <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-              {/* Mobile: Centered "Solutions for" label */}
               <span className="text-gray-700 font-medium text-center lg:text-left">
                 Solutions for :
               </span>
               
-              {/* Filter buttons - More boxy, reduced gap, larger text on mobile */}
               <div className="grid grid-cols-2 lg:flex lg:flex-wrap gap-2 lg:gap-3 flex-1">
                 {filters.map((filter) => (
                   <button
@@ -126,7 +124,6 @@ const SolutionsSection: React.FC = () => {
                 ))}
               </div>
               
-              {/* Reset button - hidden on mobile in this design */}
               <button className="hidden lg:flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors justify-center lg:justify-start">
                 <img src="/icons/reset.svg" alt="Reset" className="w-4 h-4" />
                 <span className="text-sm">Reset</span>
@@ -137,7 +134,6 @@ const SolutionsSection: React.FC = () => {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-400/30" />
         </div>
 
-        {/* Subtitle - Desktop only */}
         <div className="hidden lg:block lg:ml-[5.56%] lg:mr-[5.56%] mb-5">
           <p className="text-lg font-bold text-gray-800 pl-4">
             From eShops to{" "}
@@ -148,7 +144,6 @@ const SolutionsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Solutions Cards */}
         <div className="relative">
           <div
             className="absolute top-0 left-0 right-0 h-px bg-gray-400/30"
@@ -159,14 +154,12 @@ const SolutionsSection: React.FC = () => {
             }}
           />
 
-          {/* Mobile Layout - Horizontal cards (icon left, text right) */}
           <div className="lg:hidden">
             {solutions.map((solution) => (
               <div
                 key={solution.id}
                 className="flex items-start gap-4 px-4 py-5 border-b border-l border-r border-gray-200"
               >
-                {/* Icon on the left */}
                 <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
                   <Image
                     src={solution.iconPath}
@@ -177,7 +170,6 @@ const SolutionsSection: React.FC = () => {
                   />
                 </div>
                 
-                {/* Text on the right */}
                 <div className="flex-1">
                   <h3 className="text-base font-bold text-gray-800 mb-1">
                     {solution.title}
@@ -190,9 +182,7 @@ const SolutionsSection: React.FC = () => {
             ))}
           </div>
 
-          {/* Desktop Layout - Grid cards (original vertical layout) */}
           <div className="hidden lg:block lg:ml-[5.56%] lg:mr-[5.56%]">
-            {/* First row - 4 cards */}
             <div className="grid grid-cols-4 gap-0 mb-0">
               {solutions.slice(0, 4).map((solution, index) => (
                 <div
@@ -268,7 +258,6 @@ const SolutionsSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Second row - 3 cards + pattern */}
             <div className="grid grid-cols-4 gap-0">
               {solutions.slice(4).map((solution, index) => (
                 <div
@@ -333,13 +322,11 @@ const SolutionsSection: React.FC = () => {
                 </div>
               ))}
 
-              {/* Pattern fill for empty space */}
               <div
                 className="bg-transparent border-l border-r border-b border-gray-200 relative overflow-hidden min-h-70"
                 style={{
-                  backgroundImage:
-                    "linear-gradient(45deg, rgb(156 163 175 / 0.3) 8.33%, transparent 8.33%, transparent 50%, rgb(156 163 175 / 0.3) 50%, rgb(156 163 175 / 0.3) 58.33%, transparent 58.33%, transparent 100%)",
-                  backgroundSize: "6.00px 6.00px",
+                  backgroundImage: stripePattern,
+                  backgroundSize: stripeSize,
                 }}
               />
             </div>

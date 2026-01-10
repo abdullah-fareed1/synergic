@@ -12,6 +12,10 @@ export default function ChooseCombineGrow() {
     setOpenSection(openSection === section ? null : section);
   };
 
+  const stripePattern =
+    "linear-gradient(45deg, rgb(156 163 175 / 0.3) 8.33%, transparent 8.33%, transparent 50%, rgb(156 163 175 / 0.3) 50%, rgb(156 163 175 / 0.3) 58.33%, transparent 58.33%, transparent 100%)";
+  const stripeSize = "6.00px 6.00px";
+
   return (
     <section className="bg-slate-900 text-white relative overflow-hidden">
       <div
@@ -20,14 +24,9 @@ export default function ChooseCombineGrow() {
           left: "5.56%",
           width: "44.44%",
           bottom: "0",
-          height: "150px",
-          backgroundImage: `repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 8px,
-            rgba(100, 116, 139, 0.1) 10px,
-            rgba(100, 116, 139, 0.1) 11px
-          )`,
+          height: "120px",
+          backgroundImage: stripePattern,
+          backgroundSize: stripeSize,
         }}
       />
       
@@ -38,13 +37,8 @@ export default function ChooseCombineGrow() {
           right: "0",
           top: "50%",
           bottom: "0",
-          backgroundImage: `repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 8px,
-            rgba(100, 116, 139, 0.1) 10px,
-            rgba(100, 116, 139, 0.1) 11px
-          )`,
+          backgroundImage: stripePattern,
+          backgroundSize: stripeSize,
         }}
       />
       
@@ -58,7 +52,6 @@ export default function ChooseCombineGrow() {
         </div>
 
         <div className="max-w-full mx-auto px-6 md:px-0 relative z-10">
-          {/* Mobile Layout */}
           <div className="md:hidden relative">
             <div className="mb-12">
               <p className="text-gray-400 text-xs tracking-widest mb-3 uppercase">
