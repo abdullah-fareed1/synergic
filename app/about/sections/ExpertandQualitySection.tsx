@@ -147,7 +147,7 @@ export default function ExpertandQualitySection() {
 
           <div className="flex items-center justify-between px-6 py-6 cursor-pointer active:bg-[#e8e8e0]" style={{ backgroundColor: '#F3F3EE' }}>
             <div className="flex items-center gap-4">
-              <img src="/iso.png" alt="ISO Certification" className="h-10 w-auto" />
+              <img src="/logos/iso.png" alt="ISO Certification" className="h-10 w-auto" />
               <span className="text-sm font-semibold text-gray-900">ΕΛΟΤ EN ISO 9001:2015</span>
             </div>
             <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">

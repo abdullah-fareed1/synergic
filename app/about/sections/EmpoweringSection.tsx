@@ -11,7 +11,7 @@ export default function EmpoweringSection() {
 
   return (
     <>
-      {/* MOBILE: centered stacked hero */}
+      {/* MOBILE */}
       <section
         className="lg:hidden relative text-(--brand-white)"
         style={{ backgroundColor: "var(--brand-red)" }}
@@ -19,27 +19,27 @@ export default function EmpoweringSection() {
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
         <div className="px-6 pt-28 pb-16 text-center flex flex-col items-center">
-          <p className="text-xs tracking-[0.25em] uppercase mb-3 opacity-90">
+          <p className="text-sm tracking-[0.05em] uppercase mb-3 opacity-90">
             Synergic Intelligent Systems
           </p>
 
-          <h1 className="text-3xl font-bold leading-tight mb-4">
+          <h1 className="text-3xl font-bold leading-tight mb-4 ">
             Empowering Innovation{" "}
             <span className="block mt-1">since 2005</span>
           </h1>
 
-          <p className="text-sm leading-relaxed mb-4 max-w-md">
+          <p className="text-base leading-relaxed mb-4 max-w-md opacity-90">
             Future-ready{" "}
-            <span className="inline-block bg-(--brand-black) text-(--brand-white) px-2 py-1 rounded-sm text-xs align-middle">
+            <span className="inline-block bg-(--brand-black) text-(--brand-white) px-3 py-1 rounded-sm text-base align-middle">
               Intelligent Systems
             </span>{" "}
-            built for performance, automation, and growth.
+            built for<br/> performance, automation, and growth.
           </p>
 
-          <p className="text-sm leading-relaxed max-w-md opacity-90">
-            We have been solving real business challenges with custom software
-            since 2005. Today, we call them Intelligent Systems – modular,
-            scalable, and process-aware platforms that evolve with your
+          <p className="text-base leading-relaxed max-w-md mt-3 opacity-90">
+            We have been solving real business challenges with<br/> custom software
+            since 2005.<br/> Today, we call them Intelligent Systems – modular,<br/>
+            scalable, and process-aware platforms that evolve with<br/> your
             business.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function EmpoweringSection() {
         {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
       </section>
 
-      {/* DESKTOP: grid-based */}
+      {/* DESKTOP*/}
       <div className="hidden lg:block relative">
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
@@ -57,33 +57,35 @@ export default function EmpoweringSection() {
           className="text-(--brand-white) pt-28 pb-24"
           desktopOnly={true}
         >
-          <GridContainer className="items-center justify-center">
-            {/* Single full-width column, content centered */}
-            <GridCol span="ABCD" className="flex flex-col items-center text-center pt-10">
-              <p className="text-xs tracking-[0.3em] uppercase mb-4 opacity-90">
+          <GridContainer className="items-center">
+            <GridCol span="A" className="hidden lg:block"><div /></GridCol>
+            
+            <GridCol span="BC" className="flex flex-col items-center text-center pt-10">
+              <p className="text-lg uppercase mb-4 opacity-90">
                 Synergic Intelligent Systems
               </p>
 
               <h1 className="text-5xl xl:text-6xl font-bold leading-tight mb-6">
-                Empowering Innovation{" "}
-                <span className="block mt-1">since 2005</span>
+                Empowering Innovationsince 2005
               </h1>
 
               <p className="text-base leading-relaxed mb-4 max-w-2xl">
                 Future-ready{" "}
-                <span className="inline-block bg-(--brand-black) text-(--brand-white) px-3 py-1 rounded-sm text-xs align-middle">
+                <span className="inline-block bg-(--brand-black) text-(--brand-white) px-3 py-1 rounded-sm text-base align-middle">
                   Intelligent Systems
                 </span>{" "}
                 built for performance, automation, and growth.
               </p>
 
-              <p className="text-sm leading-relaxed max-w-3xl opacity-90">
+              <p className="text-base leading-relaxed max-w-3xl opacity-90">
                 We have been solving real business challenges with custom
-                software since 2005. Today, we call them Intelligent Systems –
-                modular, scalable, and process-aware platforms that evolve with
+                software since 2005.<br/> Today, we call them Intelligent Systems –
+                modular, scalable, and process-aware platforms that evolve with<br/>
                 your business.
               </p>
             </GridCol>
+            
+            <GridCol span="D" className="hidden lg:block"><div /></GridCol>
           </GridContainer>
         </GridSection>
 

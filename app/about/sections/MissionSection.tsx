@@ -10,17 +10,12 @@ export default function MissionSection() {
         className="lg:hidden px-2 py-12"
         style={{ backgroundColor: "var(--brand-dark)" }}
       >
-        <div className="flex flex-col items-start  mb-11">
-          <div className="relative flex items-center justify-center">
-            <img
-              src="images/mission.png"
-              alt="Mission"
-              className="w-66 h-66"
-            />
-            <h2 className="absolute text-white pl-20 text-2xl font-bold  tracking-tight">
-              Our Mission<br />is Simple
-            </h2>
-          </div>
+        <div className="flex flex-col items-start mb-11">
+          <img
+            src="images/our-mission.webp"
+            alt="Our Mission is Simple"
+            className="w-66 h-66"
+          />
         </div>
 
         <div className="space-y-2 px-2 text-gray-300">
@@ -30,9 +25,11 @@ export default function MissionSection() {
           </p>
 
           <p className="text-sm leading-relaxed text-gray-400">
-            For us, working smarter means <span className="font-semibold text-white">building systems that adapt to
-            your needs, simplify complexity, and help your business do
-            more with less effort.</span>
+            For us, working smarter means{" "}
+            <span className="font-semibold text-white">
+              building systems that adapt to your needs, simplify complexity,
+              and help your business do more with less effort.
+            </span>
           </p>
         </div>
       </section>
@@ -45,21 +42,16 @@ export default function MissionSection() {
         desktopOnly={true}
       >
         <GridContainer className="items-center">
-          {/* AB Column - Image with overlaid text */}
+          {/* AB Column - Image */}
           <GridCol
             span="AB"
             className="flex items-center justify-center relative min-h-[450px]"
           >
-            <div className="relative flex items-center justify-center">
-              <img
-                src="images/mission.png"
-                alt="Mission"
-                className="w-[400px] h-[40px] xl:w-[450px] xl:h-[450px] object-contain"
-              />
-              <h2 className="absolute pl-60 text-white text-3xl xl:text-6xl font-bold text-center leading-[1.15] tracking-tight">
-                Our Mission<br />is Simple
-              </h2>
-            </div>
+            <img
+              src="images/our-mission.webp"
+              alt="Our Mission is Simple"
+              className="w-[400px] h-[400px] xl:w-[450px] xl:h-[450px] object-contain"
+            />
           </GridCol>
 
           {/* CD Column - Text content */}
@@ -71,9 +63,11 @@ export default function MissionSection() {
               </p>
 
               <p className="text-gray-400 text-base xl:text-lg leading-relaxed">
-                For us, working smarter means <span className="font-semibold text-white">building systems that adapt to
-                your needs, simplify complexity, and help your business do
-                more with less effort.</span>
+                For us, working smarter means{" "}
+                <span className="font-semibold text-white">
+                  building systems that adapt to your needs, simplify
+                  complexity, and help your business do more with less effort.
+                </span>
               </p>
             </div>
           </GridCol>
