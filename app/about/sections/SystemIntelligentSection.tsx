@@ -45,25 +45,22 @@ export default function SystemIntelligentSection() {
         className="py-16"
       >
         <GridContainer>
-          {/* AB Span */}
           <GridCol span="AB" className="flex flex-col">
-            {/* Header */}
             <div className="px-12 pt-12 pb-16">
-              <h2 className="text-white text-4xl font-bold leading-tight mb-6">
+              <h2 className="text-white text-5xl font-bold mb-6">
                 What Makes
                 <br />
                 a System Intelligent?
               </h2>
-              <p className="text-white/80 text-lg leading-relaxed max-w-md">
+              <p className="text-white/80 text-xl leading-relaxed max-w-md">
                 We design systems that do more than execute code — they solve real problems, unlock efficiency, and grow with you.
               </p>
             </div>
 
-            {/* CTA Button*/}
-            <button className="w-full bg-white/10 hover:bg-white/15 transition-colors py-6 px-12 flex items-center justify-between group">
+            <button className="w-full bg-white/10 cursor-pointer transition-colors mt-13 mb-15 py-6 px-12 flex items-center justify-between group">
               <div className="text-left">
-                <p className="text-white/60 text-sm mb-1">Not sure where to begin?</p>
-                <p className="text-white text-xl">Book a Free Discovery Call</p>
+                <p className="text-white/60 text-base mb-1">Not sure where to begin?</p>
+                <p className="text-white text-2xl">Book a Free Discovery Call</p>
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center shrink-0">
                 <svg 
@@ -85,24 +82,22 @@ export default function SystemIntelligentSection() {
             </button>
           </GridCol>
 
-          {/* Column C */}
-          <GridCol span="C" className="px-12 py-12">
+          <GridCol span="C" className="px-12 py-15">
             {[features[0], features[2], features[4]].map((feature, index) => (
               <div key={index} className="mb-12 last:mb-0">
-                <p className="text-white/40 text-sm mb-2">{feature.number}</p>
-                <h3 className="text-white text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-base mb-3">{feature.number}</p>
+                <h3 className="text-white text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-white/80 text-base leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </GridCol>
 
-          {/* Column D */}
-          <GridCol span="D" className="px-12 py-12">
+          <GridCol span="D" className="px-12 py-15">
             {[features[1], features[3], features[5]].map((feature, index) => (
               <div key={index} className="mb-12 last:mb-0">
-                <p className="text-white/40 text-sm mb-2">{feature.number}</p>
-                <h3 className="text-white text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-white/80 text-base mb-3">{feature.number}</p>
+                <h3 className="text-white text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-white/80 text-base leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </GridCol>
@@ -111,9 +106,8 @@ export default function SystemIntelligentSection() {
 
       {/* Mobile Layout */}
       <section className="lg:hidden bg-[#2B7856]">
-        {/* Header */}
         <div className="mb-8 px-6 pt-12">
-          <h2 className="text-white text-3xl font-bold leading-tight mb-4">
+          <h2 className="text-white text-4xl font-bold leading-tight mb-4">
             What Makes
             <br />
             a System Intelligent?
@@ -122,23 +116,19 @@ export default function SystemIntelligentSection() {
             We design systems that do more than execute code — they solve real problems, unlock efficiency, and grow with you.
           </p>
         </div>
-
-        {/* Features List */}
         <div className="space-y-8 mb-8 px-6">
           {features.map((feature, index) => (
             <div key={index}>
-              <p className="text-white/40 text-sm mb-1">{feature.number}</p>
-              <h3 className="text-white text-lg font-bold mb-1">{feature.title}</h3>
-              <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-white/80 text-xl mb-3">{feature.number}</p>
+              <h3 className="text-white text-xl font-bold mb-1">{feature.title}</h3>
+              <p className="text-white/80 text-base leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
-
-        {/* CTA Button  */}
-        <button className="w-full bg-white/10 active:bg-white/15 transition-colors py-5 px-6 flex items-center justify-between">
+        <button className="w-full bg-white/10 active:bg-white/15 transition-colors py-7 px-6 flex items-center justify-between">
           <div className="text-left">
-            <p className="text-white/60 text-xs mb-0.5">Not sure where to begin?</p>
-            <p className="text-white text-base">Book a Free Discovery Call</p>
+            <p className="text-white/60 text-base mb-0.5">Not sure where to begin?</p>
+            <p className="text-white text-xl">Book a Free Discovery Call</p>
           </div>
           <div className="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center shrink-0">
             <svg 

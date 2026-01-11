@@ -65,8 +65,8 @@ export default function EmpoweringSection() {
                 Synergic Intelligent Systems
               </p>
 
-              <h1 className="text-5xl xl:text-6xl font-bold leading-tight mb-6">
-                Empowering Innovationsince 2005
+              <h1 className="text-5xl xl:text-6xl font-bold mb-6">
+                Empowering Innovation since 2005
               </h1>
 
               <p className="text-base leading-relaxed mb-4 max-w-2xl">
