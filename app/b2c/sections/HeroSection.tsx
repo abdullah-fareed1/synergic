@@ -20,14 +20,10 @@ export default function HeroSection() {
               Composable eCommerce,{" "}
               <span className="block mt-1">Built for Your Business</span>
             </h1>
-
             <p className="text-2xl leading-relaxed mb-4 text-gray-700">
               From fast retail shops to enterprise-grade commerce ecosystems — tailored, scalable, and built to grow.
             </p>
-
-            
           </div>
-
           <div className="w-full flex justify-center">
             <img
               src="images/b2c-mobile.svg"
@@ -49,7 +45,7 @@ export default function HeroSection() {
         {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
       </section>
 
-      {/* DESKTOP VERSION */}
+      {/* DESKTOP */}
       <div className="hidden lg:block relative bg-white">
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
@@ -60,32 +56,29 @@ export default function HeroSection() {
           desktopOnly={true}
         >
           <GridContainer className="min-h-screen">
-            {/* Left Column - Content */}
-            <GridCol span="AB" className="flex flex-col justify-center p-12 py-32">
-              <h1 className="text-4xl xl:text-5xl font-extrabold leading-tight mb-8 text-gray-900">
+            <GridCol span="AB" className="flex flex-col pl-6 mt-20 pt-35">
+              <h1 className="text-4xl xl:text-[40px] font-extrabold leading-tight mb-8 text-gray-900">
                 Composable eCommerce,{" "}
                 <span className="block mt-2">Built for Your Business</span>
               </h1>
 
               <p className="text-2xl leading-relaxed mb-6 text-gray-700 max-w-3xl">
-                From fast retail shops to enterprise-grade commerce ecosystems <br></br>— tailored, scalable, and built to grow.
+                From fast retail shops to enterprise-grade commerce ecosystems <br/>— tailored, scalable, and built to grow.
               </p>
 
-              <p className="text-l leading-relaxed mb-6 text-gray-600 max-w-xl">
+              <p className="text-lg leading-relaxed mb-6 text-gray-600 max-w-xl">
                 Whether you're launching a modern eShop or scaling a complex B2B platform, we design solutions that grow with your business — fast, secure, and built around your goals.
               </p>
 
-              <p className="text-l leading-relaxed text-gray-600 max-w-xl">
+              <p className="text-lg leading-relaxed text-gray-600 max-w-xl">
                 B2C, B2B, or hybrid — our modular systems connect channels, automate operations, and power experiences that convert.
               </p>
             </GridCol>
-
-            {/* img */}
-            <GridCol span="CD" className="flex items-center justify-center  p-12">
+            <GridCol span="CD" className="flex items-center justify-start pl-12 pt-12">
               <img
                 src="images/b2c-mobile.svg"
                 alt="eCommerce Platform"
-                className="w-full max-w-2xl"
+                className="max-w-xl max-h-225 object-contain"
               />
             </GridCol>
           </GridContainer>
