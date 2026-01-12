@@ -4,52 +4,48 @@ import { GridSection, GridContainer, GridCol } from "../../components/grid";
 export default function OurSolutionsSection() {
   return (
     <>
-      {/* Desktop */}
       <GridSection
         desktopOnly={true}
-        showLines={[false, false, false, false, false]} // Turned off default lines
-        bgColor="bg-black"
-        className="relative overflow-hidden"
-        minHeight="600px"
+        showLines={[true, true, true, true, true]} 
+        bgImage='images/solutions-bg.webp'
       >
-        
         <div 
-          className="absolute right-0 top-0 bottom-0 w-[67.5%] pointer-events-none -z-10"
+          className="absolute inset-0 z-1"
           style={{
-            backgroundImage: 'url(images/solutions-bg.webp)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.95) 20%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.5) 55%, transparent 75%)',
           }}
         />
         
-        {/* I added Manual gridlines on top, because wwe had a z index issue and the default gridlines were hiding below the bg img */}
-        <div className="hidden lg:block absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30 z-50 pointer-events-none" />
-        <div className="hidden lg:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30 z-50 pointer-events-none" />
-        <div className="hidden lg:block absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30 z-50 pointer-events-none" />
-        <div className="hidden lg:block absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30 z-50 pointer-events-none" />
+        <div className="hidden lg:block absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30 z-50" />
+        <div className="hidden lg:block absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30 z-50" />
+        <div className="hidden lg:block absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30 z-50" />
         
-        <GridContainer className="items-center h-full min-h-[600px]">
-          <GridCol span="AB" className="flex flex-col justify-center py-16">
-            <div className="pl-12 pr-12">
-              <h2 className="text-white text-5xl font-bold mb-8">
-                Our Solutions
-              </h2>
-              <p className="text-white/90 text-lg mb-16 leading-relaxed">
-                We design systems that do more than execute code — they solve<br />
-                real problems, unlock efficiency, and grow with you.
-              </p>
+        <GridContainer className="h-full min-h-180 relative z-2">
+          <GridCol span="AB" className="relative h-full min-h-180">
+            <div className="absolute inset-0 flex items-center">
+              <div className="pl-8 pb-28 pr-12">
+                <h2 className="text-white text-5xl font-bold mb-8 italic">
+                  Our Solutions
+                </h2>
+                <p className="text-white/80 text-lg leading-relaxed">
+                  We design systems that do more than execute code — they solve<br />
+                  real problems, unlock efficiency, and grow with you.
+                </p>
+              </div>
             </div>
             
-            
-            <div className="mt-auto">
+            <div 
+              className="absolute left-0 right-0 w-full"
+              style={{ bottom: '20%' }}
+            >
               <button 
-                className="w-full flex items-center justify-between px-8 py-6 text-white text-lg  transition-all duration-300 hover:bg-opacity-90"
+                className="w-full flex items-center justify-between px-8 py-6 text-white text-lg transition-all duration-300 cursor-pointer"
                 style={{
-                  backgroundColor: 'rgba(43, 120, 86, 0.8)',
+                  backgroundColor: 'rgba(43, 120, 86, 0.75)',
                 }}
               >
                 <div className="flex flex-col items-start">
-                  <span className="text-sm text-white/70 mb-1">Need more info?</span>
+                  <span className="text-sm text-white/70 mb-1">Need more info ?</span>
                   <span className="text-xl">Explore All Solutions</span>
                 </div>
                 <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center shrink-0">
@@ -77,44 +73,44 @@ export default function OurSolutionsSection() {
         </GridContainer>
       </GridSection>
 
-      {/* Mobile Layout */}
-      <section className="lg:hidden relative bg-black">
+      <section 
+        className="lg:hidden relative"
+        style={{
+          backgroundImage: 'url(images/solutions-bg.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30 z-0" />
         
-        <div className="relative h-64 w-full">
-          <div 
-            className="absolute inset-0 w-full h-full"
-            style={{
-              backgroundImage: 'url(images/solutions-bg.webp)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-          
-          <div className="absolute inset-0 flex flex-col justify-end px-6 pb-20">
+        <div className="relative px-6 pt-10 pb-6 z-10">
+          <div className="relative">
             <h2 className="text-white text-4xl font-bold mb-4">
               Our Solutions
             </h2>
-            <p className="text-white/90 text-base leading-relaxed">
-              We design systems that do more than execute code — they solve
-              real problems, unlock efficiency, and grow with you.
+            <p className="text-white/80 text-base leading-relaxed">
+              We design systems that do more than execute code — they
+              solve real problems, unlock efficiency, and grow with you.
             </p>
           </div>
         </div>
         
+        <div className="h-40 relative z-10"></div>
+        
         <button 
-          className="w-full flex items-center justify-between px-6 py-6 text-white text-base font-medium"
+          className="relative z-10 w-full flex items-center justify-between px-6 py-5 text-white"
           style={{
-            backgroundColor: 'rgba(43, 120, 86, 0.8',
+            backgroundColor: 'rgba(43, 120, 86, 0.75)',
           }}
         >
           <div className="flex flex-col items-start">
-            <span className="text-xs text-white/70 mb-1">Need more info?</span>
-            <span className="text-lg">Explore All Solutions</span>
+            <span className="text-sm text-white/70 mb-1">Need more info ?</span>
+            <span className="text-xl font-medium">Explore All Solutions</span>
           </div>
-          <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center flex-shrink-0">
+          <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center shrink-0">
             <svg 
-              width="18" 
-              height="18" 
+              width="20" 
+              height="20" 
               viewBox="0 0 24 24" 
               fill="none" 
               stroke="currentColor" 

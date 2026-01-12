@@ -28,7 +28,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         style={{ height: "calc(100vw / 20)" }}
       >
         {/* Desktop Logo */}
-        <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4">
+        <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4 cursor-pointer">
           <img
             src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
@@ -38,7 +38,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         </div>
 
         {/* Mobile Logo */}
-        <div className="lg:hidden flex items-center px-4 py-4">
+        <div className="lg:hidden flex items-center px-4 py-4 cursor-pointer">
           <img
             src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
