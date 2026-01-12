@@ -11,3 +11,9 @@
   --brand-dark: #111D2B;
   --brand-green: #2B7856;
 }
+
+@layer utilities {
+  [class*="text-[var()]"] {
+    color: inherit;
+  }
+}
