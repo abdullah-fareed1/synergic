@@ -56,7 +56,7 @@ export default function HeroSection() {
           desktopOnly={true}
         >
           <GridContainer className="min-h-screen">
-            <GridCol span="AB" className="flex flex-col pl-6 mt-20 pt-35">
+            <GridCol span="AB" className="flex flex-col pl-6 pt-55 ">
               <h1 className="text-4xl xl:text-[40px] font-extrabold leading-tight mb-8 text-gray-900">
                 Composable eCommerce,{" "}
                 <span className="block mt-2">Built for Your Business</span>

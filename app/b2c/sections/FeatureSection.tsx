@@ -1,11 +1,11 @@
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
-// Stripe background
 const StripedBackground = () => (
   <div 
     className="absolute inset-0 w-full h-full" 
     style={{ 
-      backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 8px, #e5e5e5 10px, #e5e5e5 11px)',
+      backgroundImage: 'linear-gradient(45deg, rgb(156 163 175 / 0.3) 8.33%, transparent 8.33%, transparent 50%, rgb(156 163 175 / 0.3) 50%, rgb(156 163 175 / 0.3) 58.33%, transparent 58.33%, transparent 100%)',
+      backgroundSize: '6.00px 6.00px',
     }}
   />
 );
@@ -31,15 +31,15 @@ export default function FeatureSection() {
         </div>
 
         <GridContainer className="py-16">
-
-          {/* AB Column*/}
-          <GridCol span="AB" className="flex items-center justify-start pl-24">
-            <div className="text-left pl-28" style={{ maxWidth: '520px' }}>
-              <h2 className="text-4xl font-extrabold text-black mb-4 leading-tight">
+          <GridCol span="AB" className="flex items-center justify-start pl-29 pb-25 pt-5">
+            <div className="text-left pl-28">
+              <h2 className="text-4xl font-extrabold text-black mb-4 ">
                 Made to Match the Way You Sell
               </h2>
-              <p className="text-black text-lg mb-6 leading-relaxed">
-                No two businesses sell the same way. That's why no single platform works for all. We build commerce systems around <span className="font-semibold">how you operate:</span>
+              <p className="text-black text-xl mb-6 leading-relaxed">
+                No two businesses sell the same way. That's why no single<br/>
+                platform works for all. We build commerce systems around<br/>
+                <span className="font-bold">how you operate:</span>
               </p>
               <div className="flex justify-start gap-2.5">
                 <div className="w-10 h-10 bg-[#8044DE] rounded-lg flex items-center justify-center text-white">
@@ -57,30 +57,28 @@ export default function FeatureSection() {
               </div>
             </div>
           </GridCol>
-
-          {/* CD Column */}
-          <GridCol span="CD" className="flex items-center pl-16">
+          <GridCol span="CD" className="flex items-center pl-32">
             <div className="max-w-md">
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <span className="text-[#8044DE] text-2xl font-bold leading-none">•</span>
-                  <span className="text-gray-700 text-base leading-relaxed">Launch a fast, mobile-first eShop</span>
+                  <span className="text-gray-700 text-lg leading-relaxed">Launch a fast, mobile-first eShop</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-[#8044DE] text-2xl font-bold leading-none">•</span>
-                  <span className="text-gray-700 text-base leading-relaxed">Scale to B2B or hybrid models</span>
+                  <span className="text-gray-700 text-lg leading-relaxed">Scale to B2B or hybrid models</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-[#8044DE] text-2xl font-bold leading-none">•</span>
-                  <span className="text-gray-700 text-base leading-relaxed">Manage thousands of SKUs with ease</span>
+                  <span className="text-gray-700 text-lg leading-relaxed">Manage thousands of SKUs with ease</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-[#8044DE] text-2xl font-bold leading-none">•</span>
-                  <span className="text-gray-700 text-base leading-relaxed">Integrate ERP, CRM, or logistics providers</span>
+                  <span className="text-gray-700 text-lg leading-relaxed">Integrate ERP, CRM, or logistics providers</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-[#8044DE] text-2xl font-bold leading-none">•</span>
-                  <span className="text-gray-700 text-base leading-relaxed">Expand with portals, mobile apps, or automations</span>
+                  <span className="text-gray-700 text-lg leading-relaxed">Expand with portals, mobile apps, or automations</span>
                 </li>
               </ul>
             </div>
