@@ -81,11 +81,11 @@ export default function OurSolutionsSection() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-black/30 z-0" />
+        <div className="absolute inset-0 bg-black/40 z-0" />
         
         <div className="relative px-6 pt-10 pb-6 z-10">
           <div className="relative">
-            <h2 className="text-white text-4xl font-bold mb-4">
+            <h2 className="text-white text-3xl font-bold mb-4">
               Our Solutions
             </h2>
             <p className="text-white/80 text-base leading-relaxed">
