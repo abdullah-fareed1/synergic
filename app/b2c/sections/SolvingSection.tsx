@@ -1,4 +1,5 @@
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
+import Image from 'next/image';
 
 const SolvingSection = () => {
   return (
@@ -48,7 +49,7 @@ const SolvingSection = () => {
 
           <GridCol span="CD" className="flex items-center relative pl-16">
             <svg className="absolute left-4" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 6V26M6 16H26" stroke="#22C55E" strokeWidth="3" strokeLinecap="round"/>
+              <path d="M16 6V26M6 16H26" stroke="#2B7856" strokeWidth="3" strokeLinecap="round"/>
             </svg>
             <h3 className="text-2xl font-extrabold text-gray-900">
               The Better Way Forward
@@ -132,7 +133,13 @@ const SolvingSection = () => {
 
             <ul className="space-y-5">
               <li className="flex items-start gap-3">
-                <span className="text-green-700 text-xl mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={12} 
+                  height={12} 
+                  className="mt-1.5 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-lg mb-1">
                     Secure by Design
@@ -143,7 +150,13 @@ const SolvingSection = () => {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-800 text-xl mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={12} 
+                  height={12} 
+                  className="mt-1.5 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-lg mb-1">
                     Fast & Reliable
@@ -154,7 +167,13 @@ const SolvingSection = () => {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-800 text-xl mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={12} 
+                  height={12} 
+                  className="mt-1.5 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-lg mb-1">
                     Scalable & Flexible
@@ -165,7 +184,13 @@ const SolvingSection = () => {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-800 text-xl mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={12} 
+                  height={12} 
+                  className="mt-1.5 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-lg mb-1">
                     Easily Integrated
@@ -176,7 +201,13 @@ const SolvingSection = () => {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-800 text-xl mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={12} 
+                  height={12} 
+                  className="mt-1.5 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-lg mb-1">
                     Customizable
@@ -187,7 +218,13 @@ const SolvingSection = () => {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-800 text-xl mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={12} 
+                  height={12} 
+                  className="mt-1.5 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-lg mb-1">
                     Transparent Pricing
@@ -269,7 +306,7 @@ const SolvingSection = () => {
         <div className="px-6 pb-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-green-800 text-2xl font-bold">+</span>
+              <span className="text-[#2B7856] text-2xl font-bold">+</span>
               <h3 className="text-xl font-extrabold text-gray-900">The Better Way Forward</h3>
             </div>
 
@@ -279,42 +316,78 @@ const SolvingSection = () => {
 
             <ul className="space-y-4">
               <li className="flex items-start gap-2.5">
-                <span className="text-green-500 text-lg mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={10} 
+                  height={10} 
+                  className="mt-1 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-sm mb-0.5">Secure by Design</h4>
                   <p className="text-gray-900 text-sm leading-relaxed">encrypted, compliant, and access-controlled</p>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="text-green-500 text-lg mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={10} 
+                  height={10} 
+                  className="mt-1 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-sm mb-0.5">Fast & Reliable</h4>
                   <p className="text-gray-900 text-sm leading-relaxed">optimized for traffic spikes and large catalogs</p>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="text-green-500 text-lg mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={10} 
+                  height={10} 
+                  className="mt-1 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-sm mb-0.5">Scalable & Flexible</h4>
                   <p className="text-gray-900 text-sm leading-relaxed">add products, users, and channels anytime</p>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="text-green-500 text-lg mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={10} 
+                  height={10} 
+                  className="mt-1 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-sm mb-0.5">Easily Integrated</h4>
                   <p className="text-gray-900 text-sm leading-relaxed">ERP, PIM, logistics, payments, and more</p>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="text-green-500 text-lg mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={10} 
+                  height={10} 
+                  className="mt-1 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-sm mb-0.5">Customizable</h4>
                   <p className="text-gray-900 text-sm leading-relaxed">checkout, roles, and workflows your way</p>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="text-green-500 text-lg mt-0.5">✓</span>
+                <Image 
+                  src="/icons/green-tick.svg" 
+                  alt="" 
+                  width={10} 
+                  height={10} 
+                  className="mt-1 shrink-0"
+                />
                 <div>
                   <h4 className="text-gray-900 font-bold text-sm mb-0.5">Transparent Pricing</h4>
                   <p className="text-gray-900 text-sm leading-relaxed">no hidden costs or transaction fees, so you sell without fear</p>
