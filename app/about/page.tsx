@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer2 from "../components/Footer2";
 import EmpoweringSection from "./sections/EmpoweringSection";
 import ExpertandQualitySection from "./sections/ExpertandQualitySection";
 import MissionSection from "./sections/MissionSection";
@@ -13,7 +13,7 @@ export default function About() {
       <SystemIntelligentSection />
       <OurSolutionsSection />
       <ExpertandQualitySection />
-      <Footer />
+      <Footer2 />
     </main>
   );
 }

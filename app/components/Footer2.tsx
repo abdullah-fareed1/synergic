@@ -249,6 +249,7 @@ const Footer2 = () => {
         </GridContainer>
       </GridSection>
 
+      {/* Mobile */}
       <section className="lg:hidden bg-[#F3F3EE]">
         <div className="px-6 pt-8 pb-0 space-y-8">
           <FooterLinkList
@@ -288,19 +289,18 @@ const Footer2 = () => {
 
         <a
           href="/contact"
-          className="flex items-center justify-between w-full bg-gray-900 text-white text-sm font-medium px-6 py-6 mt-8 hover:bg-gray-800 transition-colors"
+          className="flex items-center justify-between w-full bg-gray-900 text-white text-base  px-6 py-6 mt-8 hover:bg-gray-800 transition-colors"
         >
           <span>GET IN TOUCH</span>
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-6 h-auto" />
         </a>
       </section>
-
       <section className="lg:hidden bg-white px-6 py-5">
         <div className="flex items-center justify-start gap-8">
-          <p className="text-sm text-black font-semibold tracking-wide">
+          <p className="text-base text-black font-semibold tracking-wide">
             FOLLOW US
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-8">
             {footer2Data.social.map((social, i) => (
               <a
                 key={i}
@@ -312,7 +312,7 @@ const Footer2 = () => {
                 <img
                   src={`/icons/${social.icon}.svg`}
                   alt={social.name}
-                  className="w-6 h-6"
+                  className="w-8 h-8"
                 />
               </a>
             ))}
@@ -323,8 +323,8 @@ const Footer2 = () => {
       <div className="lg:hidden w-full h-px bg-gray-300" />
 
       <section className="lg:hidden bg-white px-6 py-4">
-        <div className="flex flex-col items-center gap-2 text-xs text-gray-500">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col items-center gap-2  text-gray-400">
+          <div className="flex items-center gap-2 text-sm">
             <a
               href="/privacy-policy"
               className="hover:text-gray-900 transition-colors"
@@ -340,7 +340,7 @@ const Footer2 = () => {
             </a>
           </div>
 
-          <div className="text-center">
+          <div className="text-center text-base">
             <p>© 2005 - {new Date().getFullYear()} Synergic Intelligent Systems.</p>
             <p>All rights reserved.</p>
           </div>
