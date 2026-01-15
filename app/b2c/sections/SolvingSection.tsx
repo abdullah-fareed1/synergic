@@ -240,12 +240,12 @@ const SolvingSection = () => {
       </GridSection>
       {/* MOBILE */}
       <section className="lg:hidden bg-white">
-        <div className="px-6 pt-8 pb-8">
+        <div className="px-6 pt-8 pb-2">
           <div className="mb-8">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4 leading-tight">
-              Solving What Slows You Down
+              Solving What Slows<br/>You Down
             </h2>
-            <p className="text-gray-900 text-base leading-relaxed">
+            <p className="text-gray-900 text-[22px] ">
               From fast retail shops to enterprise-grade commerce ecosystems — tailored, scalable, and built to grow.
             </p>
           </div>
@@ -260,42 +260,42 @@ const SolvingSection = () => {
               <h3 className="text-xl font-extrabold text-gray-900">Common challenges</h3>
             </div>
 
-            <p className="text-gray-900 text-sm mb-4 leading-relaxed">
+            <p className="text-gray-900 text-[19px] mb-4 leading-relaxed">
               We see these problems all the time — and <span className="font-bold">we build systems that solve them.</span>
             </p>
 
-            <ul className="space-y-2.5">
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Slow sites losing mobile customers</span>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Slow sites losing mobile customers</span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Platforms crashing under high traffic</span>
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Platforms crashing under high traffic</span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Limited catalog logic and poor UX</span>
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Limited catalog logic and poor UX</span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Checkout without role-based pricing</span>
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Checkout without role-based pricing</span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Painful ERP/CRM/shipping integrations</span>
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Painful ERP/CRM/shipping integrations</span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Security gaps in old plugins</span>
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Security gaps in old plugins</span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Frequent plugin conflicts and site breakage after updates</span>
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Frequent plugin conflicts and site breakage after updates</span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-gray-400 mt-0.5 text-sm">•</span>
-                <span className="text-gray-900 text-sm leading-relaxed">Every change causes issues — and growth becomes a risk</span>
+              <li className="flex items-center gap-3">
+                <span className="text-gray-400 text-2xl leading-none">•</span>
+                <span className="text-gray-900 text-[15px] leading-relaxed">Every change causes issues — and growth becomes a risk</span>
               </li>
             </ul>
           </div>
@@ -306,91 +306,93 @@ const SolvingSection = () => {
         <div className="px-6 pb-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[#2B7856] text-2xl font-bold">+</span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+                <path d="M11 3V19M3 11H19" stroke="#2B7856" strokeWidth="3" strokeLinecap="round"/>
+              </svg>
               <h3 className="text-xl font-extrabold text-gray-900">The Better Way Forward</h3>
             </div>
 
-            <p className="text-gray-900 text-sm mb-4 leading-relaxed">
+            <p className="text-gray-900 text-[19px] mb-6 leading-relaxed">
               Our commerce solutions go beyond the basics, combining modern design with enterprise-grade flexibility — <span className="font-bold">without the complexity.</span>
             </p>
 
             <ul className="space-y-4">
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <Image 
                   src="/icons/green-tick.svg" 
                   alt="" 
                   width={10} 
                   height={10} 
-                  className="mt-1 shrink-0"
+                  className="mt-1.5 shrink-0"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-bold text-sm mb-0.5">Secure by Design</h4>
-                  <p className="text-gray-900 text-sm leading-relaxed">encrypted, compliant, and access-controlled</p>
+                  <h4 className="text-gray-900 font-bold text-[17px] mb-0.5">Secure by Design</h4>
+                  <p className="text-gray-900 text-[15px] leading-relaxed">encrypted, compliant, and access-controlled</p>
                 </div>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <Image 
                   src="/icons/green-tick.svg" 
                   alt="" 
                   width={10} 
                   height={10} 
-                  className="mt-1 shrink-0"
+                  className="mt-1.5 shrink-0"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-bold text-sm mb-0.5">Fast & Reliable</h4>
-                  <p className="text-gray-900 text-sm leading-relaxed">optimized for traffic spikes and large catalogs</p>
+                  <h4 className="text-gray-900 font-bold text-[17px] mb-0.5">Fast & Reliable</h4>
+                  <p className="text-gray-900 text-[15px] leading-relaxed">optimized for traffic spikes and large catalogs</p>
                 </div>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <Image 
                   src="/icons/green-tick.svg" 
                   alt="" 
                   width={10} 
                   height={10} 
-                  className="mt-1 shrink-0"
+                  className="mt-1.5 shrink-0"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-bold text-sm mb-0.5">Scalable & Flexible</h4>
-                  <p className="text-gray-900 text-sm leading-relaxed">add products, users, and channels anytime</p>
+                  <h4 className="text-gray-900 font-bold text-[17px] mb-0.5">Scalable & Flexible</h4>
+                  <p className="text-gray-900 text-[15px] leading-relaxed">add products, users, and channels anytime</p>
                 </div>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <Image 
                   src="/icons/green-tick.svg" 
                   alt="" 
                   width={10} 
                   height={10} 
-                  className="mt-1 shrink-0"
+                  className="mt-1.5 shrink-0"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-bold text-sm mb-0.5">Easily Integrated</h4>
-                  <p className="text-gray-900 text-sm leading-relaxed">ERP, PIM, logistics, payments, and more</p>
+                  <h4 className="text-gray-900 font-bold text-[17px] mb-0.5">Easily Integrated</h4>
+                  <p className="text-gray-900 text-[15px] leading-relaxed">ERP, PIM, logistics, payments, and more</p>
                 </div>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <Image 
                   src="/icons/green-tick.svg" 
                   alt="" 
                   width={10} 
                   height={10} 
-                  className="mt-1 shrink-0"
+                  className="mt-1.5 shrink-0"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-bold text-sm mb-0.5">Customizable</h4>
-                  <p className="text-gray-900 text-sm leading-relaxed">checkout, roles, and workflows your way</p>
+                  <h4 className="text-gray-900 font-bold text-[17px] mb-0.5">Customizable</h4>
+                  <p className="text-gray-900 text-[15px] leading-relaxed">checkout, roles, and workflows your way</p>
                 </div>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <Image 
                   src="/icons/green-tick.svg" 
                   alt="" 
                   width={10} 
                   height={10} 
-                  className="mt-1 shrink-0"
+                  className="mt-1.5 shrink-0"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-bold text-sm mb-0.5">Transparent Pricing</h4>
-                  <p className="text-gray-900 text-sm leading-relaxed">no hidden costs or transaction fees, so you sell without fear</p>
+                  <h4 className="text-gray-900 font-bold text-[17px] mb-0.5">Transparent Pricing</h4>
+                  <p className="text-gray-900 text-[15px] leading-relaxed">no hidden costs or transaction fees, so you sell without fear</p>
                 </div>
               </li>
             </ul>
