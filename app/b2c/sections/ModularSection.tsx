@@ -95,17 +95,17 @@ const ModularSection = () => {
 
       <section className="lg:hidden bg-gray-100">
         <div className="px-6 pt-12 pb-8">
-          <h2 className="text-3xl font-extrabold text-black mb-4 leading-tight">
-            Modular & Custom by Design
+          <h2 className="text-3xl font-extrabold text-black mb-4 ">
+            Modular & Custom <br/>by Design
           </h2>
-          <p className="text-black text-base leading-relaxed mb-6">
+          <p className="text-black text-lg max-w-sm leading-relaxed mb-6">
             Your business is unique — your commerce system should be too.
           </p>
           
-          <p className="text-black text-base leading-relaxed">
+          <p className="text-black text-lg leading-relaxed max-w-xs">
             Every solution is <span className="font-bold">modular</span>. Need just a modern eShop today? Expanding into B2B next year?
           </p>
-          <p className="text-black text-base leading-relaxed mt-2">
+          <p className="text-black text-lg leading-relaxed mt-2 max-w-sm">
             Adding subscriptions or a PIM down the line? You can start small and grow freely by combining the components you need, when you need them.
           </p>
         </div>
@@ -118,10 +118,10 @@ const ModularSection = () => {
                 alt="" 
                 width={10} 
                 height={10} 
-                className="mt-1 shrink-0"
+                className="mt-2 shrink-0"
               />
               <div>
-                <h4 className="text-black font-bold text-base mb-1">Mix & match solutions</h4>
+                <h4 className="text-black font-bold text-lg mb-1">Mix & match solutions</h4>
                 <p className="text-black text-sm leading-relaxed">combine B2C with PIM, OMS, or loyalty programs</p>
               </div>
             </li>
@@ -131,10 +131,10 @@ const ModularSection = () => {
                 alt="" 
                 width={10} 
                 height={10} 
-                className="mt-1 shrink-0"
+                className="mt-2 shrink-0"
               />
               <div>
-                <h4 className="text-black font-bold text-base mb-1">Customize at every layer</h4>
+                <h4 className="text-black font-bold text-lg mb-1">Customize at every layer</h4>
                 <p className="text-black text-sm leading-relaxed">checkout, integrations, dashboards, and roles</p>
               </div>
             </li>
@@ -144,10 +144,10 @@ const ModularSection = () => {
                 alt="" 
                 width={10} 
                 height={10} 
-                className="mt-1 shrink-0"
+                className="mt-2 shrink-0"
               />
               <div>
-                <h4 className="text-black font-bold text-base mb-1">Future-ready</h4>
+                <h4 className="text-black font-bold text-lg mb-1">Future-ready</h4>
                 <p className="text-black text-sm leading-relaxed">mobile apps, AI search, or new sales channels anytime</p>
               </div>
             </li>
@@ -157,8 +157,8 @@ const ModularSection = () => {
         <div className="bg-[#2B7856] transition-colors cursor-pointer">
           <div className="flex items-center justify-between p-5">
             <div>
-              <p className="text-sm text-white/80 mb-1">Need a custom mix? We'll design the right stack</p>
-              <h3 className="text-xl font-normal text-white">
+              <p className="text-xs text-white/80 mb-1">Need a custom mix? We'll design the right stack</p>
+              <h3 className="text-base font-normal text-white">
                 Start your unique commerce platform
               </h3>
             </div>
