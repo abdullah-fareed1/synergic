@@ -122,7 +122,7 @@ const CommerceLeadersSection = () => {
                                 : position === 2
                                 ? 0.25
                                 : 0,
-                            transform: `scale(${position === 0 ? 1 : 0.95})`,
+                            transform: `scale(${position === 0 ? 1 : 0.98})`,
                             zIndex:
                               position === 0
                                 ? 30
@@ -140,8 +140,8 @@ const CommerceLeadersSection = () => {
                             style={{
                               boxShadow:
                                 position === 0
-                                  ? "0 10px 40px -10px rgba(0, 0, 0, 0.15)"
-                                  : "0 4px 20px -5px rgba(0, 0, 0, 0.08)",
+                                  ? "0 8px 20px 0 rgba(0, 0, 0, 0.35)"
+                                  : "0 4px 12px 0 rgba(0, 0, 0, 0.15)",
                             }}
                           >
                             <img
@@ -184,20 +184,27 @@ const CommerceLeadersSection = () => {
         />
       </div>
 
-      <section className="lg:hidden px-4 py-12 bg-gray-50 overflow-x-hidden">
-        <div className="mb-12">
-          <h2 className="text-3xl font-extrabold text-[#111D2B] mb-5 leading-tight tracking-tight">
-            Trusted by Commerce Leaders
+      <section className="lg:hidden bg-gray-50 overflow-x-hidden">
+        <div className="px-6 pt-10 pb-6">
+          <h2 className="text-[30px] font-extrabold text-[#111D2B] mb-4 leading-tight tracking-tight">
+            Trusted by Commerce<br/> Leaders
           </h2>
-          <p className="text-xl text-black leading-relaxed" style={{ lineHeight: "1.75" }}>
+          <p className="text-lg text-black leading-relaxed mb-3">
             From retailers to global B2B brands, our solutions scale with speed,
             security, and flexibility.
           </p>
         </div>
 
-        <div className="relative overflow-x-hidden" style={{ height: "350px" }}>
-          <div className="relative h-full">
-            <div className="relative w-full h-full flex items-center overflow-visible">
+        <div className="relative pb-14">
+          <div className="relative overflow-visible">
+            <div className="relative" style={{ marginLeft: "6%", width: "68%" }}>
+              <img
+                src={images[0]}
+                alt=""
+                className="w-full h-auto invisible"
+                style={{ display: "block" }}
+              />
+              
               {images.map((img, index) => {
                 const nextIndex = (activeIndex + 1) % images.length;
                 const isActive = index === activeIndex;
@@ -206,55 +213,56 @@ const CommerceLeadersSection = () => {
                 return (
                   <div
                     key={index}
-                    className="absolute transition-all duration-700 ease-out"
+                    className="absolute top-0 transition-all duration-700 ease-out"
                     style={{
-                      left: isActive ? "0%" : isPeeking ? "61%" : "100%",
-                      opacity: isActive ? 1 : isPeeking ? 0.35 : 0,
+                      left: isActive ? "0%" : isPeeking ? "103%" : "200%",
+                      opacity: isActive ? 1 : isPeeking ? 0.4 : 0,
                       zIndex: isActive ? 20 : isPeeking ? 10 : 0,
-                      transform: isActive ? "scale(1)" : "scale(0.95)",
-                      width: isActive ? "60%" : "58%",
+                      transform: isActive ? "scale(1)" : "scale(0.98)",
+                      width: "100%",
                       pointerEvents: isActive ? "auto" : "none",
                       visibility: isActive || isPeeking ? "visible" : "hidden",
                     }}
                   >
                     <div
-                      className="bg-white rounded-xl overflow-hidden"
+                      className="bg-white rounded-lg overflow-hidden"
                       style={{
                         boxShadow: isActive
-                          ? "0 10px 40px -10px rgba(0, 0, 0, 0.15)"
-                          : "0 4px 20px -5px rgba(0, 0, 0, 0.08)",
+                          ? "0 8px 20px 0 rgba(0, 0, 0, 0.35)"
+                          : "0 4px 12px 0 rgba(0, 0, 0, 0.15)",
                       }}
                     >
                       <img
                         src={img}
                         alt={`Commerce platform ${index + 1}`}
-                        className="w-full h-auto"
+                        className="w-full h-auto block"
+                        style={{ objectFit: "contain" }}
                       />
                     </div>
                   </div>
                 );
               })}
             </div>
+          </div>
 
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-8 z-30">
-              <button
-                onClick={prevSlide}
-                className="hover:opacity-70 transition-opacity"
-                aria-label="Previous slide"
-              >
-                <ArrowLeft className="w-7 h-7 text-black" strokeWidth={1.5} />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="hover:opacity-70 transition-opacity"
-                aria-label="Next slide"
-              >
-                <ArrowLeft
-                  className="w-7 h-7 text-black rotate-180"
-                  strokeWidth={1.5}
-                />
-              </button>
-            </div>
+          <div className="flex justify-center items-center gap-12 mt-6">
+            <button
+              onClick={prevSlide}
+              className="hover:opacity-70 transition-opacity"
+              aria-label="Previous slide"
+            >
+              <ArrowLeft className="w-6 h-6 text-black" strokeWidth={1.5} />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="hover:opacity-70 transition-opacity"
+              aria-label="Next slide"
+            >
+              <ArrowLeft
+                className="w-6 h-6 text-black rotate-180"
+                strokeWidth={1.5}
+              />
+            </button>
           </div>
         </div>
       </section>
