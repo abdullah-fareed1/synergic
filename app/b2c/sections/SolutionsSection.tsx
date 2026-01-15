@@ -68,7 +68,7 @@ const SolutionsSection = () => {
             <StripedBackground />
           </GridCol>
           <GridCol span="CD" className="flex items-stretch h-full">
-            <div className="w-full border border-gray-400/30 bg-[#2B7856] hover:bg-[#4A8A6D] transition-colors cursor-pointer flex items-center">
+            <div className="w-full border border-gray-400/30 bg-[#2B7856] transition-colors cursor-pointer flex items-center">
               <div className="flex items-center justify-between p-6 w-full">
                 <div>
                   <p className="text-sm text-white/80 mb-1">Talk to an eCommerce expert</p>
@@ -204,7 +204,7 @@ const SolutionsSection = () => {
       </GridSection>
 
       <section className="lg:hidden bg-white">
-        <div className="bg-[#2B7856] hover:bg-[#4A8A6D] transition-colors cursor-pointer">
+        <div className="bg-[#2B7856] transition-colors cursor-pointer">
           <div className="flex items-center justify-between p-6">
             <div>
               <p className="text-sm text-white/80 mb-1">Talk to an eCommerce expert</p>
@@ -217,22 +217,22 @@ const SolutionsSection = () => {
         </div>
 
         <div className="px-6 pt-12 pb-6">
-          <p className="text-sm font-bold text-gray-600 mb-2 tracking-wide">SOLUTIONS WE DELIVER</p>
+          <p className="text-base font-extrabold text-black mb-2 ">SOLUTIONS WE DELIVER</p>
           <h2 className="text-3xl font-extrabold text-black mb-4">What You Can Build</h2>
-          <p className="text-black text-base leading-relaxed">
+          <p className="text-black text-lg leading-relaxed">
             Start with what you need, then expand as you grow. From eShops to enterprise-grade omnichannel ecosystems.
           </p>
         </div>
 
         {solutions.map((solution, index) => (
-          <div key={solution.title} className={`px-6 py-6 ${index === solutions.length - 1 ? 'border-t border-b border-gray-300' : 'border-t border-gray-300'}`}>
+          <div key={solution.title} className={`px-7 py-6 ${index === solutions.length - 1 ? 'border-t border-b border-gray-300' : 'border-t border-gray-300'}`}>
             <div className="flex gap-4">
               <div className="shrink-0">
-                <img src={solution.icon} alt={solution.title} className="w-10 h-10 opacity-80" />
+                <img src={solution.icon} alt={solution.title} className="w-11 pt-2 h-11 opacity-80 mr-3" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-black mb-2">{solution.title}</h3>
-                <p className="text-black text-sm leading-relaxed">{solution.description}</p>
+                <h3 className="text-xl font-bold text-black mb-2">{solution.title}</h3>
+                <p className="text-black text-base max-w-2xs leading-relaxed">{solution.description}</p>
               </div>
             </div>
           </div>
