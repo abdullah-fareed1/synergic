@@ -96,15 +96,21 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         </button>
 
         {/* Mobile Menu Button */}
-        <button
+         <button
           onClick={onMenuClick}
-          className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-black/20 cursor-pointer"
+          className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-[#F3F3EE]"
           style={{ width: 'calc(100vw / 6)', height: 60 }}
         >
-          <div className="flex flex-col items-center gap-1">
-            <div className="flex flex-col gap-1">
-              <div className="bg-black w-7 h-0.5 rounded-sm mt-0.5" />
-              <div className="bg-black w-7 h-0.5 rounded-sm mt-0.5" />
+          <div className="flex flex-col items-center gap-[6px]">
+            <div className="flex flex-col gap-[6px]">
+              <div 
+                className="bg-black" 
+                style={{ width: '32px', height: '2px', borderRadius: '1px' }} 
+              />
+              <div 
+                className="bg-black" 
+                style={{ width: '32px', height: '2px', borderRadius: '1px' }} 
+              />
             </div>
             <span
               className="uppercase font-semibold"

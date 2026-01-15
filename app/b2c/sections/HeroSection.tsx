@@ -14,13 +14,13 @@ export default function HeroSection() {
       <section className="lg:hidden relative bg-white min-h-screen">
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
-        <div className="px-4 pt-24 pb-12">
+        <div className="px-2 pt-22 pb-6">
           <div className="mb-8">
-            <h1 className="text-4xl font-extrabold leading-tight mb-6 text-gray-900">
+            <h1 className="text-3xl font-extrabold mb-3 text-gray-900">
               Composable eCommerce,{" "}
               <span className="block mt-1">Built for Your Business</span>
             </h1>
-            <p className="text-2xl leading-relaxed mb-4 text-gray-700">
+            <p className="text-xl mb-4 text-gray-900">
               From fast retail shops to enterprise-grade commerce ecosystems — tailored, scalable, and built to grow.
             </p>
           </div>
@@ -28,15 +28,15 @@ export default function HeroSection() {
             <img
               src="images/b2c-mobile.svg"
               alt="eCommerce Platform"
-              className="w-full max-w-md"
+              className="w-full max-w-md max-h-100"
             />
           </div>
           <div className="mb-8">
-            <p className="text-l leading-relaxed mb-4 text-gray-600">
+            <p className="text-sm mb-4 text-gray-600">
               Whether you're launching a modern eShop or scaling a complex B2B platform, we design solutions that grow with your business — fast, secure, and built around your goals.
             </p>
 
-            <p className="text-l leading-relaxed text-gray-600">
+            <p className="text-sm leading-relaxed text-gray-600">
               B2C, B2B, or hybrid — our modular systems connect channels, automate operations, and power experiences that convert.
             </p>
           </div>
