@@ -15,7 +15,7 @@ export default function HeroSection() {
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
         <div className="px-2 pt-22 pb-6">
-          <div className="mb-8">
+          <div className="mb-4">
             <h1 className="text-3xl font-extrabold mb-3 text-gray-900">
               Composable eCommerce,{" "}
               <span className="block mt-1">Built for Your Business</span>
@@ -24,14 +24,14 @@ export default function HeroSection() {
               From fast retail shops to enterprise-grade commerce ecosystems — tailored, scalable, and built to grow.
             </p>
           </div>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center mb-4">
             <img
               src="images/b2c-mobile.svg"
               alt="eCommerce Platform"
-              className="w-full max-w-md max-h-100"
+              className="w-full max-w-xs h-auto"
             />
           </div>
-          <div className="mb-8">
+          <div>
             <p className="text-sm mb-4 text-gray-600">
               Whether you're launching a modern eShop or scaling a complex B2B platform, we design solutions that grow with your business — fast, secure, and built around your goals.
             </p>
