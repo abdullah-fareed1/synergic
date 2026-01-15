@@ -19,6 +19,9 @@ This deployment will be continuously updated as the codebase evolves.
 
 Environment Variables Required
 
+WEBSITE_BASE_URL
+currently its https://synergic.vercel.app but change it once it production, this is used in various places on the site
+
 RESEND_API_KEY
 (this can be obtained by signing up to resend.com & connecting a domain)
 

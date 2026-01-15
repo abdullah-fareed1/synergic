@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Synergic Intelligent Systems | Modular Software Platforms for Commerce & Enterprise",
+// =============================================================================
+// CONFIGURATION
+// =============================================================================
 
+const baseUrl = process.env.WEBSITE_BASE_URL || "https://synergic.vercel.app";
+const ogImageUrl = `${baseUrl}/images/synergic.webp`;
+
+// =============================================================================
+// METADATA
+// =============================================================================
+
+export const metadata: Metadata = {
+  // Base URL for resolving relative URLs
+  metadataBase: new URL(baseUrl),
+
+  // Basic
+  title:
+    "Synergic Intelligent Systems | Modular Software Platforms for Commerce & Enterprise",
   description:
     "Synergic Intelligent Systems builds modular, API-first software platforms for commerce, enterprise systems, integrations, and AI-driven growth. Choose, combine, and scale solutions tailored to your business.",
 
+  // Keywords
   keywords: [
     "software company",
     "modular software platforms",
@@ -23,31 +39,57 @@ export const metadata: Metadata = {
     "digital transformation",
   ],
 
+  // Open Graph (Facebook, Discord, LinkedIn, Slack)
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: baseUrl,
+    siteName: "Synergic Intelligent Systems",
     title: "Synergic Intelligent Systems | Choose. Combine. Grow.",
     description:
       "Intelligent, modular software platforms for commerce, enterprise systems, integrations, and AI-driven growth. Built for performance, automation, and scale.",
-    url: "https://synergic.vercel.app",
-    siteName: "Synergic Intelligent Systems",
     images: [
       {
-        url: "https://synergic.vercel.app/images/synergic.webp",
+        url: ogImageUrl,
+        secureUrl: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "Synergic Intelligent Systems – Modular Software Platforms",
+        type: "image/webp",
       },
     ],
-    type: "website",
   },
 
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: "Synergic Intelligent Systems | Choose. Combine. Grow.",
+    description:
+      "Intelligent, modular software platforms for commerce, enterprise systems, integrations, and AI-driven growth.",
+    images: [ogImageUrl],
+  },
+
+  // Robots & Indexing
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   alternates: {
-    canonical: "https://synergic.vercel.app",
+    canonical: baseUrl,
   },
+
+  authors: [{ name: "Synergic Intelligent Systems" }],
+  creator: "Synergic Intelligent Systems",
+  publisher: "Synergic Intelligent Systems",
+  category: "Technology",
 };
 
 

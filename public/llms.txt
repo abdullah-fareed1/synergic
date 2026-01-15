@@ -1,0 +1,23 @@
+# Synergic - AI-Powered E-commerce Solutions
+
+## Website Structure
+
+### Main Pages
+- Home: https://synergic.com/
+- About: https://synergic.com/about
+- B2B E-commerce: https://synergic.com/b2b-ecommerce
+- B2C: https://synergic.com/b2c
+- B2C Solutions: https://synergic.com/b2c-solutions
+- FusionMesh: https://synergic.com/fusionmesh
+- Tech Advantage: https://synergic.com/tech-advantage
+- Career: https://synergic.com/career
+- Contact: https://synergic.com/contact
+
+## Content Areas
+[Add your actual page descriptions, mission statements, service offerings, and key messaging here]
+
+## Products & Services
+[List your main products/services with descriptions]
+
+## Contact Information
+[Add contact details and career information]
