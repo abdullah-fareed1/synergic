@@ -231,7 +231,7 @@ const SolutionsSection = () => {
                 <img src={solution.icon} alt={solution.title} className="w-11 pt-2 h-11 opacity-80 mr-3" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-black mb-2">{solution.title}</h3>
+                <h3 className="text-xl font-bold text-black mb-1">{solution.title}</h3>
                 <p className="text-black text-base max-w-2xs leading-relaxed">{solution.description}</p>
               </div>
             </div>
