@@ -75,30 +75,30 @@ const FusionMeshGlanceSection = () => {
             resilience in high-traffic, data-intensive environments.
           </p>
 
-          <div className="space-y-6 mb-12">
+          <div className="space-y-5 mb-12">
             <div>
-              <p className="text-[#FB3B22] text-l font-semibold mb-1">01</p>
-              <h3 className="text-lg font-semibold">Fast, scalable custom systems</h3>
+              <p className="text-[#FB3B22] text-xl font-semibold">01</p>
+              <h3 className="text-xl font-extrabold text-[#111D2B]">Fast, scalable custom<br/>systems</h3>
             </div>
 
             <div>
-              <p className="text-[#FB3B22] text-l font-semibold mb-1">02</p>
-              <h3 className="text-lg font-semibold">Secure cloud or on-premise platforms</h3>
+              <p className="text-[#FB3B22] text-xl font-semibold">02</p>
+              <h3 className="text-xl font-extrabold text-[#111D2B]">Secure cloud or on-premise<br/>platforms</h3>
             </div>
 
             <div>
-              <p className="text-[#FB3B22] text-l font-semibold mb-1">03</p>
-              <h3 className="text-lg font-semibold">Integrated business applications</h3>
+              <p className="text-[#FB3B22] text-xl font-semibold">03</p>
+              <h3 className="text-xl font-extrabold text-[#111D2B]">Integrated business<br/>applications</h3>
             </div>
 
             <div>
-              <p className="text-[#FB3B22] text-l font-semibold mb-1">04</p>
-              <h3 className="text-lg font-semibold">Smart, automation-ready services</h3>
+              <p className="text-[#FB3B22] text-xl font-semibold">04</p>
+              <h3 className="text-xl font-extrabold text-[#111D2B]">Smart, automation-ready<br/>services</h3>
             </div>
 
             <div>
-              <p className="text-[#FB3B22] text-l font-semibold mb-1">05</p>
-              <h3 className="text-lg font-semibold">Multi tenant SaaS or enterprise solutions</h3>
+              <p className="text-[#FB3B22] text-xl font-semibold">05</p>
+              <h3 className="text-xl font-extrabold text-[#111D2B]">Multi tenant SaaS or enterprise<br/>solutions</h3>
             </div>
           </div>
         </div>

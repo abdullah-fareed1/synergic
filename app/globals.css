@@ -12,6 +12,19 @@
   --brand-green: #2B7856;
 }
 
+@theme {
+  --font-family-manrope: var(--font-manrope), sans-serif;
+  --font-family-geologica: var(--font-geologica), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-geologica), sans-serif;
+}
+
+p, span, a, li {
+  font-family: var(--font-manrope), sans-serif;
+}
+
 @layer utilities {
   [class*="text-[var()]"] {
     color: inherit;
