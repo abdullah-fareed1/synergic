@@ -45,13 +45,26 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         </div>
 
         {/* Desktop Get in Touch */}
-        <div className="hidden lg:flex items-center absolute right-[5.56%] top-0 bottom-0 pr-4 gap-3">
-          <span className="text-white text-sm font-medium tracking-wide uppercase">
+        <div 
+          className="hidden lg:flex items-center justify-end absolute top-0 bottom-0 pr-4 gap-3 cursor-pointer hover:opacity-80 transition"
+          style={{ 
+            right: '5.56%',
+            width: 'calc(5.56% * 2)',
+            backgroundColor: 'rgba(255, 255, 255, 0.08)'
+          }}
+        >
+          <span 
+            className="text-sm font-medium tracking-wide uppercase"
+            style={{ color: 'white' }}
+          >
             Get in Touch
           </span>
           <div
-            className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition border-2"
-            style={{ borderColor: "#E63946" }}
+            className="w-10 h-10 rounded-full flex items-center justify-center transition border-2"
+            style={{ 
+              borderColor: "#FB3B22",
+              backgroundColor: 'transparent'
+            }}
           >
             <svg
               className="w-5 h-5"
@@ -73,26 +86,25 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         {/* Desktop Menu Button */}
         <button
           onClick={onMenuClick}
-          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
+          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black/50 cursor-pointer"
           style={{ width: '5.56%' }}
         >
-          <div className="flex flex-col items-center gap-1">
-            <div className="flex flex-col gap-1">
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-              <div className="bg-white w-7 h-0.5 rounded-sm" />
-            </div>
+          <div className="flex flex-col items-center gap-2">
+            <svg width="32" height="12" viewBox="0 0 32 12" fill="none">
+              <rect x="0" y="0" width="32" height="3" rx="1.5" fill="white" />
+              <rect x="0" y="9" width="32" height="3" rx="1.5" fill="white" />
+            </svg>
             <span
-              className="uppercase font-semibold"
+              className="uppercase font-bold"
               style={{
-                color: "#E63946",
-                fontSize: "9px",
+                color: "var(--brand-red)",
+                fontSize: "10px",
                 letterSpacing: "1.55px",
               }}
             >
               MENU
             </span>
-            
-          </div>
+            </div>
         </button>
 
         {/* Mobile Menu Button */}

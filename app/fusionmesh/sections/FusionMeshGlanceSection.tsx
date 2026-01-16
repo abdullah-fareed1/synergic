@@ -14,51 +14,51 @@ const FusionMeshGlanceSection = () => {
         <div className="absolute left-0 right-0 top-[15%] h-px bg-gray-400 opacity-30 z-20" />
 
         <GridContainer className="items-center h-full">
-          <GridCol span="AB" className="p-12 pt-40">
-            <h2 className="text-4xl font-extrabold mb-6">
+          <GridCol span="AB" className="pl-9 pt-28">
+            <h2 className="text-4xl font-extrabold mb-4">
               FusionMesh at a Glance
             </h2>
-            <p className="text-lg text-gray-700 mb-12">
+            <p className="text-lg max-w-2xl text-gray-800 mb-12">
               Fusion helps you build fast, scalable custom systems ideal for performance and
               resilience in high-traffic, data-intensive environments.
             </p>
 
             <div className="grid grid-cols-2 gap-x-8">
               <div className="space-y-8">
-                <div>
-                  <p className="text-[#FB3B22] text-l font-semibold mb-2">01</p>
-                  <h3 className="text-l font-semibold">Fast, scalable custom<br/>systems</h3>
+                <div className="group cursor-pointer">
+                  <p className="text-[#FB3B22] text-xl font-semibold mb-2 opacity-60 group-hover:opacity-100 transition-opacity duration-200">01</p>
+                  <h3 className="text-xl font-bold text-black opacity-60 group-hover:opacity-100 transition-opacity duration-200">Fast, scalable custom<br/>systems</h3>
                 </div>
 
-                <div>
-                  <p className="text-[#FB3B22] text-l font-semibold mb-2">03</p>
-                  <h3 className="text-l font-semibold">Integrated business<br/> applications</h3>
+                <div className="group cursor-pointer">
+                  <p className="text-[#FB3B22] text-xl font-semibold mb-2 opacity-60 group-hover:opacity-100 transition-opacity duration-200">03</p>
+                  <h3 className="text-xl font-bold text-black opacity-60 group-hover:opacity-100 transition-opacity duration-200">Integrated business<br/> applications</h3>
                 </div>
 
-                <div>
-                  <p className="text-[#FB3B22] text-l font-semibold mb-2">05</p>
-                  <h3 className="text-l font-semibold">Multi tenant SaaS or enterprise<br/> solutions</h3>
+                <div className="group cursor-pointer">
+                  <p className="text-[#FB3B22] text-xl font-semibold mb-2 opacity-60 group-hover:opacity-100 transition-opacity duration-200">05</p>
+                  <h3 className="text-xl font-bold text-black opacity-60 group-hover:opacity-100 transition-opacity duration-200">Multi tenant SaaS or enterprise<br/> solutions</h3>
                 </div>
               </div>
               <div className="space-y-8">
-                <div>
-                  <p className="text-[#FB3B22] text-l mb-2">02</p>
-                  <h3 className="text-l font-semibold">Secure cloud or on-premise<br/> platforms</h3>
+                <div className="group cursor-pointer">
+                  <p className="text-[#FB3B22] text-xl mb-2 font-semibold opacity-60 group-hover:opacity-100 transition-opacity duration-200">02</p>
+                  <h3 className="text-xl font-bold text-black opacity-60 group-hover:opacity-100 transition-opacity duration-200">Secure cloud or on-premise<br/> platforms</h3>
                 </div>
 
-                <div>
-                  <p className="text-[#FB3B22] text-l font-semibold mb-2">04</p>
-                  <h3 className="text-l font-semibold">Smart, automation-ready<br/> services</h3>
+                <div className="group cursor-pointer">
+                  <p className="text-[#FB3B22] text-xl font-semibold mb-2 opacity-60 group-hover:opacity-100 transition-opacity duration-200">04</p>
+                  <h3 className="text-xl font-bold text-black opacity-60 group-hover:opacity-100 transition-opacity duration-200">Smart, automation-ready<br/> services</h3>
                 </div>
               </div>
             </div>
           </GridCol>
 
-          <GridCol span="CD" className="relative pl-8 pt-20 h-full flex items-center">
+          <GridCol span="CD" className="relative pl-22 pt-20 h-full flex items-center">
             <img
               src="/images/fusionmesh-screen.svg"
               alt="FusionMesh Screen"
-              className="h-[75vh] w-auto max-w-none"
+              className="h-[72vh] w-auto max-w-none"
             />
           </GridCol>
         </GridContainer>
@@ -70,7 +70,7 @@ const FusionMeshGlanceSection = () => {
           <h2 className="text-3xl font-extrabold mb-4">
             FusionMesh at a Glance
           </h2>
-          <p className="text-base text-gray-700 mb-8">
+          <p className="text-base text-gray-800 mb-8">
             Fusion helps you build fast, scalable custom systems ideal for performance and
             resilience in high-traffic, data-intensive environments.
           </p>

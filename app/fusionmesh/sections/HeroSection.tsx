@@ -150,19 +150,17 @@ export default function HeroSection() {
 
           <GridContainer className="min-h-screen">
             <GridCol span="AB" className="relative flex items-center">
-              <div className="relative z-10 pl-8 py-24 ">
+              <div className="relative z-10 pl-8 pt-29 ">
                 <h1
-                  className="text-white font-extrabold mb-6"
-                  style={{ fontSize: "2.3rem", lineHeight: "1.1" }}
+                  className="text-white font-extrabold mb-6 text-[41px]"
                 >
                   The Technology Platform for Scalable,
-                  <br />
                   Intelligent Systems
                 </h1>
 
                 <div className="mb-8">
                   <span
-                    className="inline-block px-4 py-2.4 text-white text-sm tracking-wide"
+                    className="inline-block px-4 pt-1 pb-1 text-white text-base tracking-wide"
                     style={{ backgroundColor: "#FB3B22" }}
                   >
                     FusionMesh™
@@ -170,33 +168,27 @@ export default function HeroSection() {
                 </div>
 
                 <p
-                  className="text-gray-300 leading-relaxed mb-10"
-                  style={{ fontSize: "1.2rem", lineHeight: "1.7" }}
+                  className="text-gray-300 leading-relaxed mb-10 text-2xl max-w-3xl"
                 >
                   Power your digital innovations with a secure, cloud-ready
-                  framework <br /> built to scale and evolve with your business.
+                  framework built to scale and evolve with your business.
                 </p>
 
                 <div
-                  className="space-y-5 text-gray-400 leading-relaxed"
-                  style={{ fontSize: "1rem", lineHeight: "1.7" }}
+                  className="space-y-5 text-gray-400 leading-relaxed text-lg max-w-xl"
                 >
                   <p>
                     FusionMesh™ is Synergic's modular, open architecture
-                    framework
-                    <br /> designed to power custom applications and intelligent
-                    platforms at
-                    <br /> any scale.
+                    framework designed to power custom applications and intelligent
+                    platforms at any scale.
                   </p>
                   <p>
                     Whether cloud-native or on-premise, it enables organizations
-                    to build
-                    <br /> fast, secure, extensible systems without starting
+                    to build fast, secure, extensible systems without starting
                     from scratch.
                     <br />
                     With built-in security, automations and adaptable data
-                    pipelines,
-                    <br /> fusion is the engine that turns ideas into reality.
+                    pipelines, fusion is the engine that turns ideas into reality.
                   </p>
                 </div>
               </div>
