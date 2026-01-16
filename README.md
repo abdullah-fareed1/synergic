@@ -1,41 +1,54 @@
-Synergic Intelligent Systems
+# Synergic Intelligent Systems
 
-This repository contains the pages for Synergic Intelligent Systems, built as a modern, responsive landing experience.
+Landing experience and web presence for Synergic Intelligent Systems — built with Next.js and modern web technologies.
 
+## Tech Stack
 
-🛠 Tech Stack
+- **Next.js** — React framework for production
+- **TypeScript** — Type-safe development
+- **Tailwind CSS** — Utility-first styling
+- **Responsive Design** — Mobile-first approach
 
-Next.js – React framework for production
+## Live Site
 
+The site is deployed on Vercel and accessible at:
 
-🌍 Live Deployment
+👉 **https://synergic.vercel.app**
 
-The site is deployed on Vercel and can be viewed here:
+Updates deploy automatically as the codebase evolves.
 
-👉 https://synergic.vercel.app
+## Environment Variables
 
-This deployment will be continuously updated as the codebase evolves.
+To run this project, you'll need to set up the following environment variables in your `.env` file:
 
+### Core Configuration
+- `WEBSITE_BASE_URL` — Your site URL (default: `https://synergic.vercel.app`, update for production)
 
-Environment Variables Required
+### Email Service (Resend)
+- `RESEND_API_KEY` — API key from [resend.com](https://resend.com)
+- `SENDING_EMAIL_ADDRESS` — Email address for outgoing messages (must match your Resend domain)
+- `RECEIVING_EMAIL_ADDRESS` — Email address that receives contact form submissions
 
-WEBSITE_BASE_URL
-currently its https://synergic.vercel.app but change it once it production, this is used in various places on the site
+### reCAPTCHA v2
+- `NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY` — Public site key
+- `RECAPTCHA_V2_SECRET_KEY` — Private secret key
 
-RESEND_API_KEY
-(this can be obtained by signing up to resend.com & connecting a domain)
+Get reCAPTCHA keys from: https://www.google.com/recaptcha/admin/
 
-SENDING_EMAIL_ADDRESS
-(this email address must have the same domain which was connected to resend.com)
+## Getting Started
 
-RECEIVING_EMAIL_ADDRESS
-(this is the email that will be recieving the input from contact form)
+```bash
+# Install dependencies
+npm install
 
-NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY
-(this is the public key)
+# Run development server
+npm run dev
 
-RECAPTCHA_V2_SECRET_KEY
-(private key)
+# Build for production
+npm run build
 
-Recaptcha API keys can be obtained from
-https://www.google.com/recaptcha/admin/
+# Start production server
+npm run start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view in your browser.

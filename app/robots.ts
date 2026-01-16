@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const baseUrl = process.env.WEBSITE_BASE_URL;
+const baseUrl = process.env.WEBSITE_BASE_URL || 'https://synergic.vercel.app'
 
 export default function robots(): MetadataRoute.Robots {
   return {
