@@ -10,7 +10,6 @@ export default function HeroSection() {
 
   return (
     <>
-      {/* Mobile */}
       <section
         className="lg:hidden relative min-h-screen"
         style={{ backgroundColor: "#070C18" }}
@@ -28,26 +27,26 @@ export default function HeroSection() {
         <div className="relative z-10">
           <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
-          <div className="pt-24 px-6 pb-12">
-            <h1 className="text-white text-4xl font-extrabold leading-tight mb-6">
-              The Technology Platform for<br/>Scalable, Intelligent<br />Systems
+          <div className="pt-24 pl-2 pr-6 pb-12">
+            <h1 className="text-white text-3xl font-extrabold leading-snug mb-4">
+              The Technology Platform for Scalable, Intelligent Systems
             </h1>
 
-            <div className="mb-6">
+            <div className="mb-4">
               <span
-                className="inline-block px-4 py-2 text-white text-sm font-bold tracking-wide"
+                className="inline-block px-3 py-1 my-1 text-white text-sm tracking-wide"
                 style={{ backgroundColor: "#FB3B22" }}
               >
                 FusionMesh™
               </span>
             </div>
 
-            <p className="text-gray-300 text-l leading-relaxed mb-8">
+            <p className="text-gray-300 text-xl leading-relaxed mb-6">
               Power your digital innovations with a secure, cloud-ready
               framework built to scale and evolve with your business.
             </p>
 
-            <div className="space-y-4 text-gray-400 text-m leading-relaxed">
+            <div className="space-y-3 text-gray-300 text-sm leading-relaxed">
               <p>
                 FusionMesh™ is Synergic's modular, open architecture framework
                 designed to power custom applications and intelligent platforms
@@ -85,7 +84,6 @@ export default function HeroSection() {
 
         {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
       </section>
-      {/* Desktop */}
       <div
         className="hidden lg:block relative"
         style={{ backgroundColor: "#070C18" }}
