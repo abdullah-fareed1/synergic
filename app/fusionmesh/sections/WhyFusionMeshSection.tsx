@@ -1,5 +1,73 @@
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
+const featureCards = [
+  {
+    icon: "/icons/dashboard.svg",
+    title: "Open & Modular",
+    description: "API-first, standards-based, and fully extensible – adapt it to your needs.",
+    hasStripedBackground: false,
+  },
+  {
+    icon: "/icons/scale-out-repository.svg",
+    title: "Scalable by Design",
+    description: "Built to scale vertically or horizontally — from hundreds to thousands of users and millions of transactions.",
+    hasStripedBackground: false,
+  },
+  {
+    icon: "/icons/secure-shield.svg",
+    title: "Secure & Compliant",
+    description: "Encryption, 2FA, SSO, audit logs, and RBAC – ready for enterprise security standards.",
+    hasStripedBackground: true,
+  },
+  {
+    icon: "/icons/24-hour-service.svg",
+    title: "Highly Available & Observable",
+    description: "Engineered for 24/7 uptime with failover, redundancy, and real-time system insights through integrated monitoring and logs.",
+    hasStripedBackground: true,
+  },
+  {
+    icon: "/icons/speed-alt.svg",
+    title: "Optimized for Speed",
+    description: "In-memory processing, smart caching, and asynchronous pipelines ensure real-time performance.",
+    hasStripedBackground: false,
+  },
+  {
+    icon: "/icons/light-bulb-idea.svg",
+    title: "Intelligent by Default",
+    description: "AI-ready foundation enables automation, dynamic workflows, and smart data discovery.",
+    hasStripedBackground: false,
+  },
+  {
+    icon: "/icons/server-cluster.svg",
+    title: "Integrates Seamlessly",
+    description: "Built for deep integration with your systems, services, and external data sources.",
+    hasStripedBackground: true,
+  },
+  {
+    icon: "/icons/cloud-network.svg",
+    title: "Cloud or On-Premise",
+    description: "Fully deployable in the cloud, on-premise, or hybrid – depending on your strategy.",
+    hasStripedBackground: true,
+  },
+];
+
+const sectionContent = {
+  header: {
+    title: "Why FusionMesh",
+    description: "FusionMesh gives you the technical foundation modern systems demand — modular, secure, and built to perform under scale.",
+  },
+  costEfficient: {
+    title: "Cost-Efficient by Design",
+    description: "Fusion is built on open standards and proven technologies — giving you freedom of choice and control over costs.",
+    subDescription: "It supports both open-source and commercial solutions, so you can optimize infrastructure based on your scale, budget, and compliance needs.",
+  },
+};
+
+const stripeStyle = {
+  backgroundImage: 'linear-gradient(45deg, rgb(156 163 175 / 0.3) 8.33%, transparent 8.33%, transparent 50%, rgb(156 163 175 / 0.3) 50%, rgb(156 163 175 / 0.3) 58.33%, transparent 58.33%, transparent 100%)',
+  backgroundSize: '6.00px 6.00px',
+};
+
 interface FeatureCardProps {
   icon: string;
   title: string;
@@ -13,9 +81,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   description,
   hasStripedBackground = false,
 }) => {
-  const stripePattern =
-    "repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.08) 1px, transparent 1px, transparent 4px)";
-
   const cardClasses = hasStripedBackground
     ? "h-full border-t border-b border-gray-400/30"
     : "h-full";
@@ -23,29 +88,44 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <div
       className={cardClasses}
-      style={
-        hasStripedBackground
-          ? {
-              backgroundImage: stripePattern,
-              backgroundSize: "auto",
-            }
-          : {}
-      }
+      style={hasStripedBackground ? stripeStyle : {}}
     >
       <div className="px-8 py-10 h-full flex flex-col">
         <div className="mb-6">
           <img src={icon} alt={title} className="w-10 h-10 opacity-70" />
         </div>
-        <h3 className="text-lg font-bold text-white mb-3 leading-tight">
+        <h3 className="text-xl font-bold text-white mb-3 leading-tight">
           {title}
         </h3>
-        <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
+        <p className="text-gray-300 text-base leading-relaxed">{description}</p>
       </div>
     </div>
   );
 };
 
+const MobileFeatureCard: React.FC<FeatureCardProps> = ({
+  icon,
+  title,
+  description,
+}) => (
+  <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
+    <div className="flex gap-4">
+      <div className="shrink-0">
+        <img src={icon} alt={title} className="w-10 h-10 opacity-70" />
+      </div>
+      <div>
+        <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
+        <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
+      </div>
+    </div>
+  </div>
+);
+
 const WhyFusionMeshSection = () => {
+  const firstRowCards = featureCards.slice(0, 4);
+  const secondRowCards = featureCards.slice(4, 8);
+  const columnSpans = ["A", "B", "C", "D"] as const;
+
   return (
     <>
       {/* Desktop */}
@@ -61,12 +141,11 @@ const WhyFusionMeshSection = () => {
             className="flex flex-col justify-center py-16 pl-12"
           >
             <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight">
-              Why FusionMesh
+              {sectionContent.header.title}
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-              FusionMesh gives you the technical foundation modern systems
-              demand —<br />
-              modular, secure, and built to perform under scale.
+            <p className="text-gray-300 text-2xl leading-relaxed max-w-4xl">
+              {sectionContent.header.description.split(' — ')[0]} —<br />
+              {sectionContent.header.description.split(' — ')[1]}
             </p>
           </GridCol>
         </GridContainer>
@@ -79,39 +158,11 @@ const WhyFusionMeshSection = () => {
         desktopOnly={true}
       >
         <GridContainer className="min-h-70">
-          <GridCol span="A">
-            <FeatureCard
-              icon="/icons/dashboard.svg"
-              title="Open & Modular"
-              description="API-first, standards-based, and fully extensible – adapt it to your needs."
-            />
-          </GridCol>
-
-          <GridCol span="B">
-            <FeatureCard
-              icon="/icons/scale-out-repository.svg"
-              title="Scalable by Design"
-              description="Built to scale vertically or horizontally — from hundreds to thousands of users and millions of transactions."
-            />
-          </GridCol>
-
-          <GridCol span="C">
-            <FeatureCard
-              icon="/icons/secure-shield.svg"
-              title="Secure & Compliant"
-              description="Encryption, 2FA, SSO, audit logs, and RBAC – ready for enterprise security standards."
-              hasStripedBackground={true}
-            />
-          </GridCol>
-
-          <GridCol span="D">
-            <FeatureCard
-              icon="/icons/24-hour-service.svg"
-              title="Highly Available & Observable"
-              description="Engineered for 24/7 uptime with failover, redundancy, and real-time system insights through integrated monitoring and logs."
-              hasStripedBackground={true}
-            />
-          </GridCol>
+          {firstRowCards.map((card, index) => (
+            <GridCol key={card.title} span={columnSpans[index]}>
+              <FeatureCard {...card} />
+            </GridCol>
+          ))}
         </GridContainer>
       </GridSection>
 
@@ -122,39 +173,11 @@ const WhyFusionMeshSection = () => {
         desktopOnly={true}
       >
         <GridContainer className="min-h-70">
-          <GridCol span="A">
-            <FeatureCard
-              icon="/icons/speed-alt.svg"
-              title="Optimized for Speed"
-              description="In-memory processing, smart caching, and asynchronous pipelines ensure real-time performance."
-            />
-          </GridCol>
-
-          <GridCol span="B">
-            <FeatureCard
-              icon="/icons/light-bulb-idea.svg"
-              title="Intelligent by Default"
-              description="AI-ready foundation enables automation, dynamic workflows, and smart data discovery."
-            />
-          </GridCol>
-
-          <GridCol span="C">
-            <FeatureCard
-              icon="/icons/server-cluster.svg"
-              title="Integrates Seamlessly"
-              description="Built for deep integration with your systems, services, and external data sources."
-              hasStripedBackground={true}
-            />
-          </GridCol>
-
-          <GridCol span="D">
-            <FeatureCard
-              icon="/icons/cloud-network.svg"
-              title="Cloud or On-Premise"
-              description="Fully deployable in the cloud, on-premise, or hybrid – depending on your strategy."
-              hasStripedBackground={true}
-            />
-          </GridCol>
+          {secondRowCards.map((card, index) => (
+            <GridCol key={card.title} span={columnSpans[index]}>
+              <FeatureCard {...card} />
+            </GridCol>
+          ))}
         </GridContainer>
       </GridSection>
 
@@ -173,10 +196,7 @@ const WhyFusionMeshSection = () => {
             <div className="absolute inset-0 w-full h-full">
               <div 
                 className="w-full h-full border-t border-b border-gray-400/30"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.08) 1px, transparent 1px, transparent 4px)",
-                }}
+                style={stripeStyle}
               ></div>
               <div 
                 className="absolute w-full h-px bg-gray-400/30"
@@ -199,16 +219,13 @@ const WhyFusionMeshSection = () => {
                 </div>
               </div>
               <h2 className="text-4xl font-extrabold text-white mb-6 leading-tight">
-                Cost-Efficient by Design
+                {sectionContent.costEfficient.title}
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                Fusion is built on open standards and proven technologies — giving
-                you freedom of choice and control over costs.
+                {sectionContent.costEfficient.description}
               </p>
               <p className="text-gray-400 text-base leading-relaxed">
-                It supports both open-source and commercial solutions, so you can
-                optimize infrastructure based on your scale, budget, and
-                compliance needs.
+                {sectionContent.costEfficient.subDescription}
               </p>
             </div>
           </div>
@@ -219,183 +236,17 @@ const WhyFusionMeshSection = () => {
       <section className="lg:hidden bg-[#111D2B] px-6 py-12">
         <div className="mb-12">
           <h2 className="text-3xl font-extrabold text-white mb-4">
-            Why FusionMesh
+            {sectionContent.header.title}
           </h2>
           <p className="text-gray-300 text-base leading-relaxed">
-            FusionMesh gives you the technical foundation modern systems demand
-            — modular, secure, and built to perform under scale.
+            {sectionContent.header.description}
           </p>
         </div>
 
         <div className="space-y-0">
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/dashboard.svg"
-                  alt="Open & Modular"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Open & Modular
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  API-first, standards-based, and fully extensible – adapt it to
-                  your needs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/scale-out-repository.svg"
-                  alt="Scalable by Design"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Scalable by Design
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Built to scale vertically or horizontally — from hundreds to
-                  thousands of users and millions of transactions.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/secure-shield.svg"
-                  alt="Secure & Compliant"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Secure & Compliant
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Encryption, 2FA, SSO, audit logs, and RBAC – ready for
-                  enterprise security standards.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/24-hour-service.svg"
-                  alt="Highly Available"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Highly Available & Observable
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Engineered for 24/7 uptime with failover, redundancy, and
-                  real-time system insights through integrated monitoring and
-                  logs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/speed-alt.svg"
-                  alt="Optimized for Speed"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Optimized for Speed
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  In-memory processing, smart caching, and asynchronous
-                  pipelines ensure real-time performance.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/light-bulb-idea.svg"
-                  alt="Intelligent by Default"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Intelligent by Default
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  AI-ready foundation enables automation, dynamic workflows, and
-                  smart data discovery.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/server-cluster.svg"
-                  alt="Integrates Seamlessly"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Integrates Seamlessly
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Built for deep integration with your systems, services, and
-                  external data sources.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-            <div className="flex gap-4">
-              <div className="shrink-0">
-                <img
-                  src="/icons/cloud-network.svg"
-                  alt="Cloud or On-Premise"
-                  className="w-10 h-10 opacity-70"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Cloud or On-Premise
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Fully deployable in the cloud, on-premise, or hybrid –
-                  depending on your strategy.
-                </p>
-              </div>
-            </div>
-          </div>
+          {featureCards.map((card) => (
+            <MobileFeatureCard key={card.title} {...card} />
+          ))}
 
           <div className="pt-8">
             <div className="mb-6">
@@ -404,16 +255,13 @@ const WhyFusionMeshSection = () => {
               </div>
             </div>
             <h2 className="text-3xl font-extrabold text-white mb-4">
-              Cost-Efficient by Design
+              {sectionContent.costEfficient.title}
             </h2>
             <p className="text-gray-300 text-base leading-relaxed mb-4">
-              Fusion is built on open standards and proven technologies — giving
-              you freedom of choice and control over costs.
+              {sectionContent.costEfficient.description}
             </p>
             <p className="text-gray-400 text-sm leading-relaxed">
-              It supports both open-source and commercial solutions, so you can
-              optimize infrastructure based on your scale, budget, and
-              compliance needs.
+              {sectionContent.costEfficient.subDescription}
             </p>
           </div>
         </div>
