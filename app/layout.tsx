@@ -15,18 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Synergic Intelligent Systems",
   description: "Intelligent Systems for Commerce, Enterprise and Growth",
-  icons: {
-    icon: [
-      {
-        url: "logos/favicon-dark.svg",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "logos/favicon-light.svg",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
-  },
+
 };
 
 export default function RootLayout({
