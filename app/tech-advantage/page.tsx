@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer2 from "../components/Footer2";
 import CoreTechnologiesSection from "./sections/CoreTechnologiesSection";
 import HeroSection from "./sections/HeroSection";
 import MixMatchSection from "./sections/MixMatchSection";
@@ -11,7 +11,7 @@ export default function TechAdvantage() {
       <CoreTechnologiesSection />
       <MixMatchSection />
       <WhyThisStackSection />
-      <Footer />
+      <Footer2 />
     </main>
   );
 }

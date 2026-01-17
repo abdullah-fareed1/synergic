@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import Footer2 from "../components/Footer2";
 import B2BCapabilitiesSection from "./sections/b2bCapabilitiesSection";
 import HeroSection from "./sections/HeroSection";

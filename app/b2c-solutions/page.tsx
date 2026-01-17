@@ -1,4 +1,4 @@
-import Footer from '../components/Footer'
+import Footer2 from '../components/Footer2'
 import BuiltForGrowthSection from './sections/BuiltForGrowthSection'
 import HeroSection from './sections/HeroSection'
 import ReadyToBuildSection from './sections/ReadyToBuildSection'
@@ -15,7 +15,7 @@ export default function B2cSolutions() {
         <TechnologySection />
         <BuiltForGrowthSection />
         <ReadyToBuildSection />
-        <Footer />
+        <Footer2 />
     </main>
   )
 }
