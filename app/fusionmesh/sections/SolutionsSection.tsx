@@ -49,7 +49,7 @@ const solutions = [
 const BulletPoint: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <li className="flex items-start gap-3">
     <span 
-      className="w-2 h-2 rounded-full bg-black mt-2 shrink-0"
+      className="w-2 h-2 rounded-full bg-[#111D2B] mt-2 shrink-0"
       aria-hidden="true"
     />
     <span>{children}</span>
@@ -96,16 +96,16 @@ const MobileSolutionCard: React.FC<SolutionCardProps> = ({
   features,
 }) => (
   <div className="px-6 mb-8">
-    <div className="w-full aspect-4/3 mb-6 overflow-hidden">
+    <div className="w-full aspect-[365/271.77] mb-6 overflow-hidden rounded-lg">
       <img
         src={image}
         alt={title}
         className="w-full h-full object-cover"
       />
     </div>
-    <h3 className="text-xl font-bold text-black mb-3">{title}</h3>
-    <p className="text-black mb-6 leading-relaxed text-base">{description}</p>
-    <ul className="space-y-3 text-base text-black">
+    <h3 className="text-xl font-bold text-[#111D2B] mb-3">{title}</h3>
+    <p className="text-[#111D2B] mb-6 leading-relaxed text-lg">{description}</p>
+    <ul className="space-y-3 text-sm text-[#111D2B]">
       {features.map((feature, idx) => (
         <BulletPoint key={idx}>{feature}</BulletPoint>
       ))}
@@ -274,10 +274,10 @@ const SolutionsSection = () => {
       {/* Mobile Layout */}
       <section className="lg:hidden">
         <div className="px-6 pt-8 pb-8">
-          <h2 className="text-4xl font-extrabold text-black leading-tight mb-4">
+          <h2 className="text-4xl font-extrabold text-[#111D2B] leading-tight mb-4">
             Solutions You Can Create with Fusion
           </h2>
-          <div className="w-16 h-1.5 bg-[#FB3B22]" />
+          <div className="w-12 h-1.5 py-1 bg-[#FB3B22]" />
         </div>
 
         {solutions.map((solution) => (
@@ -287,22 +287,22 @@ const SolutionsSection = () => {
         <div className="w-full border-t border-gray-400" style={{ opacity: 0.3 }} />
         
         <div 
-          className="w-full px-6 pt-12 pb-0"
+          className="w-full px-6 pt-12 pb-8"
           style={{ ...stripeStyle, marginLeft: 0, marginRight: 0 }}
         >
-          <h2 className="text-3xl font-bold text-black mb-6 leading-tight">
+          <h2 className="text-3xl font-extrabold text-[#111D2B] mb-6 leading-tight">
             Powered by Proven Technologies
           </h2>
-          <p className="text-black mb-4 leading-relaxed text-xl">
+          <p className="text-[#111D2B] mb-4 leading-relaxed text-xl">
             Fusion is built with industry-grade, future-ready technologies that support scale, security, and performance.
           </p>
-          <p className="text-black mb-8 leading-relaxed">
+          <p className="text-[#111D2B] mb-6 leading-relaxed text-base">
             From modern data layers to AI-ready architectures, it brings together the best of today's tech — engineered into one cohesive framework.
           </p>
         </div>
         <button className="w-full flex items-center justify-between px-6 py-5 bg-white text-black border-t border-gray-200">
           <div className="flex flex-col items-start text-left">
-            <span className="text-xs text-black mb-1">
+            <span className="text-xs text-gray-700 mb-1">
               Need a custom mix? We'll design the right stack.
             </span>
             <span className="text-lg">
