@@ -109,15 +109,11 @@ const MobileFeatureCard: React.FC<FeatureCardProps> = ({
   description,
 }) => (
   <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
-    <div className="flex gap-4">
-      <div className="shrink-0">
-        <img src={icon} alt={title} className="w-10 h-10 opacity-70" />
-      </div>
-      <div>
-        <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
-      </div>
+    <div className="mb-4">
+      <img src={icon} alt={title} className="w-10 h-10 opacity-70" />
     </div>
+    <h3 className="text-lg font-bold text-gray-300 mb-2">{title}</h3>
+    <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
   </div>
 );
 
@@ -214,14 +210,12 @@ const WhyFusionMeshSection = () => {
           <div className="h-full flex items-center" style={{ marginLeft: '27.78%', marginRight: '5.56%' }}>
             <div className="pointer-events-auto p-4" style={{ maxWidth: '66.66%' }}>
               <div className="mb-6">
-                <div className="w-8 h-8 bg-[#FB3B22] rounded-sm flex items-center justify-center">
-                  <div className="w-3 h-3 bg-[#0D1821]"></div>
-                </div>
+                <img src="/icons/red-cube.svg" alt="Cost Efficient" className="w-8 h-8" />
               </div>
               <h2 className="text-4xl font-extrabold text-white mb-6 leading-tight">
                 {sectionContent.costEfficient.title}
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">
+              <p className="text-gray-400 text-lg leading-relaxed mb-4">
                 {sectionContent.costEfficient.description}
               </p>
               <p className="text-gray-400 text-base leading-relaxed">
@@ -250,9 +244,7 @@ const WhyFusionMeshSection = () => {
 
           <div className="pt-8">
             <div className="mb-6">
-              <div className="w-8 h-8 bg-[#FB3B22] rounded-sm flex items-center justify-center">
-                <div className="w-3 h-3 bg-[#0D1821]"></div>
-              </div>
+              <img src="/icons/red-cube.svg" alt="Cost Efficient" className="w-8 h-8" />
             </div>
             <h2 className="text-3xl font-extrabold text-white mb-4">
               {sectionContent.costEfficient.title}
