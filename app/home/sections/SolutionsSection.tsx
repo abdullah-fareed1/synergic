@@ -160,7 +160,7 @@ const SolutionsSection: React.FC = () => {
                 key={solution.id}
                 className="flex items-start gap-4 px-4 py-5 border-b border-l border-r border-gray-200"
               >
-                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                <div className="shrink-0 w-10 h-10 flex items-center justify-center">
                   <Image
                     src={solution.iconPath}
                     alt={solution.title}

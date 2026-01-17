@@ -215,14 +215,9 @@ export default function ChooseCombineGrow() {
 
             <div className="pt-8">
               <button
-                className="w-full text-white px-6 py-5 flex items-center justify-between transition"
+                className="w-full text-white px-6 py-5 flex items-center justify-between transition cursor-pointer"
                 style={{ backgroundColor: "#FF4D3D" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#E63520")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#FF4D3D")
-                }
+                
               >
                 <div className="text-left">
                   <div className="text-base mb-0.5">Start now</div>
@@ -267,14 +262,8 @@ export default function ChooseCombineGrow() {
 
                 <div className="pl-[11.11%] relative z-20">
                   <button
-                    className="w-full text-white px-8 py-6 flex items-center justify-between transition"
+                    className="w-full text-white px-8 py-6 flex items-center justify-between transition cursor-pointer"
                     style={{ backgroundColor: "#FF4D3D" }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#E63520")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#FF4D3D")
-                    }
                   >
                     <div className="text-left">
                       <div className="text-lg mb-1">Start now</div>
