@@ -5,7 +5,8 @@ import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const IndustryFocusedSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   const stripePatternDark =
     "linear-gradient(45deg, rgba(30, 55, 80, 0.9) 8.33%, rgba(15, 30, 50, 0.9) 8.33%, rgba(15, 30, 50, 0.9) 50%, rgba(30, 55, 80, 0.9) 50%, rgba(30, 55, 80, 0.9) 58.33%, rgba(15, 30, 50, 0.9) 58.33%, rgba(15, 30, 50, 0.9) 100%)";
 
@@ -24,35 +25,107 @@ const IndustryFocusedSection = () => {
         "Legacy Modernization",
         "AI-Enhanced Search",
       ],
-      isHighlighted: true,
     },
     {
       title: "Startups & SaaS Builders",
-      subtitle: "",
-      services: [],
-      isHighlighted: false,
+      subtitle: "Build It Right from Day One. From MVP to market-ready SaaS.",
+      services: [
+        "FusionMesh SaaS Platform",
+        "Subscription & Billing Platform",
+        "Mobile Apps",
+        "Web Presence (Headless CMS)",
+      ],
     },
     {
       title: "Retailers & B2B",
-      subtitle: "",
-      services: [],
-      isHighlighted: false,
+      subtitle: "Create Commerce Systems That Perform and Deliver fast.",
+      services: [
+        "B2C eShop",
+        "B2B Commerce Suite",
+        "PIM",
+        "OMS",
+        "Smart Catalog & Search",
+        "Marketplace Platform",
+        "ERP/CRM Integrations",
+      ],
     },
     {
       title: "Public Sector",
-      subtitle: "",
-      services: [],
-      isHighlighted: false,
+      subtitle: "Serve Smarter, More Securely",
+      services: [
+        "Enterprise Systems (FusionMesh)",
+        "Data Integration & BI",
+        "Workflow Automation & AI Agents",
+        "System Integration & APIs",
+        "Legacy Modernization",
+      ],
     },
   ];
 
-  const nextSlide = () => {
-    setActiveSlide((prev) => (prev + 1) % industries.length);
-  };
+  const activeCard = hoveredCard !== null ? hoveredCard : 0;
 
-  const prevSlide = () => {
-    setActiveSlide(
-      (prev) => (prev - 1 + industries.length) % industries.length
+  const renderCard = (index: number, span: "A" | "B" | "C" | "D") => {
+    const industry = industries[index];
+    const isActive = activeCard === index;
+
+    return (
+      <GridCol span={span} className="relative z-10">
+        <div
+          className={`h-150 transition-all duration-300 mx-0.5 ${
+            isActive ? "bg-black/85" : "bg-black/40 hover:bg-black/70"
+          }`}
+          onMouseEnter={() => setHoveredCard(index)}
+          onMouseLeave={() => setHoveredCard(null)}
+        >
+          <div
+            className={`h-full flex flex-col transition-all duration-300 ${
+              isActive
+                ? "justify-center items-start text-left px-8 pl-12"
+                : "items-center text-center p-8 pt-[42%]"
+            }`}
+          >
+            <h3
+              className={`text-2xl font-bold mb-2 transition-colors duration-300 ${
+                isActive ? "text-[#FB3B22]" : "text-white"
+              }`}
+            >
+              {industry.title}
+            </h3>
+            <div
+              className={`transition-all duration-300 overflow-hidden ${
+                isActive ? "opacity-100 max-h-125" : "opacity-0 max-h-0"
+              }`}
+            >
+              <p className="text-gray-400 text-lg font-bold mb-6">
+                {industry.subtitle}
+              </p>
+              <ul className="space-y-3 ml-4">
+                {industry.services.map((service, idx) => (
+                  <li
+                    key={idx}
+                    className="text-gray-300 text-base hover:text-white transition-colors cursor-pointer"
+                    style={{
+                      textUnderlineOffset: "4px",
+                      textDecoration: "none",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.textDecoration = "underline";
+                      e.currentTarget.style.textDecorationColor =
+                        "var(--brand-red)";
+                      e.currentTarget.style.textDecorationThickness = "1px";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.textDecoration = "none";
+                    }}
+                  >
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </GridCol>
     );
   };
 
@@ -105,71 +178,10 @@ const IndustryFocusedSection = () => {
               <div className="h-150"></div>
             </GridCol>
 
-            <GridCol span="A" className="relative z-10 group">
-              <div className="h-150 bg-black/85 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col justify-center items-start text-left px-8 pl-12">
-                  <h3 className="text-2xl font-bold mb-2 text-[#FB3B22]">
-                    {industries[0].title}
-                  </h3>
-                  <p className="text-gray-400 text-lg font-bold mb-6">
-                    {industries[0].subtitle}
-                  </p>
-                  <ul className="space-y-3 ml-4">
-                    {industries[0].services.map((service, idx) => (
-                      <li
-                        key={idx}
-                        className="text-gray-300 text-base hover:text-white transition-colors cursor-pointer"
-                        style={{
-                          textUnderlineOffset: "4px",
-                          textDecoration: "none",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.textDecoration = "underline";
-                          e.currentTarget.style.textDecorationColor =
-                            "var(--brand-red)";
-                          e.currentTarget.style.textDecorationThickness = "1px";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.textDecoration = "none";
-                        }}
-                      >
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </GridCol>
-
-            <GridCol span="B" className="relative z-10 group">
-              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col items-center text-center p-8 pt-[42%]">
-                  <h3 className="text-2xl font-bold text-white ">
-                    {industries[1].title}
-                  </h3>
-                </div>
-              </div>
-            </GridCol>
-
-            <GridCol span="C" className="relative z-10 group">
-              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col items-center text-center p-8 pt-[42%]">
-                  <h3 className="text-2xl font-bold text-white">
-                    {industries[2].title}
-                  </h3>
-                </div>
-              </div>
-            </GridCol>
-
-            <GridCol span="D" className="relative z-10 group">
-              <div className="h-150 bg-black/40 hover:bg-black/70 transition-all duration-300 mx-0.5">
-                <div className="h-full flex flex-col items-center text-center p-8 pt-[42%]">
-                  <h3 className="text-2xl font-bold text-white">
-                    {industries[3].title}
-                  </h3>
-                </div>
-              </div>
-            </GridCol>
+            {renderCard(0, "A")}
+            {renderCard(1, "B")}
+            {renderCard(2, "C")}
+            {renderCard(3, "D")}
           </GridContainer>
         </GridSection>
 
@@ -187,6 +199,7 @@ const IndustryFocusedSection = () => {
         </GridSection>
       </div>
 
+      {/* Mobile version */}
       <section className="lg:hidden bg-[#111D2B] text-white">
         <div className="px-[5.56%] py-12">
           <p className="text-[#FB3B22] text-xs font-bold uppercase tracking-wider mb-4">
@@ -215,36 +228,24 @@ const IndustryFocusedSection = () => {
               {industries.map((industry, index) => (
                 <div
                   key={index}
-                  className={`w-full h-full shrink-0 ${
-                    industry.isHighlighted ? "bg-black/85" : "bg-black/60"
-                  }`}
+                  className="w-full h-full shrink-0 bg-black/85"
                 >
-                  <div
-                    className={`h-full flex flex-col ${industry.isHighlighted ? "justify-start items-start text-left p-8" : "justify-center items-center text-center p-8"}`}
-                  >
-                    <h3
-                      className={`text-2xl font-bold mb-2 ${
-                        industry.isHighlighted ? "text-[#FB3B22]" : "text-white"
-                      }`}
-                    >
+                  <div className="h-full flex flex-col justify-start items-start text-left p-8">
+                    <h3 className="text-2xl font-bold mb-2 text-[#FB3B22]">
                       {industry.title}
                     </h3>
 
-                    {industry.subtitle && (
-                      <p className="text-gray-400 text-base mb-6">
-                        {industry.subtitle}
-                      </p>
-                    )}
+                    <p className="text-gray-400 text-base mb-6">
+                      {industry.subtitle}
+                    </p>
 
-                    {industry.services.length > 0 && (
-                      <ul className="space-y-4 mt-4">
-                        {industry.services.map((service, idx) => (
-                          <li key={idx} className="text-gray-300 text-base">
-                            {service}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    <ul className="space-y-4 mt-4">
+                      {industry.services.map((service, idx) => (
+                        <li key={idx} className="text-gray-300 text-base">
+                          {service}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
