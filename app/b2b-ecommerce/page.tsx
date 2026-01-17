@@ -1,6 +1,8 @@
 import Footer from "../components/Footer";
+import Footer2 from "../components/Footer2";
 import B2BCapabilitiesSection from "./sections/b2bCapabilitiesSection";
 import HeroSection from "./sections/HeroSection";
+import ReadyToBuildSection from "./sections/ReadyToBuildSection";
 import TechnologySection from "./sections/TechnologySection";
 
 export default function B2cSolutions() {
@@ -9,7 +11,8 @@ export default function B2cSolutions() {
         <HeroSection />
         <B2BCapabilitiesSection/>
         <TechnologySection/>
-        <Footer />
+        <ReadyToBuildSection/>
+        <Footer2 />
     </main>
   )
 }
