@@ -18,7 +18,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
 
       <div className="relative flex items-start justify-between" style={{ height: 'calc(100vw / 20)', backgroundColor: 'white' }}>
         {/* Desktop Logo */}
-        <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4">
+        <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4 cursor-pointer">
           <img
             src="logos/synergic-b2c-logo.png"
             alt="Synergic Intelligent Systems"
@@ -28,7 +28,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         </div>
 
         {/* Mobile Logo */}
-        <div className="lg:hidden flex items-center px-4 py-4">
+        <div className="lg:hidden flex items-center px-4 py-4 cursor-pointer">
           <img
             src="logos/synergic-b2c-logo.png"
             alt="Synergic Intelligent Systems"
@@ -79,7 +79,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         {/* Desktop Menu */}
         <button
           onClick={onMenuClick}
-          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition"
+          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition cursor-pointer"
           style={{ width: '5.56%', backgroundColor: 'var(--brand-red)' }}
         >
           <div className="flex flex-col items-center gap-1">
