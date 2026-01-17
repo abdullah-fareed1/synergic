@@ -99,7 +99,7 @@ import SolutionsSection from "./home/sections/SolutionsSection";
 import CustomersLogoSection from "./home/sections/CustomersLogoSection";
 import IndustryFocusedSection from "./home/sections/IndustryFocusedSection";
 import BlogSection from "./home/sections/BlogSection";
-import Footer from "./components/Footer";
+import HomeFooter from "./components/HomeFooter";
 import BuildFusionTopSection from "./home/sections/BuildFusionTopSection";
 import BuildFusionBottomSection from "./home/sections/BuildFusionBottomSection";
 
@@ -114,7 +114,7 @@ export default function Home() {
       <CustomersLogoSection />
       <IndustryFocusedSection />
       <BlogSection />
-      <Footer />
+      <HomeFooter />
     </main>
   );
 }

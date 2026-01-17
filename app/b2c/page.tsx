@@ -1,5 +1,4 @@
 import Footer from "../components/Footer";
-import Footer2 from "../components/Footer2";
 import BuiltToEvolveSection from "./sections/BuiltToEvolveSection";
 import CommerceLeadersSection from "./sections/CommerceLeadersSection";
 import FeatureSection from "./sections/FeatureSection";
@@ -20,7 +19,7 @@ export default function B2C() {
       <CommerceLeadersSection />
       <ModernTechnologySection />
       <BuiltToEvolveSection />
-      <Footer2 />
+      <Footer />
     </main>
   );
 }

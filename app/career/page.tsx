@@ -1,4 +1,4 @@
-import Footer2 from '../components/Footer2'
+import Footer from '../components/Footer'
 import FormSection from './sections/FormSection'
 import HeroSection from './sections/HeroSection'
 import OpportunitiesSection from './sections/OpportunitiesSection'
@@ -9,7 +9,7 @@ export default function Contact() {
         <HeroSection />
         <OpportunitiesSection />
         <FormSection />
-        <Footer2 />
+        <Footer />
     </main>
   )
 }

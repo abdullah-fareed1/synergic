@@ -1,4 +1,4 @@
-import Footer2 from "../components/Footer2";
+import Footer from "../components/Footer";
 import FusionMeshGlanceSection from "./sections/FusionMeshGlanceSection";
 import HeroSection from "./sections/HeroSection";
 import SolutionsSection from "./sections/SolutionsSection";
@@ -13,7 +13,7 @@ export default function FusionMesh() {
       <WhyFusionMeshSection />
       <SolutionsSection />
       <StartBuildingSmarterSection />
-      <Footer2 />
+      <Footer />
     </main>
   );
 }
