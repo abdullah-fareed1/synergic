@@ -34,7 +34,7 @@ export default function HeroSection() {
 
           <div className="-mx-6">
             <img
-              src="/images/b2b-hero-mobile.webp"
+              src="/images/b2b-hero-mobile.avif"
               alt="B2B eCommerce Solutions"
               className="w-full block"
             />
@@ -152,7 +152,7 @@ export default function HeroSection() {
                   }}
                 >
                   <img
-                    src="/images/b2b-hero-desktop.webp"
+                    src="/images/b2b-hero-desktop.avif"
                     alt="B2B eCommerce Solutions"
                     className="block"
                     style={{

@@ -131,7 +131,7 @@ export default function HeroSection() {
                   }}
                 >
                   <img
-                    src="/images/b2c-solutions-hero.webp"
+                    src="/images/b2c-solutions-hero.avif"
                     alt="B2C eCommerce Solutions"
                     className="block"
                     style={{
