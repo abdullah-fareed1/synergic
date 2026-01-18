@@ -1,8 +1,14 @@
 import React from 'react'
+import HeroSection from './sections/HeroSection'
+import Footer from '../components/Footer'
 
 const DigitalNarketplaces = () => {
   return (
-    <div>page</div>
+    <>
+    <HeroSection/>
+    <div className="h-20"></div>
+    <Footer/>
+    </>
   )
 }
 
