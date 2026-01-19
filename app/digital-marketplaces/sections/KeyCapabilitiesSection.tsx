@@ -147,7 +147,7 @@ const KeyCapabilitiesSection = () => {
           PLANNED
         </span>
 
-        <h2 className="text-4xl font-extrabold text-black mb-8">Key Capabilities</h2>
+        <h2 className="text-[32px] font-extrabold text-black mb-8">Key Capabilities</h2>
 
         <div className="mb-8">
           <h3 className="text-xl font-extrabold text-black mb-4">
