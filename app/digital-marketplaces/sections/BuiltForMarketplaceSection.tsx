@@ -1,11 +1,15 @@
+import React from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
-const ReadyToBuildSection = () => {
+const BuiltForMarketplaceSection = () => {
   const stripePatternGreen =
     "linear-gradient(45deg, rgba(217, 217, 217, 0.2) 8.33%, transparent 8.33%, transparent 50%, rgba(217, 217, 217, 0.2) 50%, rgba(217, 217, 217, 0.2) 58.33%, transparent 58.33%, transparent 100%)";
   
   const stripePatternWhite =
     "linear-gradient(45deg, #d9d9d9 8.33%, #ffffff 8.33%, #ffffff 50%, #d9d9d9 50%, #d9d9d9 58.33%, #ffffff 58.33%, #ffffff 100%)";
+  
+  const stripePatternInverted =
+    "linear-gradient(-45deg, rgba(217, 217, 217, 0.2) 8.33%, transparent 8.33%, transparent 50%, rgba(217, 217, 217, 0.2) 50%, rgba(217, 217, 217, 0.2) 58.33%, transparent 58.33%, transparent 100%)";
   
   const stripeSize = "6.00px 6.00px";
 
@@ -13,9 +17,20 @@ const ReadyToBuildSection = () => {
     <>
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        {/* Wrapper for first two sections so stripes can span both */}
         <div className="relative">
-          {/* Column A stripes - spans from top to bottom, excluding CTA button */}
+          <div
+            className="absolute top-0"
+            style={{ 
+              zIndex: 50,
+              left: 0,
+              width: 'calc(100vw / 18)',
+              height: '100%',
+              backgroundImage: stripePatternInverted,
+              backgroundSize: stripeSize,
+              pointerEvents: 'none',
+            }}
+          />
+          
           <div
             className="absolute top-0"
             style={{ 
@@ -66,14 +81,15 @@ const ReadyToBuildSection = () => {
                 <div className="absolute inset-0 bg-[#2B7856]" style={{ zIndex: -1 }} />
                 
                 <h2 className="text-4xl font-extrabold mb-6 relative z-10">
-                  Let's Modernize Your B2B Commerce
+                  Built for Marketplace Growth
                 </h2>
                 <p className="text-2xl font-normal mb-8 relative z-10">
-                  Stop losing sales to manual processes.
+                  We're shaping the next generation of digital marketplaces<br/>
+                  — scalable, flexible, and future-ready.
                 </p>
                 <p className="text-lg mb-4 opacity-90 relative z-10">
-                  Give your customers the modern buying experience they expect<br/>
-                  while streamlining your operations.
+                  This solution is in development and will launch soon.<br/>
+                  Join our early access list to stay ahead and help shape what's next.
                 </p>
               </GridCol>
 
@@ -92,18 +108,26 @@ const ReadyToBuildSection = () => {
                   }}
                 />
                 <h2 className="text-4xl font-extrabold mb-6 text-black relative z-10">
-                  Complete Commerce Solutions
+                  Powered by Modern Technology
                 </h2>
                 <p className="text-2xl font-normal mb-8 text-black relative z-10">
-                  B2B is just the beginning.
+                  A cloud-native, API-first platform designed to integrate,<br/>
+                  scale, and perform.
                 </p>
-                <p className="text-lg mb-4 text-gray-700 relative z-10">
-                  Build a complete commerce ecosystem with our integrated platform suite.
-                </p>
-                <p className="text-lg text-gray-700 relative z-10">
-                  Explore all solutions : B2C Retail • Digital Marketplaces • PIM Systems • OMS & Fulfillment<br/>
-                  • ERP Integrations • AI Discovery (coming soon)
-                </p>
+                <ul className="text-lg text-gray-700 relative z-10 space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-3 text-gray-500">•</span>
+                    <span>Enterprise-grade security (PCI DSS, GDPR)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3 text-gray-500">•</span>
+                    <span>Mobile-optimized web and native apps</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3 text-gray-500">•</span>
+                    <span>Cloud-native resilience, built-in failover, and scaling</span>
+                  </li>
+                </ul>
               </GridCol>
             </GridContainer>
           </GridSection>
@@ -146,13 +170,13 @@ const ReadyToBuildSection = () => {
                   style={{ zIndex: 0 }}
                 />
 
-                <button className="relative z-10 w-full flex items-center justify-between px-12 py-6 text-white">
+                <button className="relative z-10 w-full flex items-center justify-between px-12 py-6 text-white cursor-pointer">
                   <div className="flex flex-col items-start text-left">
                     <span className="text-sm opacity-80 mb-2">
-                      Calculate Your ROI in 5 Minutes
+                      Get Notified When We Launch
                     </span>
                     <span className="text-xl font-normal">
-                      See Live Demo for Your Industry
+                      Join the Early Access List
                     </span>
                   </div>
                   <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center shrink-0 ml-4">
@@ -175,13 +199,13 @@ const ReadyToBuildSection = () => {
 
               <GridCol span="CD" className="px-12 py-6 relative" style={{ zIndex: 5 }}>
                 <div className="absolute inset-0 bg-white" style={{ zIndex: -1 }} />
-                <button className="relative z-10 w-full flex items-center justify-between text-black">
+                <button className="relative z-10 w-full flex items-center justify-between text-black cursor-pointer">
                   <div className="flex flex-col items-start text-left">
                     <span className="text-sm text-gray-600 mb-2">
                       Need more info ?
                     </span>
                     <span className="text-xl font-normal">
-                      View All Commerce Solutions
+                      Learn About Our Tech Stack
                     </span>
                   </div>
                   <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center shrink-0 ml-4">
@@ -211,6 +235,19 @@ const ReadyToBuildSection = () => {
           className="h-20 relative"
         >
           <div
+            className="absolute top-0"
+            style={{ 
+              zIndex: 50,
+              left: 0,
+              width: 'calc(100vw / 18)',
+              height: '100%',
+              backgroundImage: stripePatternInverted,
+              backgroundSize: stripeSize,
+              pointerEvents: 'none',
+            }}
+          />
+          
+          <div
             className="absolute left-0 w-[50%] top-0 bottom-0 bg-[#2B7856]"
             style={{ zIndex: 0 }}
           />
@@ -232,9 +269,7 @@ const ReadyToBuildSection = () => {
             <GridCol
               span="B"
               className="h-20 relative"
-              style={{ 
-                backgroundImage: stripePatternGreen,
-                backgroundSize: stripeSize,
+              style={{
                 zIndex: 5,
               }}
             >
@@ -260,23 +295,23 @@ const ReadyToBuildSection = () => {
       <section className="lg:hidden">
         <div className="bg-[#2B7856] text-white px-6 py-12">
           <h2 className="text-3xl font-extrabold mb-4">
-            Let's Modernize Your B2B Commerce
+            Built for Marketplace Growth
           </h2>
           <p className="text-xl font-normal mb-6">
-            Stop losing sales to manual processes.
+            We're shaping the next generation of digital marketplaces scalable, flexible, and future-ready.
           </p>
           <p className="text-sm mb-3 opacity-90">
-            Give your customers the modern buying experience they expect
-            while streamlining your operations.
+            This solution is in development and will launch soon.
+            Join our early access list to stay ahead and help shape what's next.
           </p>
         </div>
-        <button className="w-full bg-[#418667] text-white px-6 py-6 flex items-center justify-between">
+        <button className="w-full bg-[#418667] text-white px-6 py-6 flex items-center justify-between cursor-pointer">
           <div className="flex flex-col items-start text-left">
             <span className="text-xs opacity-80 mb-1">
-              Calculate Your ROI in 5 Minutes
+              Get Notified When We Launch
             </span>
             <span className="text-base font-normal">
-              See Live Demo for Your Industry
+              Join the Early Access List
             </span>
           </div>
           <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center shrink-0 ml-4">
@@ -298,28 +333,35 @@ const ReadyToBuildSection = () => {
 
         <div className="bg-white px-6 py-12">
           <h2 className="text-3xl font-extrabold mb-4 text-black">
-            Complete Commerce Solutions
+            Powered by Modern Technology
           </h2>
           <p className="text-xl font-normal mb-6 text-black">
-            B2B is just the beginning.
+            A cloud-native, API-first platform designed to integrate, scale, and perform.
           </p>
-          <p className="text-sm mb-3 text-gray-700">
-            Build a complete commerce ecosystem with our integrated platform suite.
-          </p>
-          <p className="text-sm text-gray-700">
-            Explore all solutions : B2C Retail • Digital Marketplaces • PIM Systems • OMS & Fulfillment
-            • ERP Integrations • AI Discovery (coming soon)
-          </p>
+          <ul className="text-sm text-gray-700 space-y-2">
+            <li className="flex items-start">
+              <span className="mr-3 text-gray-500">•</span>
+              <span>Enterprise-grade security (PCI DSS, GDPR)</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 text-gray-500">•</span>
+              <span>Mobile-optimized web and native apps</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 text-gray-500">•</span>
+              <span>Cloud-native resilience, built-in failover, and scaling</span>
+            </li>
+          </ul>
         </div>
 
         <div className="border-t border-b border-gray-400/30">
-          <button className="w-full bg-white text-black px-6 py-6 flex items-center justify-between border-t border-gray-300">
+          <button className="w-full bg-white text-black px-6 py-6 flex items-center justify-between border-t border-gray-300 cursor-pointer">
             <div className="flex flex-col items-start text-left">
               <span className="text-xs text-gray-600 mb-1">
                 Need more info ?
               </span>
               <span className="text-base font-normal">
-                View All Commerce Solutions
+                Learn About Our Tech Stack
               </span>
             </div>
             <div className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center shrink-0 ml-4">
@@ -344,4 +386,4 @@ const ReadyToBuildSection = () => {
   );
 };
 
-export default ReadyToBuildSection;
+export default BuiltForMarketplaceSection;
