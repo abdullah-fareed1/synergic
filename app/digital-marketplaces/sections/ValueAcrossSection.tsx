@@ -145,7 +145,7 @@ const ValueAcrossSection = () => {
         </div>
 
         <h2 className="text-[32px] font-extrabold leading-tight text-gray-900 mb-8">
-          Key Capabilities
+          Value Across the Ecosystem
         </h2>
 
         <div className="mb-8">
