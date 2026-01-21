@@ -1,5 +1,3 @@
-"use client";
-
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const GrayIcon = ({ src, alt }: { src: string; alt: string }) => (
