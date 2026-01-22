@@ -27,77 +27,40 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
 
       <div className="flex-1 flex items-center justify-center overflow-y-auto py-6">
         <div className="flex flex-col gap-5 text-white text-2xl font-light text-center">
-          <Link
-            href="/"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Home
           </Link>
-          <Link
-            href="/about"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/about" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             About
           </Link>
-          <Link
-            href="/b2c"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/b2c" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             B2C
           </Link>
-          <Link
-            href="/b2c-solutions"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/b2c-solutions" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             B2C Solutions
           </Link>
-          <Link
-            href="/b2b-ecommerce"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/b2b-ecommerce" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             B2B eCommerce
           </Link>
-          <Link
-            href="/fusionmesh"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/fusionmesh" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             FusionMesh
           </Link>
-          <Link
-            href="/tech-advantage"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/tech-advantage" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Tech Advantage
           </Link>
-          <Link
-            href="/digital-marketplaces"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/digital-marketplaces" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Digital Marketplaces
           </Link>
+          <Link href="/erp-integrations" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
+            ERP Integrations
+          </Link>
           <Link
-            href="/erp-integrations"
+            href="/pim-systems"
             onClick={onClose}
             className="flex items-center justify-center gap-2 hover:opacity-70 transition"
             style={{ color: "white" }}
           >
-            ERP Integrations
+            PIM Systems
             <span
               className="text-xs font-semibold px-2 py-1 rounded"
               style={{ backgroundColor: "var(--brand-red)", color: "white" }}
@@ -105,31 +68,12 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
               Ongoing
             </span>
           </Link>
-          <Link
-            href="/career"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/career" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Career
           </Link>
-          <Link
-            href="/contact"
-            onClick={onClose}
-            className="hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/contact" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Contact
           </Link>
-          <span className="flex items-center justify-center gap-2 text-gray-500 cursor-not-allowed">
-            PIM Systems
-            <span
-              className="text-xs font-semibold px-2 py-1 rounded"
-              style={{ backgroundColor: "var(--brand-yellow)", color: "var(--brand-black)" }}
-            >
-              Coming Soon
-            </span>
-          </span>
           <span className="flex items-center justify-center gap-2 text-gray-500 cursor-not-allowed">
             Ecommerce Tech
             <span
@@ -152,11 +96,7 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
       </div>
 
       <div className="pb-8 flex justify-center">
-        <Link
-          href="/contact"
-          onClick={onClose}
-          className="flex items-center gap-3 hover:opacity-80 transition"
-        >
+        <Link href="/contact" onClick={onClose} className="flex items-center gap-3 hover:opacity-80 transition">
           <span className="text-white text-sm uppercase tracking-wide font-medium">
             Get in Touch
           </span>
