@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import AutomatedErpSection from "./sections/AutomatedErpSection";
 import FaqSection from "./sections/FaqSection";
 import HeroSection from "./sections/HeroSection";
+import HowItWorksSection from "./sections/HowItWorksSection";
 import WhyAutomatedSection from "./sections/WhyAutomatedSection";
 
 const  ErpIntegrations = () => {
@@ -10,9 +11,7 @@ const  ErpIntegrations = () => {
       <HeroSection />
       <WhyAutomatedSection/>
       <AutomatedErpSection/>
-      <div className="bg-white border h-20">
-        Temporarily created space for dev purposes
-      </div>
+      <HowItWorksSection/>
       <FaqSection/>
       <Footer />
     </>
