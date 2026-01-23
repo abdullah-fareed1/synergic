@@ -41,7 +41,7 @@ const OurSolutionSection = () => {
           desktopOnly={true}
         >
           <GridContainer>
-            <GridCol span="AB" className="py-12">
+            <GridCol span="AB" className="py-18">
               <div className="pl-8 pr-8 flex items-center h-full">
                 <h2
                   className="font-extrabold leading-tight"
@@ -60,7 +60,7 @@ const OurSolutionSection = () => {
               </div>
             </GridCol>
 
-            <GridCol span="C" className="py-12">
+            <GridCol span="C" className="py-18">
               <div className="pl-8 flex items-center h-full">
                 <p
                   className=" tracking-wide"
@@ -72,7 +72,7 @@ const OurSolutionSection = () => {
             </GridCol>
             <GridCol
               span="D"
-              className="py-12"
+              className="py-18"
               style={{
                 backgroundImage: stripePattern,
                 backgroundSize: stripeSize,
