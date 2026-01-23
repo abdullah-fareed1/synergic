@@ -63,7 +63,7 @@ const OurSolutionSection = () => {
             <GridCol span="C" className="py-12">
               <div className="pl-8 flex items-center h-full">
                 <p
-                  className="font-semibold tracking-wide"
+                  className=" tracking-wide"
                   style={{ color: "var(--brand-dark)", fontSize: "25px" }}
                 >
                   THE RESULT ?
@@ -97,7 +97,7 @@ const OurSolutionSection = () => {
                   className="text-gray-700 leading-relaxed"
                   style={{ fontSize: "25px" }}
                 >
-                  Product data comes from everywhere — CSVs, XML feeds, JSON
+                  Product data comes from everywhere — CSVs, XML<br/> feeds, JSON
                   APIs, and manual spreadsheets.
                 </p>
               </div>
