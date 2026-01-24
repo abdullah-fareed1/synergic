@@ -80,7 +80,7 @@ const PimDashboardSection = () => {
               </GridCol>
 
               <GridCol span="B" className="pl-8 pt-20 pb-28" style={{ height: "520px" }}>
-                <div className="pt-17">
+                <div className="pt-19">
                   <ul className="space-y-6">
                     {whatYouGetColB.map((item, index) => (
                       <li
@@ -111,7 +111,7 @@ const PimDashboardSection = () => {
             desktopOnly={true}
           >
             <GridContainer>
-              <GridCol span="A" className="pl-8 pt-20 pb-36" style={{ height: "520px" }}>
+              <GridCol span="A" className="pl-8 pt-20 pb-46" style={{ height: "520px" }}>
                 <h2
                   className="font-extrabold mb-10"
                   style={{ color: "#111D2B", fontSize: "36px", lineHeight: "1.2" }}
@@ -137,8 +137,8 @@ const PimDashboardSection = () => {
                 </ul>
               </GridCol>
 
-              <GridCol span="B" className="pl-8 pt-20 pb-36" style={{ height: "520px" }}>
-                <div className="pt-17">
+              <GridCol span="B" className="pl-8 pt-20 pb-46" style={{ height: "520px" }}>
+                <div className="pt-19">
                   <ul className="space-y-6">
                     {benefitsColB.map((item, index) => (
                       <li
@@ -159,7 +159,7 @@ const PimDashboardSection = () => {
                 </div>
               </GridCol>
 
-              <GridCol span="CD" style={{ height: "520px" }}>
+              <GridCol span="CD" className="pb-46" style={{ height: "520px" }}>
                 <></>
               </GridCol>
             </GridContainer>
