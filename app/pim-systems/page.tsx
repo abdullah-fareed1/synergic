@@ -1,4 +1,5 @@
 import Footer from "../components/Footer"
+import FaqSection from "./sections/FaqSection";
 import HeroSection from "./sections/HeroSection";
 import HowItWorksSection from "./sections/HowItWorksSection";
 import OurApproachSection from "./sections/OurApproachSection";
@@ -15,7 +16,7 @@ const  PimSystems = () => {
       <OurApproachSection/>
       <PimDashboardSection/>
       <HowItWorksSection/>
-      <div className="h-20 border">     </div>
+      <FaqSection/>
       <Footer />
     </>
   );
