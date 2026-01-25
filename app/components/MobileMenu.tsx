@@ -54,19 +54,8 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
           <Link href="/erp-integrations" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             ERP Integrations
           </Link>
-          <Link
-            href="/pim-systems"
-            onClick={onClose}
-            className="flex items-center justify-center gap-2 hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
+          <Link href="/pim-systems" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             PIM Systems
-            <span
-              className="text-xs font-semibold px-2 py-1 rounded"
-              style={{ backgroundColor: "var(--brand-red)", color: "white" }}
-            >
-              Ongoing
-            </span>
           </Link>
           <Link href="/career" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Career
@@ -74,15 +63,21 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
           <Link href="/contact" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Contact
           </Link>
-          <span className="flex items-center justify-center gap-2 text-gray-500 cursor-not-allowed">
+          
+          <Link
+            href="/ecommerce-tech-advantage"
+            onClick={onClose}
+            className="flex items-center justify-center gap-2 hover:opacity-70 transition"
+            style={{ color: "white" }}
+          >
             Ecommerce Tech
             <span
               className="text-xs font-semibold px-2 py-1 rounded"
-              style={{ backgroundColor: "var(--brand-yellow)", color: "var(--brand-black)" }}
+              style={{ backgroundColor: "var(--brand-red)", color: "white" }}
             >
-              Coming Soon
+              Ongoing
             </span>
-          </span>
+          </Link>
           <span className="flex items-center justify-center gap-2 text-gray-500 cursor-not-allowed">
             OMS
             <span
