@@ -6,7 +6,6 @@ export default function EcommerceTechAdvantage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <div className="h-20 border"></div>
       <LegacyPlatformsSection />
       <Footer/>
     </main>

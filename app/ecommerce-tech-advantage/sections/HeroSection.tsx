@@ -15,8 +15,8 @@ export default function HeroSection() {
         <div
           className="relative px-6 pt-24 pb-8"
           style={{
-            backgroundColor: "var(--brand-dark)",
-            background: "radial-gradient(ellipse at center, #233A53 0%, var(--brand-dark) 70%)",
+            backgroundColor: "#111D2B",
+            background: "radial-gradient(ellipse at 75% 75%, #243B55 0%, #111D2B 70%)",
           }}
         >
           <h1
@@ -69,8 +69,8 @@ export default function HeroSection() {
         <div
           className="relative overflow-hidden"
           style={{
-            backgroundColor: "var(--brand-dark)",
-            background: "radial-gradient(ellipse at center, #233A53 0%, var(--brand-dark) 70%)",
+            backgroundColor: "#111D2B",
+            background: "radial-gradient(ellipse at 75% 75%, #243B55 0%, #111D2B 70%)",
           }}
         >
           <div className="absolute inset-0 z-0">
