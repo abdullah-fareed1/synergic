@@ -1,6 +1,3 @@
-"use client";
-
-import React, { useRef, useEffect, useState } from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
 const CompleteCommerceSection = () => {
@@ -12,21 +9,7 @@ const CompleteCommerceSection = () => {
     "linear-gradient(45deg, #d9d9d9 4%, transparent 4%, transparent 50%, #d9d9d9 50%, #d9d9d9 54%, transparent 54%, transparent 100%)";
   const stripeSizeWide = "12px 12px";
 
-  const [paddingHeight, setPaddingHeight] = useState(60);
-  const buttonRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const updateMeasurements = () => {
-      if (buttonRef.current) {
-        const btnHeight = buttonRef.current.getBoundingClientRect().height;
-        setPaddingHeight(btnHeight * 0.75);
-      }
-    };
-
-    updateMeasurements();
-    window.addEventListener("resize", updateMeasurements);
-    return () => window.removeEventListener("resize", updateMeasurements);
-  }, []);
+  const paddingHeight = 60;
 
   return (
     <>
@@ -76,20 +59,20 @@ const CompleteCommerceSection = () => {
               <GridCol span="BC" className="py-16">
                 <div className="px-8">
                   <h2
-                    className="text-[32px] font-extrabold mb-4 leading-tight"
+                    className="text-4xl font-extrabold mb-4 leading-tight"
                     style={{ color: "var(--brand-black)" }}
                   >
                     Complete Commerce Solutions
                   </h2>
                   <p
-                    className="text-[25px] mb-6 leading-relaxed"
+                    className="text-xl mb-6 leading-relaxed"
                     style={{ color: "var(--brand-black)" }}
                   >
                     One tech stack, endless possibilities — all connected, scalable,
                     and built to adapt as your business evolves.
                   </p>
                   <p
-                    className="text-[16px] leading-relaxed max-w-xl"
+                    className="text-base leading-relaxed max-w-xl"
                     style={{ color: "rgba(0, 0, 0, 0.55)" }}
                   >
                     With our modular architecture, the same technology foundation powers everything
@@ -112,7 +95,6 @@ const CompleteCommerceSection = () => {
             />
 
             <div
-              ref={buttonRef}
               className="relative"
               style={{
                 marginLeft: "27.78%",
