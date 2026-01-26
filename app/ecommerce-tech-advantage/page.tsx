@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import BuiltForGrowthSection from "./sections/BuiltForGrowthSection";
 import CompleteCommerceSection from "./sections/CompleteCommerceSection";
 import HeroSection from "./sections/HeroSection";
 import LegacyPlatformsSection from "./sections/LegacyPlatformsSection";
@@ -11,7 +12,7 @@ export default function EcommerceTechAdvantage() {
       <LegacyPlatformsSection />
       
       <OurCompleteSection/>
-      <div className="h-20 border"></div>
+      <BuiltForGrowthSection/>
       <CompleteCommerceSection/>
       <Footer/>
     </main>
