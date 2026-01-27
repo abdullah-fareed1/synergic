@@ -63,14 +63,17 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
           <Link href="/contact" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Contact
           </Link>
+          <Link href="/ecommerce-tech-advantage" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
+            Ecommerce Tech
+          </Link>
           
           <Link
-            href="/ecommerce-tech-advantage"
+            href="/order-management-systems"
             onClick={onClose}
             className="flex items-center justify-center gap-2 hover:opacity-70 transition"
             style={{ color: "white" }}
           >
-            Ecommerce Tech
+            OMS
             <span
               className="text-xs font-semibold px-2 py-1 rounded"
               style={{ backgroundColor: "var(--brand-red)", color: "white" }}
@@ -78,15 +81,6 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
               Ongoing
             </span>
           </Link>
-          <span className="flex items-center justify-center gap-2 text-gray-500 cursor-not-allowed">
-            OMS
-            <span
-              className="text-xs font-semibold px-2 py-1 rounded"
-              style={{ backgroundColor: "var(--brand-yellow)", color: "var(--brand-black)" }}
-            >
-              Coming Soon
-            </span>
-          </span>
         </div>
       </div>
 
