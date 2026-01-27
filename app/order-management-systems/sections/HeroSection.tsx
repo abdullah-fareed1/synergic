@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 import Navbar from "../components/Navbar";
