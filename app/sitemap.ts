@@ -3,7 +3,6 @@ import type { MetadataRoute } from 'next'
 const baseUrl = process.env.WEBSITE_BASE_URL || 'https://synergic.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Core pages
   const routes = [
     {
       url: baseUrl,

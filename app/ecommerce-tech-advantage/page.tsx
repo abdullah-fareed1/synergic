@@ -3,6 +3,7 @@ import BuiltForGrowthSection from "./sections/BuiltForGrowthSection";
 import CompleteCommerceSection from "./sections/CompleteCommerceSection";
 import HeroSection from "./sections/HeroSection";
 import LegacyPlatformsSection from "./sections/LegacyPlatformsSection";
+import MetricsSection from "./sections/MetricsSection";
 import OurCompleteSection from "./sections/OurCompleteSection";
 
 export default function EcommerceTechAdvantage() {
@@ -10,7 +11,7 @@ export default function EcommerceTechAdvantage() {
     <main className="min-h-screen">
       <HeroSection />
       <LegacyPlatformsSection />
-      
+      <MetricsSection/>
       <OurCompleteSection/>
       <BuiltForGrowthSection/>
       <CompleteCommerceSection/>

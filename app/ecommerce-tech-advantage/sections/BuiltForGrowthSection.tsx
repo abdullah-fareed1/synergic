@@ -166,7 +166,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[0].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
@@ -179,7 +179,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[1].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
@@ -192,7 +192,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[2].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
@@ -205,7 +205,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[3].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
@@ -228,7 +228,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[4].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
@@ -241,7 +241,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[5].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
@@ -254,7 +254,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[6].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
@@ -267,7 +267,7 @@ const BuiltForGrowthSection = () => {
                 <img
                   src={features[7].icon}
                   alt=""
-                  style={{ height: "48px", width: "auto", opacity: 0.75 }}
+                  style={{ height: "42px", width: "auto", opacity: 0.75 }}
                   className="mb-5"
                 />
                 <p style={{ color: "#09051F", fontSize: "18px", opacity: 0.75, lineHeight: 1.6 }}>
