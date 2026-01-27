@@ -1,6 +1,5 @@
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 
-// Card data for columns C and D (desktop)
 const columnCCards = [
   {
     num: "01",
@@ -47,7 +46,6 @@ const columnDCards = [
   },
 ];
 
-// Feature cards data for mobile (copied from WhyFusionMeshSection)
 const featureCards = [
   {
     icon: "/icons/dashboard.svg",
@@ -91,7 +89,6 @@ const featureCards = [
   },
 ];
 
-// Section content for mobile (copied from WhyFusionMeshSection)
 const sectionContent = {
   header: {
     title: "Why FusionMesh",
@@ -104,7 +101,6 @@ const sectionContent = {
   },
 };
 
-// Mobile feature card component (copied from WhyFusionMeshSection)
 interface MobileFeatureCardProps {
   icon: string;
   title: string;
@@ -118,14 +114,13 @@ const MobileFeatureCard: React.FC<MobileFeatureCardProps> = ({
 }) => (
   <div className="border-t border-b border-gray-400/30 py-8 -mx-6 px-6">
     <div className="mb-4">
-      <img src={icon} alt={title} className="w-10 h-10 opacity-70" />
+      <img src={icon} alt={title} className="w-10 h-10 " />
     </div>
-    <h3 className="text-lg font-bold text-gray-300 mb-2">{title}</h3>
-    <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
+    <h3 className="text-[16px] font-bold text-white mb-2">{title}</h3>
+    <p className="text-white text-[14px] opacity-75 leading-relaxed">{description}</p>
   </div>
 );
 
-// Desktop card component for consistent styling
 const DesktopFeatureCard = ({
   num,
   title,
@@ -171,14 +166,12 @@ const DesktopFeatureCard = ({
 const MetricsSection = () => {
   return (
     <>
-      {/* Desktop View */}
       <GridSection
         showLines={[false, false, true, true, true]}
         bgColor="bg-[#2B7856]"
         minHeight="797px"
         desktopOnly={true}
       >
-        {/* Manual gridline 1 at 5.56% - on top of image */}
         <div
           className="absolute top-0 bottom-0"
           style={{
@@ -188,8 +181,6 @@ const MetricsSection = () => {
             zIndex: 20,
           }}
         />
-
-        {/* Horizontal line at bottom 10% - absolute positioned, full width */}
         <div
           className="absolute left-0 right-0"
           style={{
@@ -201,13 +192,11 @@ const MetricsSection = () => {
         />
 
         <GridContainer className="h-full">
-          {/* Column AB - Left side with text and image */}
           <GridCol
             span="AB"
             className="relative flex flex-col"
             style={{ height: "797px" }}
           >
-            {/* Text content */}
             <div
               style={{
                 paddingTop: "80px",
@@ -255,8 +244,6 @@ const MetricsSection = () => {
                 Build on technology designed for growth.
               </p>
             </div>
-
-            {/* Image - positioned at bottom 10% with full width */}
             <div
               className="absolute left-0 right-0"
               style={{
@@ -271,8 +258,6 @@ const MetricsSection = () => {
               />
             </div>
           </GridCol>
-
-          {/* Column C - First set of 4 cards */}
           <GridCol
             span="C"
             className="flex flex-col justify-between"
@@ -291,8 +276,6 @@ const MetricsSection = () => {
               />
             ))}
           </GridCol>
-
-          {/* Column D - Second set of 4 cards */}
           <GridCol
             span="D"
             className="flex flex-col justify-between"
@@ -314,13 +297,12 @@ const MetricsSection = () => {
         </GridContainer>
       </GridSection>
 
-      {/* Mobile View - Same as WhyFusionMeshSection but with green background */}
       <section className="lg:hidden bg-[#2B7856] px-6 py-12">
         <div className="mb-12">
-          <h2 className="text-3xl font-extrabold text-white mb-4">
+          <h2 className="text-[25px] font-extrabold text-white mb-4">
             {sectionContent.header.title}
           </h2>
-          <p className="text-gray-300 text-base leading-relaxed">
+          <p className="text-white text-[16px] leading-relaxed">
             {sectionContent.header.description}
           </p>
         </div>
@@ -334,13 +316,13 @@ const MetricsSection = () => {
             <div className="mb-6">
               <img src="/icons/red-cube.svg" alt="Cost Efficient" className="w-8 h-8" />
             </div>
-            <h2 className="text-3xl font-extrabold text-white mb-4">
+            <h2 className="text-[30px] font-extrabold text-white mb-4">
               {sectionContent.costEfficient.title}
             </h2>
-            <p className="text-gray-300 text-base leading-relaxed mb-4">
+            <p className="text-white opacity-80 text-[18px] leading-relaxed mb-4">
               {sectionContent.costEfficient.description}
             </p>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-white opacity-75 text-[16px] leading-relaxed">
               {sectionContent.costEfficient.subDescription}
             </p>
           </div>
