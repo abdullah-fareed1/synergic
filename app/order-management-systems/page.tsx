@@ -1,7 +1,11 @@
+import Footer from "../components/Footer";
+import HeroSection from "./sections/HeroSection";
+
 export default function OrderManagementSystems() {
   return (
     <main className="min-h-screen">
-      <h1>Order Management Systems Page</h1>
+      <HeroSection/>
+      <Footer />
     </main>
   );
 }
