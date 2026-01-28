@@ -77,7 +77,7 @@ const FaqSection = () => {
             left: "27.78%",
             width: "1px",
             backgroundColor: "#E5E5E5",
-            zIndex: 50,
+            zIndex: 20,
           }}
         />
 

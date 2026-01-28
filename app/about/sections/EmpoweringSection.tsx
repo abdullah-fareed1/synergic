@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
 import Navbar from "./../components/Navbar";
-import MobileMenu from "../../components/MobileMenu";
+import MobileMenu from "../../components/Menu";
 
 export default function EmpoweringSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

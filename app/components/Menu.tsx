@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 
-type MobileMenuProps = {
+type MenuProps = {
   onClose: () => void;
 };
 
-export default function MobileMenu({ onClose }: MobileMenuProps) {
+export default function Menu({ onClose }: MenuProps) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col">
       <div className="flex items-center justify-between px-6 py-5 border-b border-gray-800">
@@ -19,7 +19,7 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
         </Link>
         <button
           onClick={onClose}
-          className="text-white text-4xl leading-none hover:opacity-70 transition"
+          className="text-white text-4xl leading-none hover:opacity-70 transition cursor-pointer"
         >
           ×
         </button>
@@ -66,21 +66,10 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
           <Link href="/ecommerce-tech-advantage" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
             Ecommerce Tech
           </Link>
-          
-          <Link
-            href="/order-management-systems"
-            onClick={onClose}
-            className="flex items-center justify-center gap-2 hover:opacity-70 transition"
-            style={{ color: "white" }}
-          >
-            OMS
-            <span
-              className="text-xs font-semibold px-2 py-1 rounded"
-              style={{ backgroundColor: "var(--brand-red)", color: "white" }}
-            >
-              Ongoing
-            </span>
+          <Link href="/order-management-systems" onClick={onClose} className="hover:opacity-70 transition" style={{ color: "white" }}>
+            Order Management
           </Link>
+          
         </div>
       </div>
 

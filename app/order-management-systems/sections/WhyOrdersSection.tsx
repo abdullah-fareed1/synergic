@@ -185,7 +185,7 @@ const WhyOrdersSection = () => {
               left: "72.22%",
               top: "-5px",
               transform: "translate(-50%, -50%)",
-              zIndex: 9999,
+              zIndex: 20,
             }}
           >
             <span

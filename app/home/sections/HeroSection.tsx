@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-import MobileMenu from "../../components/MobileMenu";
+import MobileMenu from "../../components/Menu";
 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
