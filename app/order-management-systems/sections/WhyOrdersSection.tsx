@@ -166,7 +166,7 @@ const WhyOrdersSection = () => {
                 <img
                   src="/images/oms-bulb-image.svg"
                   alt="Order chaos illustration"
-                  className="w-full max-w-[280px] h-auto"
+                  className="w-full max-w-70 h-auto"
                 />
               </div>
             </GridCol>
