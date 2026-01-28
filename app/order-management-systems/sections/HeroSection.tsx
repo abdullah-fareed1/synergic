@@ -15,7 +15,6 @@ export default function HeroSection() {
           className="relative px-6 pt-24 pb-8"
           style={{ minHeight: "500px" }}
         >
-          {/* Background image - positioned at bottom */}
           <div
             className="absolute inset-0"
             style={{
@@ -24,12 +23,10 @@ export default function HeroSection() {
               backgroundPosition: "center bottom",
             }}
           />
-          {/* Dark overlay on top of bg image */}
           <div
             className="absolute inset-0"
             style={{ backgroundColor: "rgba(17, 29, 43, 0.65)" }}
           />
-          {/* Gradient overlay - dark top to transparent bottom */}
           <div
             className="absolute inset-0"
             style={{

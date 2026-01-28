@@ -80,7 +80,7 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         {/* Desktop Menu */}
         <button
           onClick={onMenuClick}
-          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition"
+          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition cursor-pointer"
           style={{ width: '5.56%', backgroundColor: 'var(--brand-red)' }}
         >
           <div className="flex flex-col items-center gap-1">

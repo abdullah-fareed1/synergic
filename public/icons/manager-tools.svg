@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.067" height="37.733" viewBox="0 0 42.067 37.733">
+  <g id="Group_19246" data-name="Group 19246" transform="translate(-152.644 -2614.25)" opacity="0.89">
+    <path id="dataflow-03-svgrepo-com" d="M17.029,6.379H29.184c1.865,0,2.8,0,3.51.363A3.33,3.33,0,0,1,34.149,8.2c.363.712.363,1.645.363,3.51v2.165a8.308,8.308,0,0,1-.253,2.939,3.331,3.331,0,0,1-1.8,1.8,8.308,8.308,0,0,1-2.939.253M20.359,31.355H8.2c-1.865,0-2.8,0-3.51-.363a3.33,3.33,0,0,1-1.455-1.455c-.363-.712-.363-1.645-.363-3.51V23.862a8.306,8.306,0,0,1,.253-2.939,3.331,3.331,0,0,1,1.8-1.8,8.307,8.307,0,0,1,2.939-.253m7.992,4.163h5.661a2.069,2.069,0,0,0,.877-.091.832.832,0,0,0,.364-.364,2.069,2.069,0,0,0,.091-.877V16.036a2.068,2.068,0,0,0-.091-.877.832.832,0,0,0-.364-.364,2.069,2.069,0,0,0-.877-.091H15.863a2.068,2.068,0,0,0-.877.091.832.832,0,0,0-.364.364,2.068,2.068,0,0,0-.091.877V21.7a2.069,2.069,0,0,0,.091.877.832.832,0,0,0,.364.364A2.068,2.068,0,0,0,15.863,23.029Z" transform="translate(155.718 2614.832)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <g id="profile-svgrepo-com" transform="translate(153.394 2615)">
+      <path id="Path_36360" data-name="Path 36360" d="M10.759,10.609A3.269,3.269,0,1,0,7.49,7.339,3.269,3.269,0,0,0,10.759,10.609Z" transform="translate(-3.873 -4.07)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_36361" data-name="Path 36361" d="M8.975,11.91c-.007,0-.007,0-.014.007" transform="translate(-4.277 -6.227)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_36362" data-name="Path 36362" d="M12.989,12.82a6.88,6.88,0,0,1,3.284,5.495.37.37,0,0,1-.37.384H2.87a.37.37,0,0,1-.37-.384,6.888,6.888,0,0,1,3.255-5.473" transform="translate(-2.5 -5.527)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <g id="profile-svgrepo-com-2" data-name="profile-svgrepo-com" transform="translate(180.188 2638.06)">
+      <path id="Path_36360-2" data-name="Path 36360" d="M10.759,10.609A3.269,3.269,0,1,0,7.49,7.339,3.269,3.269,0,0,0,10.759,10.609Z" transform="translate(-3.873 -4.07)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_36361-2" data-name="Path 36361" d="M8.975,11.91c-.007,0-.007,0-.014.007" transform="translate(-4.277 -6.227)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_36362-2" data-name="Path 36362" d="M12.989,12.82a6.88,6.88,0,0,1,3.284,5.495.37.37,0,0,1-.37.384H2.87a.37.37,0,0,1-.37-.384,6.888,6.888,0,0,1,3.255-5.473" transform="translate(-2.5 -5.527)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
