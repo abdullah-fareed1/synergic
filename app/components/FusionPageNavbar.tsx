@@ -7,24 +7,18 @@ type NavbarProps = {
 export default function Navbar({ onMenuClick }: NavbarProps) {
   return (
     <nav className="absolute top-0 left-0 right-0 z-20">
-      {/* Grid overlay for desktop */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
-        {/* Vertical lines - positioned at 1, 5, 9, 13, 17 out of 18 columns */}
-        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" /> {/*line 1*/}
-        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 2*/}
-        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 3*/}
-        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 4*/}
-        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />{/*line 5*/}
+        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
 
-        {/* Horizontal line - height is 1/18 of viewport width to make squares */}
         <div className="absolute left-0 right-0 h-px bg-gray-400 opacity-30" style={{ top: 'calc(100vw / 20)' }} />
       </div>
-
-      {/* Mobile horizontal line */}
       <div className="lg:hidden absolute left-0 right-0 h-px bg-gray-400 opacity-30" style={{ top: 60 }} />
 
       <div className="relative flex items-start justify-between" style={{ height: 'calc(100vw / 20)' }}>
-        {/* Desktop Logo */}
         <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4">
           <img
             src="logos/synergic-logo.svg"
@@ -34,7 +28,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
           />
         </div>
 
-        {/* Mobile Logo */}
         <div className="lg:hidden flex items-center px-4 py-4">
           <img
             src="logos/synergic-logo.svg"
@@ -43,8 +36,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             onClick={() => window.location.href = '/'}
           />
         </div>
-
-        {/* Desktop Get in Touch */}
         <div 
           className="hidden lg:flex items-center justify-end absolute top-0 bottom-0 pr-4 gap-3 cursor-pointer hover:opacity-80 transition"
           style={{ 
@@ -82,8 +73,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             </svg>
           </div>
         </div>
-
-        {/* Desktop Menu Button */}
         <button
           onClick={onMenuClick}
           className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black/50 cursor-pointer"
@@ -106,8 +95,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             </span>
             </div>
         </button>
-
-        {/* Mobile Menu Button */}
         <button
           onClick={onMenuClick}
           className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition"

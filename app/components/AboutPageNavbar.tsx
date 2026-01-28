@@ -7,17 +7,12 @@ type NavbarProps = {
 export default function Navbar({ onMenuClick }: NavbarProps) {
   return (
     <nav className="absolute top-0 left-0 right-0 z-20">
-      {/* Grid overlay for desktop */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
-        {/* Vertical lines - positioned at 1, 5, 9, 13, 17 out of 18 columns */}
-        {/* Horizontal line - height is 1/18 of viewport width to make squares */}
         <div
           className="absolute left-0 right-0 h-px bg-gray-300 opacity-30"
           style={{ top: "calc(100vw / 20)" }}
         />
       </div>
-
-      {/* Mobile horizontal line */}
       <div
         className="lg:hidden absolute left-0 right-0 h-px bg-gray-300 opacity-30"
         style={{ top: 60 }}
@@ -27,7 +22,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
         className="relative flex items-start justify-between"
         style={{ height: "calc(100vw / 20)" }}
       >
-        {/* Desktop Logo */}
         <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4 cursor-pointer">
           <img
             src="logos/synergic-logo.svg"
@@ -36,8 +30,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             onClick={() => (window.location.href = "/")}
           />
         </div>
-
-        {/* Mobile Logo */}
         <div className="lg:hidden flex items-center px-4 py-4 cursor-pointer">
           <img
             src="logos/synergic-logo.svg"
@@ -46,8 +38,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             onClick={() => (window.location.href = "/")}
           />
         </div>
-
-        {/* Desktop Get in Touch */}
         <div
           className="hidden lg:flex items-center justify-end absolute top-0 bottom-0 pr-4 gap-3 cursor-pointer transition bg-(--brand-light)/20"
           style={{
@@ -84,8 +74,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             </svg>
           </div>
         </div>
-
-        {/* Desktop Menu Button */}
         <button
           onClick={onMenuClick}
           className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center cursor-pointer transition"
@@ -99,8 +87,6 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             </div>
           </div>
         </button>
-
-        {/* Mobile Menu Button */}
         <button
           onClick={onMenuClick}
           className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-black/20"

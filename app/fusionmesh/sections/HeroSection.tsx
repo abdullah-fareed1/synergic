@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/FusionPageNavbar";
 import MobileMenu from "../../components/Menu";
 
 export default function HeroSection() {

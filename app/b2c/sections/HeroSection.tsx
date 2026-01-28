@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/B2cPageNavbar";
 import MobileMenu from "../../components/Menu";
 
 export default function HeroSection() {
@@ -10,7 +10,6 @@ export default function HeroSection() {
 
   return (
     <>
-      {/* MOBILE VERSION */}
       <section className="lg:hidden relative bg-white min-h-screen">
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 
@@ -44,8 +43,6 @@ export default function HeroSection() {
 
         {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
       </section>
-
-      {/* DESKTOP */}
       <div className="hidden lg:block relative bg-white">
         <Navbar onMenuClick={() => setIsMenuOpen(true)} />
 

@@ -8,55 +8,44 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
   return (
     <nav className="absolute top-0 left-0 right-0 z-20">
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
-        <div className="absolute left-0 right-0 h-px bg-gray-400 opacity-30" style={{ top: 'calc(100vw / 20)' }} />
+        <div className="absolute left-[5.56%] top-0 bottom-0 w-px bg-gray-400 opacity-30" /> 
+        <div className="absolute left-[27.78%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[50%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[72.22%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-[94.44%] top-0 bottom-0 w-px bg-gray-400 opacity-30" />
+        <div className="absolute left-0 h-px bg-gray-400 opacity-30" style={{ top: 'calc(100vw / 20)', right: '5.56%' }} />
       </div>
+
       <div className="lg:hidden absolute left-0 right-0 h-px bg-gray-400 opacity-30" style={{ top: 60 }} />
 
       <div className="relative flex items-start justify-between" style={{ height: 'calc(100vw / 20)' }}>
-        {/* Desktop Logo */}
-        <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4 cursor-pointer">
+        <div className="hidden lg:flex items-center absolute left-[5.56%] top-0 bottom-0 pl-4">
           <img
-            src="logos/synergic-b2c-logo.png"
+            src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
-            className="h-9 w-auto"
+            className="h-8 w-auto cursor-pointer"
             onClick={() => window.location.href = '/'}
           />
         </div>
-
-        {/* Mobile Logo */}
-        <div className="lg:hidden flex items-center px-4 py-4 cursor-pointer">
+        <div className="lg:hidden flex items-center px-4 py-4">
           <img
-            src="logos/synergic-b2c-logo.png"
+            src="logos/synergic-logo.svg"
             alt="Synergic Intelligent Systems"
-            className="h-7 w-auto"
+            className="h-7 w-auto cursor-pointer"
             onClick={() => window.location.href = '/'}
           />
         </div>
-
-        {/* Desktop Get in Touch */}
-        <div 
-          className="hidden lg:flex items-center justify-end absolute top-0 bottom-0 pr-4 gap-3 cursor-pointer hover:opacity-80 transition bg-[#F3F3EE]"
-          style={{ 
-            right: '5.56%',
-            width: 'calc(5.56% * 2)'
-          }}
-        >
-          <span 
-            className="text-sm font-medium tracking-wide uppercase"
-            style={{ color: 'var(--brand-red)' }}
-          >
+        <div className="hidden lg:flex items-center absolute right-[5.56%] top-0 bottom-0 pr-4 gap-3">
+          <span className="text-white text-sm tracking-wide uppercase">
             Get in Touch
           </span>
           <div
-            className="w-10 h-10 rounded-full flex items-center justify-center transition border-2"
-            style={{ 
-              borderColor: "var(--brand-red)",
-              backgroundColor: 'transparent'
-            }}
+            className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition border-2"
+            style={{ borderColor: "#E63946" }}
           >
             <svg
               className="w-5 h-5"
-              style={{ color: "var(--brand-red)" }}
+              style={{ color: "#E63946" }}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -70,45 +59,41 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
             </svg>
           </div>
         </div>
-
-        {/* Desktop Menu */}
         <button
           onClick={onMenuClick}
-          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-[#F3F3EE] cursor-pointer"
-          style={{ width: '5.56%' }}
+          className="hidden lg:flex absolute right-0 top-0 bottom-0 flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
+          style={{ width: '5.56%', zIndex: 30 }}
         >
           <div className="flex flex-col items-center gap-2">
             <svg width="32" height="12" viewBox="0 0 32 12" fill="none">
-              <rect x="0" y="0" width="32" height="3" rx="1.5" fill="black" />
-              <rect x="0" y="9" width="32" height="3" rx="1.5" fill="black" />
+              <rect x="0" y="0" width="32" height="3" rx="1.5" fill="white" />
+              <rect x="0" y="9" width="32" height="3" rx="1.5" fill="white" />
             </svg>
             <span
-              className="uppercase font-bold"
+              className="uppercase font-semibold"
               style={{
-                color: "var(--brand-red)",
-                fontSize: "10px",
+                color: "#E63946",
+                fontSize: "9px",
                 letterSpacing: "1.55px",
               }}
             >
               MENU
             </span>
-            </div>
+          </div>
         </button>
-
-        {/* Mobile Menu Button */}
-         <button
+        <button
           onClick={onMenuClick}
-          className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-[#F3F3EE]"
+          className="lg:hidden flex flex-col items-center justify-center hover:opacity-80 transition bg-black/50"
           style={{ width: 'calc(100vw / 6)', height: 60 }}
         >
           <div className="flex flex-col items-center gap-[6px]">
             <div className="flex flex-col gap-[6px]">
               <div 
-                className="bg-black" 
+                className="bg-white" 
                 style={{ width: '32px', height: '2px', borderRadius: '1px' }} 
               />
               <div 
-                className="bg-black" 
+                className="bg-white" 
                 style={{ width: '32px', height: '2px', borderRadius: '1px' }} 
               />
             </div>

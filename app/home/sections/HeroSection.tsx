@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/HomePageNavbar";
 import MobileMenu from "../../components/Menu";
 
 export default function HeroSection() {
