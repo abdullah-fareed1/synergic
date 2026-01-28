@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Script from "next/script";
 import { GridSection, GridContainer, GridCol } from "../../components/grid";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/TransparentNavbar";
 import MobileMenu from "../../components/Menu";
 
 interface FloatingInputProps {
